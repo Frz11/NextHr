@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NextHR</string>
+    <string name="first_admin_main">Your company will be registered, in order to use your company you must sign up the admin account! We advise you to not use this account for any employee, including yourself! This account will have the rights to add/edit/delete any information in your system!</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

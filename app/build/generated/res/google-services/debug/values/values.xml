@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">211197208371-bg2c34t87q6b0g0i5g81cg9vim7rej4v.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://nexthr-d7eba.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">211197208371</string>
+    <string name="google_api_key" translatable="false">AIzaSyDHKyLs4zEEyUMkl21-b98oNthoYmaq4tQ</string>
+    <string name="google_app_id" translatable="false">1:211197208371:android:f71e7963ab4bef76</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDHKyLs4zEEyUMkl21-b98oNthoYmaq4tQ</string>
+    <string name="google_storage_bucket" translatable="false">nexthr-d7eba.appspot.com</string>
+    <string name="project_id" translatable="false">nexthr-d7eba</string>
+</resources>

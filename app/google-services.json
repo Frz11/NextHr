@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "211197208371",
+    "firebase_url": "https://nexthr-d7eba.firebaseio.com",
+    "project_id": "nexthr-d7eba",
+    "storage_bucket": "nexthr-d7eba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211197208371:android:f71e7963ab4bef76",
+        "android_client_info": {
+          "package_name": "com.example.cristianion.nexthr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211197208371-0achaol3m2j8psoaukbk06khj3qu8h8h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cristianion.nexthr",
+            "certificate_hash": "9fcb18fb164d59dee8d6e4810585dba270c40437"
+          }
+        },
+        {
+          "client_id": "211197208371-bg2c34t87q6b0g0i5g81cg9vim7rej4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHKyLs4zEEyUMkl21-b98oNthoYmaq4tQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211197208371-bg2c34t87q6b0g0i5g81cg9vim7rej4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
