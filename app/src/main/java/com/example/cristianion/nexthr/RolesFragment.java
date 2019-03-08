@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +18,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.cristianion.nexthr.Adapters.RolesAdapter;
 import com.example.cristianion.nexthr.Models.Role;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -49,67 +56,20 @@ public class RolesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final RecyclerView rvRoles = (RecyclerView) view.findViewById(R.id.RoleRecycler);
         //get roles
-        final TableLayout rolesTable = view.findViewById(R.id.RolesTable);
-        rolesTable.removeAllViews();
         mDatabase.child("roles").orderByChild("name").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
+                    ArrayList<Role> roles = new ArrayList<>();
                     for(DataSnapshot child : dataSnapshot.getChildren()){
                         final Role foundRole = child.getValue(Role.class);
-
-                        if(foundRole.name.equals("Admin")){
-                            TableRow tr = new TableRow(view.getContext());
-                            tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                            TextView rolesText = new TextView(view.getContext());
-                            rolesText.setText(foundRole.name);
-                            rolesText.setTextSize(20);
-                            rolesText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
-                            rolesText.setTextColor(Color.BLACK);
-                            tr.addView(rolesText);
-                            rolesTable.addView(tr, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.WRAP_CONTENT));
-                        } else {
-
-                            TableRow tr = new TableRow(view.getContext());
-                            tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-
-                            TextView roleText = new TextView(view.getContext());
-                            roleText.setText(foundRole.name);
-                            roleText.setTextSize(20);
-                            roleText.setTextColor(Color.BLACK);
-                            roleText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,TableRow.LayoutParams.WRAP_CONTENT,(float) 0.95));
-
-
-                            Button deleteButton = new Button(view.getContext());
-                            Button editButton = new Button(view.getContext());
-                            deleteButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Delete(foundRole);
-                                }
-                            });
-                            editButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    GoToEdit(foundRole);
-                                }
-                            });
-                            deleteButton.setBackgroundColor(Color.RED);
-                            deleteButton.setText("x");
-                            deleteButton.setTextColor(Color.WHITE);
-                            deleteButton.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT,(float) 0.020));
-                            editButton.setBackgroundColor(Color.BLUE);
-                            editButton.setText("Edit");
-                            editButton.setTextColor(Color.WHITE);
-                            editButton.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT,(float) 0.025));
-                            tr.addView(roleText);
-                            tr.addView(editButton);
-                            tr.addView(deleteButton);
-                            rolesTable.addView(tr, new TableLayout.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
-
-                        }
+                        roles.add(foundRole);
                     }
+                    RolesAdapter adapter = new RolesAdapter(roles);
+                    rvRoles.setAdapter(adapter);
+                    rvRoles.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 }
                 Button button = view.findViewById(R.id.AddRoleButton);
                 final TextView role = view.findViewById(R.id.Role);
@@ -125,7 +85,10 @@ public class RolesFragment extends Fragment {
                         mDatabase.child("roles").child(roleTBA.id).setValue(roleTBA).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Objects.requireNonNull(getActivity()).recreate();
+                                FragmentManager fragmentManager = getFragmentManager();
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.Frame,new RolesFragment());
+                                fragmentTransaction.commit();
                             }
                         });
                     }
