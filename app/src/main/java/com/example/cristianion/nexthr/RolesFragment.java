@@ -67,7 +67,7 @@ public class RolesFragment extends Fragment {
                         final Role foundRole = child.getValue(Role.class);
                         roles.add(foundRole);
                     }
-                    RolesAdapter adapter = new RolesAdapter(roles);
+                    RolesAdapter adapter = new RolesAdapter(roles,getFragmentManager());
                     rvRoles.setAdapter(adapter);
                     rvRoles.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 }
@@ -86,7 +86,7 @@ public class RolesFragment extends Fragment {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 FragmentManager fragmentManager = getFragmentManager();
-                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                FragmentTransaction fragmentTransaction = Objects.requireNonNull(fragmentManager).beginTransaction();
                                 fragmentTransaction.replace(R.id.Frame,new RolesFragment());
                                 fragmentTransaction.commit();
                             }

@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Role name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/AddRoleButton"
@@ -30,13 +31,13 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/RoleRecycler"
         android:layout_width="match_parent"
-        android:layout_height="624dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/AddRoleButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp" />
 </RelativeLayout>

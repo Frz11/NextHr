@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.cristianion.nexthr.Models.Company;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,16 +30,12 @@ import java.util.UUID;
 public class WelcomeActivity extends AppCompatActivity {
 
     private List<Company> companies;
-    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
-
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        mAuth.signInAnonymously();
-
+        //FirebaseApp.initializeApp();
+        
         companies = new ArrayList<>();
         final ConstraintLayout main = findViewById(R.id.MainLayout);
         final ConstraintLayout newCompany = findViewById(R.id.newCompanyLayout);
@@ -73,8 +70,13 @@ public class WelcomeActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Company name cannot be empty!",Toast.LENGTH_LONG).show();
                     return;
                 }
-                Query getCompany = mDatabase.orderByChild("name").equalTo(companyName);
-                getCompany.addListenerForSingleValueEvent(getCompanyListener);
+                final Company company = new Company(UUID.randomUUID().toString(),companyName);
+                Intent intent = new Intent(WelcomeActivity.this, FirstAdminActivity.class);
+                intent.putExtra("companyId",company.id);
+                intent.putExtra("companyName",company.name);
+                startActivity(intent);
+                finish();
+
 
             }
         });
@@ -89,33 +91,4 @@ public class WelcomeActivity extends AppCompatActivity {
         });
 
     }
-
-    ValueEventListener getCompanyListener= new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            companies.clear();
-            if(dataSnapshot.exists()){
-              for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                  Company company = snapshot.getValue(Company.class);
-                  companies.add(company);
-              }
-                Log.wtf("wtf",companies.toString());
-                Toast.makeText(getApplicationContext(),"Company name already in use!",Toast.LENGTH_LONG).show();
-                return;
-            } else {
-                final Company company = new Company(UUID.randomUUID().toString(),((TextView)findViewById(R.id.companyName)).getText().toString());
-                Intent intent = new Intent(WelcomeActivity.this, FirstAdminActivity.class);
-                intent.putExtra("companyId",company.id);
-                intent.putExtra("companyName",company.name);
-                startActivity(intent);
-                finish();
-
-            }
-        }
-
-        @Override
-        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-        }
-    };
 }

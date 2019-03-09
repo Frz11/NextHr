@@ -1,8 +1,10 @@
 package com.example.cristianion.nexthr;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,11 +14,23 @@ import com.example.cristianion.nexthr.Models.Company;
 import com.example.cristianion.nexthr.Models.Employee;
 import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.Models.UserRole;
+import com.example.cristianion.nexthr.Utils.AESUtils;
 import com.example.cristianion.nexthr.Utils.Global;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.Objects;
 import java.util.UUID;
 
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isEmailValid;
@@ -26,6 +40,8 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 public class FirstAdminActivity extends AppCompatActivity {
 
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies");
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,32 +96,78 @@ public class FirstAdminActivity extends AppCompatActivity {
                     showError(getApplicationContext(),"Passwords don't match");
                     return;
                 }
-                //add admin role
 
-                mDatabase.child(company.id).setValue(company).addOnSuccessListener(new OnSuccessListener<Void>() {
+                auth.createUserWithEmailAndPassword(email,password).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                        //create admin role
-                        final Role adminRole = new Role(UUID.randomUUID().toString(),"Admin");
-                        mDatabase.child(company.id).child("roles").child(adminRole.id).setValue(adminRole).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                final Employee admin = new Employee(UUID.randomUUID().toString(),lastName,firstName,birthday,password,email,phone);
-                                mDatabase.child(company.id).child("employees").child(admin.id).setValue(admin).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        mDatabase.child(company.id).child("user_role").child(UUID.randomUUID().toString()).setValue(new UserRole(admin.id,adminRole.id));
-                                        Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-                                });
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(!task.isSuccessful()){
+                            showError(getApplicationContext(),"Register failed: "
+                                    +task.getException());
+                        } else {
+                            auth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    db.collection("companies").whereEqualTo("name",company.name).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                            if (task.isSuccessful()){
+                                                boolean goOn = true;
+                                                if(task.getResult() != null){
+                                                    for (QueryDocumentSnapshot document : task.getResult()){
+                                                        Company foundCompany = document.toObject(Company.class);
+                                                        if(foundCompany.name.equals(company.name)){
+                                                            goOn = true;
+                                                        }
+                                                    }
+                                                }
+                                                if (goOn){
+                                                    db.collection("companies").document(company.id).set(company).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            final Role adminRole = new Role(UUID.randomUUID().toString(),"Admin");
+                                                            db.collection("companies").document(company.id).collection("roles").document(adminRole.id).set(adminRole)
+                                                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                        @Override
+                                                                        public void onSuccess(Void aVoid) {
+                                                                            String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
+                                                                            final Employee admin = new Employee(userId,lastName,firstName,birthday,email,phone,company.id);
+                                                                            db.collection("companies").document(company.id).collection("employees")
+                                                                                    .document(admin.id).set(admin).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                @Override
+                                                                                public void onSuccess(Void aVoid) {
+                                                                                    db.collection("companies").document(company.id).collection("user_role").
+                                                                                            document(UUID.randomUUID().toString()).
+                                                                                            set(new UserRole(admin.id,adminRole.id)).
+                                                                                            addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                @Override
+                                                                                                public void onSuccess(Void aVoid) {
+                                                                                                    Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
+                                                                                                    Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
+                                                                                                    startActivity(intent);
+                                                                                                    finish();
+                                                                                                }
+                                                                                            });
+                                                                                }
+                                                                            });
 
-                            }
-                        });
+                                                                        }
+                                                                    });
+
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+
+                        }
+
                     }
                 });
+
 
             }
         });

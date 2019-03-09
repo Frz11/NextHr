@@ -1,83 +1,85 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/6cd61e965f268723fa73921c9031b362/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/357f62afb2466fd6b132de8a50e45ea8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b9ed2a4abc4b991bafc3ff2543710ca0/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/daf7820236615c9e35533dac0fd71a5a/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-database:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/57549ce9e00ba326179d095b075efc94/AndroidManifest.xml:2:1-8:12
-MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/3a6b24a2f89a9e9eee4763247c603c35/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-storage:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.1.aar/d73ee8e3973705a484cc6ae3004f7d6b/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:17:1-38:12
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/ac53dcff9a2d377ac45e74f5ef1c17c7/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/5c5ba718271650ef9527833aae98aa50/AndroidManifest.xml:2:1-12:12
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:17:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/611bc9cb1ffd3151f2b0fab26b4dc968/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/bd2992b0bd24d4ee5c29096eb7867974/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:17:1-65:12
-MERGED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:2:1-16:12
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/c6fcbf9b443e48b0b74f1c9d96d8283c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/78567a7f5cca32805bc6f6a01b808938/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/01fdae5285698da7843201272b86edce/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/c1c5a017911bdcb5f0a65cc3003380f8/AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/ce0f879e7acecf1d75ab5c30944f6e0e/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/026aba541ceadb389fbfe5ca5e3b4ae1/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/cc0b0a617af37bc4feb9a58bee6a643f/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/3300aaf6e2b9dfdb3a0b78b29572300a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b5fb85007fae9dda5839edb0b7345347/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a38058faf8b175778517bfeb4ffe1612/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/1cf158820a314ee9ec637884e3374c9d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d21fc1f5a68f72849fbf3b3366597e66/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3f5b4aa87156278438fa8f5e7b537e4d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0cd8baccd83339615e83ae390e517c64/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/27fab03dec22696e1999f48122b50266/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/aecc69822b70df0dfb333fe57c963764/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5cf37cf2df48a9b3a8453934104c2289/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5c72e7f57583f6b6ddd6882d099cc3c1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f61b06f514665ddd7132d682abb19c23/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42f2a82ef11bc377be73cab3042cb032/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1cc29404b9fa926d6aeb974540805bd7/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f7dd959656e0e81d20fd224f7cf3b787/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/4b806ff82c929977f32c6b35b68168a2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8ce5a8084dd8c17d321c4f612fccbef0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/f7e0a09bb41f09a5b650d8b3c80d2bf5/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/39c4e65fa9c3c8c1b20f55ae213ec4f9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/f0b5a02c78246e5f04d113bebd13e1cc/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/c54a27408ecc3562f7b3a926e21aeaa6/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a578e84d49dec4319a437f9b90da01e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/25ae5365ec689b2e3a9c3184d40346da/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9882da83e2e1af2bbecf5a04ffae2514/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/4133f39be32a8677afbabd43ccbfe6af/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/cb6007ba6ecddcce00ccb138c27193c9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/921cf7bb525c1de124b5b7ba168032be/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2d52103cd351eb1308bd8b99ab62d210/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/53fc6837c9ec0a69bc7362529f05ab2d/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6c4509dcacb9171b6b4c9aa2d984e469/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/bab2f4e0325bd47a8eee0a95c6411a23/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/450beebd401c4ea5b5c34fdcf89c8430/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-core:16.0.7] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.7.aar/ede2b93917cd235ec18c352aeba226fd/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:15:1-36:12
+MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/644151a9dc798a0957a12dc5e122f1ff/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:2:1-24:12
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/d3545904d50809234676f81400195eb4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/330d0a2c03be21557eb1ca5a360acc89/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/620d9e445f71d47e8281cbc9387d7b67/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/e85a92dd813bc88b3279540f94e8359c/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-measurement-api:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.3.0.aar/e1058f9146987d3237a22bf5b5f01a81/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/1b56e84275cda5ebad4e61ed26efb885/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/d1ea6eb68ffc6b463028af0df6c4e0ce/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.3.0.aar/d3e40bd760215b5c305b987417a2dc9c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/05181caead3389228076249a214da0a2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/31f5cd9365964ddf6e2eb045189cad35/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/19a1af4151e9158b95cb2c6f25d6be3d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f40c5c9522cf54aad63cf88784c23c0c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/0d600a9796fe218d362d2b0bda078bb8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/b5d0d9f1a9553af6a6b47ffc5cb5fbd4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/931afba8d0557a432b1688e4d011c07c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/03c59ee2e06e3514cbf6ab03b75af73f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca81c7ff203d9d828d9809a868022de7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/941ab28497d2edbc377966b3cf3d4fc6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/e2e8a32f6cf0e16aba410fa322d23b58/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/1c38f869ef8979dd2800c88af764f953/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/1a8ef6bc9340d2d4efafb010a9ceecc4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4295d14418b7f7092f6aaf55fa4ce961/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9fa1c72680e05a40afa67fd9cc04bc05/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/7f10d6ba17c63a409b19dd117dd33361/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/7fdeb958ebff7df3ff5a4394ce5da77c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/326a8a1c507ed4ee1340643a4f32eac7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d69b3e7a25c3582ee323c241add16626/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/b1681ea0186a2d333c349657c1269aa1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/443f08927a49250cc3b68fd811c0d00a/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/11f869b13cd9a15b54f4142a86a1d1fa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/77f7159da65d27744ccb7ec2ed17cde0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/933595396ad388847056f4929bb7c174/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2a14d30c1a6f9173e9aaf0f6242723d6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/26af527056085e9eea5c7d4c5df67c95/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e1f9a064d2c2a107fb6fa2977ada93d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/eea00d851d06812a36224785341805c4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4d7ef9ab227870095d1173b44565cc08/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1fbe82422a6fe1d84dfaefa1ac1abd06/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ab977be10c4f6eb77b8882c2fa54d246/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/4f62afca709f2d525ad4a4653dcfb49d/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/41adf522ddab60c5b334a68e153ba9fc/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/8b4531ac86cdbf16dfe75422fb260a9d/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:11-69
@@ -86,57 +88,65 @@ ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:5:22-65
 application
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:7:5-28:19
-MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/6cd61e965f268723fa73921c9031b362/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/6cd61e965f268723fa73921c9031b362/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b9ed2a4abc4b991bafc3ff2543710ca0/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b9ed2a4abc4b991bafc3ff2543710ca0/AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/daf7820236615c9e35533dac0fd71a5a/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/daf7820236615c9e35533dac0fd71a5a/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:22:5-36:19
-MERGED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:22:5-36:19
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/ac53dcff9a2d377ac45e74f5ef1c17c7/AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/ac53dcff9a2d377ac45e74f5ef1c17c7/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/5c5ba718271650ef9527833aae98aa50/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/5c5ba718271650ef9527833aae98aa50/AndroidManifest.xml:10:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/bd2992b0bd24d4ee5c29096eb7867974/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/bd2992b0bd24d4ee5c29096eb7867974/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:34:5-63:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:34:5-63:19
-MERGED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:8:5-14:19
-MERGED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:8:5-14:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/78567a7f5cca32805bc6f6a01b808938/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/78567a7f5cca32805bc6f6a01b808938/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/01fdae5285698da7843201272b86edce/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/01fdae5285698da7843201272b86edce/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/ce0f879e7acecf1d75ab5c30944f6e0e/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/ce0f879e7acecf1d75ab5c30944f6e0e/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/026aba541ceadb389fbfe5ca5e3b4ae1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/026aba541ceadb389fbfe5ca5e3b4ae1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/cc0b0a617af37bc4feb9a58bee6a643f/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/cc0b0a617af37bc4feb9a58bee6a643f/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/f7e0a09bb41f09a5b650d8b3c80d2bf5/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/f7e0a09bb41f09a5b650d8b3c80d2bf5/AndroidManifest.xml:22:5-23:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/f0b5a02c78246e5f04d113bebd13e1cc/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/f0b5a02c78246e5f04d113bebd13e1cc/AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/bab2f4e0325bd47a8eee0a95c6411a23/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/bab2f4e0325bd47a8eee0a95c6411a23/AndroidManifest.xml:22:5-20
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:7:5-29:19
+MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/450beebd401c4ea5b5c34fdcf89c8430/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/450beebd401c4ea5b5c34fdcf89c8430/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.7] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.7.aar/ede2b93917cd235ec18c352aeba226fd/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.7] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.7.aar/ede2b93917cd235ec18c352aeba226fd/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:28:5-34:19
+MERGED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:28:5-34:19
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:16:5-22:19
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:16:5-22:19
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/d3545904d50809234676f81400195eb4/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/d3545904d50809234676f81400195eb4/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/330d0a2c03be21557eb1ca5a360acc89/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/330d0a2c03be21557eb1ca5a360acc89/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/e85a92dd813bc88b3279540f94e8359c/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/e85a92dd813bc88b3279540f94e8359c/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.3.0.aar/e1058f9146987d3237a22bf5b5f01a81/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.3.0.aar/e1058f9146987d3237a22bf5b5f01a81/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/1b56e84275cda5ebad4e61ed26efb885/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/1b56e84275cda5ebad4e61ed26efb885/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/d1ea6eb68ffc6b463028af0df6c4e0ce/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/d1ea6eb68ffc6b463028af0df6c4e0ce/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.3.0.aar/d3e40bd760215b5c305b987417a2dc9c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.3.0.aar/d3e40bd760215b5c305b987417a2dc9c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/05181caead3389228076249a214da0a2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/05181caead3389228076249a214da0a2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/31f5cd9365964ddf6e2eb045189cad35/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/31f5cd9365964ddf6e2eb045189cad35/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/19a1af4151e9158b95cb2c6f25d6be3d/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/19a1af4151e9158b95cb2c6f25d6be3d/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d69b3e7a25c3582ee323c241add16626/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d69b3e7a25c3582ee323c241add16626/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/443f08927a49250cc3b68fd811c0d00a/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/443f08927a49250cc3b68fd811c0d00a/AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:22:18-91
 	android:supportsRtl
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
@@ -149,164 +159,172 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /User
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:13:9-40
-activity#com.example.cristianion.nexthr.LoginActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:14:9-51
+activity#com.example.cristianion.nexthr.FirebaseLogIn
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:14:9-60
 	android:name
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:14:19-48
+activity#com.example.cristianion.nexthr.LoginActivity
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:15:9-51
+	android:name
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:15:19-48
 activity#com.example.cristianion.nexthr.WelcomeActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:15:9-21:20
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:15:19-50
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:16:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:20:27-74
 activity#com.example.cristianion.nexthr.FirstAdminActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:22:9-56
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:23:9-56
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:22:19-53
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:23:19-53
 activity#com.example.cristianion.nexthr.MenuActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:23:9-26:59
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:24:9-27:59
 	android:label
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:25:13-56
-	android:theme
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:26:13-56
+	android:theme
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:27:13-56
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:24:13-41
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:25:13-41
 activity#com.example.cristianion.nexthr.ChangePasswordActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:27:9-69
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:28:9-60
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:27:19-57
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:28:19-57
 uses-sdk
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
-MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/6cd61e965f268723fa73921c9031b362/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/6cd61e965f268723fa73921c9031b362/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/357f62afb2466fd6b132de8a50e45ea8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/357f62afb2466fd6b132de8a50e45ea8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b9ed2a4abc4b991bafc3ff2543710ca0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b9ed2a4abc4b991bafc3ff2543710ca0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/daf7820236615c9e35533dac0fd71a5a/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/daf7820236615c9e35533dac0fd71a5a/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/57549ce9e00ba326179d095b075efc94/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/57549ce9e00ba326179d095b075efc94/AndroidManifest.xml:6:5-44
-MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/3a6b24a2f89a9e9eee4763247c603c35/AndroidManifest.xml:7:5-9:41
-MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/3a6b24a2f89a9e9eee4763247c603c35/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-storage:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.1.aar/d73ee8e3973705a484cc6ae3004f7d6b/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-storage:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.1.aar/d73ee8e3973705a484cc6ae3004f7d6b/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/ac53dcff9a2d377ac45e74f5ef1c17c7/AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/ac53dcff9a2d377ac45e74f5ef1c17c7/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/5c5ba718271650ef9527833aae98aa50/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/5c5ba718271650ef9527833aae98aa50/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/611bc9cb1ffd3151f2b0fab26b4dc968/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/611bc9cb1ffd3151f2b0fab26b4dc968/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/bd2992b0bd24d4ee5c29096eb7867974/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/bd2992b0bd24d4ee5c29096eb7867974/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:5:5-6:37
-MERGED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:5:5-6:37
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/c6fcbf9b443e48b0b74f1c9d96d8283c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/c6fcbf9b443e48b0b74f1c9d96d8283c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/78567a7f5cca32805bc6f6a01b808938/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/78567a7f5cca32805bc6f6a01b808938/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/01fdae5285698da7843201272b86edce/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/01fdae5285698da7843201272b86edce/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/c1c5a017911bdcb5f0a65cc3003380f8/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/c1c5a017911bdcb5f0a65cc3003380f8/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/ce0f879e7acecf1d75ab5c30944f6e0e/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/ce0f879e7acecf1d75ab5c30944f6e0e/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/026aba541ceadb389fbfe5ca5e3b4ae1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/026aba541ceadb389fbfe5ca5e3b4ae1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/cc0b0a617af37bc4feb9a58bee6a643f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/cc0b0a617af37bc4feb9a58bee6a643f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/3300aaf6e2b9dfdb3a0b78b29572300a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/3300aaf6e2b9dfdb3a0b78b29572300a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b5fb85007fae9dda5839edb0b7345347/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b5fb85007fae9dda5839edb0b7345347/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a38058faf8b175778517bfeb4ffe1612/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a38058faf8b175778517bfeb4ffe1612/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/1cf158820a314ee9ec637884e3374c9d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/1cf158820a314ee9ec637884e3374c9d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d21fc1f5a68f72849fbf3b3366597e66/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d21fc1f5a68f72849fbf3b3366597e66/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3f5b4aa87156278438fa8f5e7b537e4d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3f5b4aa87156278438fa8f5e7b537e4d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0cd8baccd83339615e83ae390e517c64/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0cd8baccd83339615e83ae390e517c64/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/27fab03dec22696e1999f48122b50266/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/27fab03dec22696e1999f48122b50266/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/aecc69822b70df0dfb333fe57c963764/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/aecc69822b70df0dfb333fe57c963764/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5cf37cf2df48a9b3a8453934104c2289/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5cf37cf2df48a9b3a8453934104c2289/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5c72e7f57583f6b6ddd6882d099cc3c1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5c72e7f57583f6b6ddd6882d099cc3c1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f61b06f514665ddd7132d682abb19c23/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f61b06f514665ddd7132d682abb19c23/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42f2a82ef11bc377be73cab3042cb032/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42f2a82ef11bc377be73cab3042cb032/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1cc29404b9fa926d6aeb974540805bd7/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1cc29404b9fa926d6aeb974540805bd7/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f7dd959656e0e81d20fd224f7cf3b787/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f7dd959656e0e81d20fd224f7cf3b787/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/4b806ff82c929977f32c6b35b68168a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/4b806ff82c929977f32c6b35b68168a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8ce5a8084dd8c17d321c4f612fccbef0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8ce5a8084dd8c17d321c4f612fccbef0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4bcaadcf5e02546e4bbc5f94445dfc98/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/f7e0a09bb41f09a5b650d8b3c80d2bf5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/f7e0a09bb41f09a5b650d8b3c80d2bf5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/39c4e65fa9c3c8c1b20f55ae213ec4f9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/39c4e65fa9c3c8c1b20f55ae213ec4f9/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/f0b5a02c78246e5f04d113bebd13e1cc/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/f0b5a02c78246e5f04d113bebd13e1cc/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/c54a27408ecc3562f7b3a926e21aeaa6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/c54a27408ecc3562f7b3a926e21aeaa6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a578e84d49dec4319a437f9b90da01e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a578e84d49dec4319a437f9b90da01e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/25ae5365ec689b2e3a9c3184d40346da/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/25ae5365ec689b2e3a9c3184d40346da/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9882da83e2e1af2bbecf5a04ffae2514/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9882da83e2e1af2bbecf5a04ffae2514/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/4133f39be32a8677afbabd43ccbfe6af/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/4133f39be32a8677afbabd43ccbfe6af/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/cb6007ba6ecddcce00ccb138c27193c9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/cb6007ba6ecddcce00ccb138c27193c9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/921cf7bb525c1de124b5b7ba168032be/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/921cf7bb525c1de124b5b7ba168032be/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2d52103cd351eb1308bd8b99ab62d210/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2d52103cd351eb1308bd8b99ab62d210/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/53fc6837c9ec0a69bc7362529f05ab2d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/53fc6837c9ec0a69bc7362529f05ab2d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6c4509dcacb9171b6b4c9aa2d984e469/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6c4509dcacb9171b6b4c9aa2d984e469/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/bab2f4e0325bd47a8eee0a95c6411a23/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/bab2f4e0325bd47a8eee0a95c6411a23/AndroidManifest.xml:20:5-44
+MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/450beebd401c4ea5b5c34fdcf89c8430/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/450beebd401c4ea5b5c34fdcf89c8430/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-core:16.0.7] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.7.aar/ede2b93917cd235ec18c352aeba226fd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.7] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.7.aar/ede2b93917cd235ec18c352aeba226fd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:19:5-21:41
+MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/644151a9dc798a0957a12dc5e122f1ff/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:4.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.1.0.aar/644151a9dc798a0957a12dc5e122f1ff/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/d3545904d50809234676f81400195eb4/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/d3545904d50809234676f81400195eb4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/330d0a2c03be21557eb1ca5a360acc89/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/330d0a2c03be21557eb1ca5a360acc89/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/620d9e445f71d47e8281cbc9387d7b67/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/620d9e445f71d47e8281cbc9387d7b67/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/e85a92dd813bc88b3279540f94e8359c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/e85a92dd813bc88b3279540f94e8359c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.3.0.aar/e1058f9146987d3237a22bf5b5f01a81/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.3.0.aar/e1058f9146987d3237a22bf5b5f01a81/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/1b56e84275cda5ebad4e61ed26efb885/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/1b56e84275cda5ebad4e61ed26efb885/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/d1ea6eb68ffc6b463028af0df6c4e0ce/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/d1ea6eb68ffc6b463028af0df6c4e0ce/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.3.0.aar/d3e40bd760215b5c305b987417a2dc9c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.3.0.aar/d3e40bd760215b5c305b987417a2dc9c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/05181caead3389228076249a214da0a2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/05181caead3389228076249a214da0a2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/31f5cd9365964ddf6e2eb045189cad35/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/31f5cd9365964ddf6e2eb045189cad35/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/19a1af4151e9158b95cb2c6f25d6be3d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/19a1af4151e9158b95cb2c6f25d6be3d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f40c5c9522cf54aad63cf88784c23c0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f40c5c9522cf54aad63cf88784c23c0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/0d600a9796fe218d362d2b0bda078bb8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/0d600a9796fe218d362d2b0bda078bb8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/b5d0d9f1a9553af6a6b47ffc5cb5fbd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/b5d0d9f1a9553af6a6b47ffc5cb5fbd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/931afba8d0557a432b1688e4d011c07c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/931afba8d0557a432b1688e4d011c07c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/03c59ee2e06e3514cbf6ab03b75af73f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/03c59ee2e06e3514cbf6ab03b75af73f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca81c7ff203d9d828d9809a868022de7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca81c7ff203d9d828d9809a868022de7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/941ab28497d2edbc377966b3cf3d4fc6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/941ab28497d2edbc377966b3cf3d4fc6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/e2e8a32f6cf0e16aba410fa322d23b58/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/e2e8a32f6cf0e16aba410fa322d23b58/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/1c38f869ef8979dd2800c88af764f953/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/1c38f869ef8979dd2800c88af764f953/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/1a8ef6bc9340d2d4efafb010a9ceecc4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/1a8ef6bc9340d2d4efafb010a9ceecc4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4295d14418b7f7092f6aaf55fa4ce961/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4295d14418b7f7092f6aaf55fa4ce961/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9fa1c72680e05a40afa67fd9cc04bc05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9fa1c72680e05a40afa67fd9cc04bc05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/7f10d6ba17c63a409b19dd117dd33361/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/7f10d6ba17c63a409b19dd117dd33361/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/7fdeb958ebff7df3ff5a4394ce5da77c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/7fdeb958ebff7df3ff5a4394ce5da77c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/326a8a1c507ed4ee1340643a4f32eac7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/326a8a1c507ed4ee1340643a4f32eac7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d69b3e7a25c3582ee323c241add16626/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d69b3e7a25c3582ee323c241add16626/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/b1681ea0186a2d333c349657c1269aa1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/b1681ea0186a2d333c349657c1269aa1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/443f08927a49250cc3b68fd811c0d00a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/443f08927a49250cc3b68fd811c0d00a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/11f869b13cd9a15b54f4142a86a1d1fa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/11f869b13cd9a15b54f4142a86a1d1fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/77f7159da65d27744ccb7ec2ed17cde0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/77f7159da65d27744ccb7ec2ed17cde0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/933595396ad388847056f4929bb7c174/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/933595396ad388847056f4929bb7c174/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2a14d30c1a6f9173e9aaf0f6242723d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2a14d30c1a6f9173e9aaf0f6242723d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/26af527056085e9eea5c7d4c5df67c95/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/26af527056085e9eea5c7d4c5df67c95/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e1f9a064d2c2a107fb6fa2977ada93d2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e1f9a064d2c2a107fb6fa2977ada93d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/eea00d851d06812a36224785341805c4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/eea00d851d06812a36224785341805c4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4d7ef9ab227870095d1173b44565cc08/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4d7ef9ab227870095d1173b44565cc08/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1fbe82422a6fe1d84dfaefa1ac1abd06/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1fbe82422a6fe1d84dfaefa1ac1abd06/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ab977be10c4f6eb77b8882c2fa54d246/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ab977be10c4f6eb77b8882c2fa54d246/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/4f62afca709f2d525ad4a4653dcfb49d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/4f62afca709f2d525ad4a4653dcfb49d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/41adf522ddab60c5b334a68e153ba9fc/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/41adf522ddab60c5b334a68e153ba9fc/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/8b4531ac86cdbf16dfe75422fb260a9d/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/8b4531ac86cdbf16dfe75422fb260a9d/AndroidManifest.xml:7:5-9:41
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -317,215 +335,221 @@ INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/Andro
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
-activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:23:9-29:75
-	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:25:13-46
-	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:27:13-48
-	android:exported
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:26:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:28:13-102
-	android:theme
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:29:13-72
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:24:13-85
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:31:9-35:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:35:9-39:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:35:9-39:19
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:31:18-89
-meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:32:13-34:85
-	android:value
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:34:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.1.aar/22e676cb9eaa49c378bb04deda4dfefe/AndroidManifest.xml:33:17-109
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/611bc9cb1ffd3151f2b0fab26b4dc968/AndroidManifest.xml:8:5-67
-MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/611bc9cb1ffd3151f2b0fab26b4dc968/AndroidManifest.xml:8:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:8:5-67
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:8:5-67
-	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:22:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:7:5-79
-MERGED from [com.google.firebase:firebase-storage-common:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/adf78a0eea98931a149fbdfa02cebd92/AndroidManifest.xml:7:5-79
+ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/8b4531ac86cdbf16dfe75422fb260a9d/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/8b4531ac86cdbf16dfe75422fb260a9d/AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:23:22-76
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:24:5-68
+		ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:25:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:24:22-65
-meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:28:13-30:85
+		ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:26:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:29:9-33:19
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:17:9-21:19
+MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:17:9-21:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:29:18-89
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:30:13-32:85
 	android:value
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:30:17-82
+		ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:32:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/13879a87f92c7219b142dd839718ff2c/AndroidManifest.xml:29:17-139
-uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:26:5-110
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:26:22-107
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:29:9-33:20
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:31:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:30:13-85
-receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/4644734b37fc844057f2dd7463c343b9/AndroidManifest.xml:29:9-37:20
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:36:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:37:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:38:13-69
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:35:13-100
-intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:39:13-41:29
-action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:40:17-79
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:40:25-76
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:44:9-47:40
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:46:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:45:13-84
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:48:9-52:72
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:50:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:51:13-37
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:52:13-69
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/895d8e800a51a44b7b9467d4f60a54b9/AndroidManifest.xml:49:13-87
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:26:5-82
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:26:22-79
-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:28:5-30:47
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:30:9-44
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:29:9-63
-permission#com.example.cristianion.nexthr.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:28:5-30:47
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:30:9-44
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:29:9-63
-uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:32:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:32:22-76
-uses-permission#com.example.cristianion.nexthr.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:32:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:32:22-76
-meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:36:13-38:85
+		ADDED from [com.google.firebase:firebase-database:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-database-16.1.0.aar/c0c8141dccc2aa56435888e88ac48143/AndroidManifest.xml:31:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:31:13-33:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:38:17-82
+		ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:33:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:37:17-96
-receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:41:9-50:20
+		ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.1.0.aar/c8ce82ad2be2ec9472736c0afd6e8741/AndroidManifest.xml:32:17-107
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:28:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:43:13-36
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:27:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:44:13-73
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:42:13-78
-intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:45:13-49:29
-intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.example.cristianion.nexthr
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:45:13-49:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:46:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:46:25-78
-category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:48:17-61
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:48:27-58
-category#com.example.cristianion.nexthr
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:48:17-61
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:48:27-58
-service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:56:9-62:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:58:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:57:13-77
-intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:59:13-61:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:59:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:60:17-80
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/5ca69140a1cbd5b8a4657b9b1a98f6ce/AndroidManifest.xml:60:25-77
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:9:9-13:39
-	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:11:13-72
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:12:13-37
-	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:13:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/a206eeeda5598eee196644342b6f668b/AndroidManifest.xml:10:13-77
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:29:13-102
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:31:13-47
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/c4dddf3adafb904ed7d18142d56cc400/AndroidManifest.xml:24:13-79
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:23:9-25:69
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:36:13-38:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:38:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/a379b27a3f33a53276f747924f1c6459/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/04e278ecf5cd0577fe3a301fbd3c3c55/AndroidManifest.xml:37:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:18.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.1.0.aar/1c8f5e899e59468a5a064959adac25b4/AndroidManifest.xml:19:17-111
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.5.aar/056a12b98afeae252eedbe854ba11071/AndroidManifest.xml:29:17-139
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.3.0.aar/76c0812d20ab01397522f282b1259890/AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.3.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.3.0.aar/7747de31a79bc9d3247b81719d10d794/AndroidManifest.xml:49:13-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:42:25-78
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/3198129ee1066a8fff2df95ac185772d/AndroidManifest.xml:54:25-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:12:9-16:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:15:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/firebase-common-16.1.0.aar/39dff7d2865846d56956f2182a704d25/AndroidManifest.xml:13:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:24:13-58

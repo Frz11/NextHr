@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Models.Company;
 import com.example.cristianion.nexthr.Models.Employee;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,26 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 public class LoginActivity extends AppCompatActivity {
 
     private DatabaseReference db = FirebaseDatabase.getInstance().getReference("companies");
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(auth.getCurrentUser() == null){
+            db.orderByChild("employees/id").equalTo("").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                     showError(getApplicationContext(), "Password is required!");
                     return;
                 }
+                /*
                 db.orderByChild("name").equalTo(company).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -97,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                });
+                });*/
             }
 
         });

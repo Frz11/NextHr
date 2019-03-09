@@ -4,7 +4,7 @@
             "outputFile": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ba632963d6317f1bd1ee57e0f9989690/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/357f62afb2466fd6b132de8a50e45ea8/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

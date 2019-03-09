@@ -35,7 +35,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final TextView oldPassword = findViewById(R.id.oldPassword);
                 final TextView newPassword = findViewById(R.id.newPassword);
-                mDatabase.child("password").addListenerForSingleValueEvent(new ValueEventListener() {
+                /*mDatabase.child("password").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String dbPass = dataSnapshot.getValue(String.class);
@@ -65,7 +65,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                });
+                });*/
 
             }
         });
