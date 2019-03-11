@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(auth.getCurrentUser() == null){
+        if(auth.getCurrentUser() != null){
             db.orderByChild("employees/id").equalTo("").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -63,13 +63,9 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String company = ((TextView)findViewById(R.id.Company)).getText().toString();
                 final String email = ((TextView)findViewById(R.id.Email)).getText().toString();
                 final String password = ((TextView) findViewById(R.id.Password)).getText().toString();
-                if(company.length() == 0){
-                    showError(getApplicationContext(),"Company name is required!");
-                    return;
-                }
+
                 if(email.length() == 0){
                     showError(getApplicationContext(), "Email is required!");
                     return;

@@ -26,6 +26,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -44,7 +47,8 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 
 public class ProfileFragment extends Fragment {
 
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies");
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static final int PICK_IMAGE = 1;
     @Nullable
     @Override
@@ -62,12 +66,13 @@ public class ProfileFragment extends Fragment {
         final TextView phone = view.findViewById(R.id.profilePhone);
 
         final ImageView profilePhoto = view.findViewById(R.id.imagePicker);
-        mDatabase.child(currentCompany.id).child("images").orderByChild("userId").equalTo(currentEmployee.id).addListenerForSingleValueEvent(new ValueEventListener() {
+        db.collection("companies").document(currentEmployee.companyId).collection("images")
+                .whereEqualTo("userId",currentEmployee.id).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        Image image = snapshot.getValue(Image.class);
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()){
+                    for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        Image image = data.toObject(Image.class);
                         StorageReference storage = FirebaseStorage.getInstance().getReference("images/").child(currentCompany.id).child(image.id);
                         storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
@@ -79,11 +84,6 @@ public class ProfileFragment extends Fragment {
                         break;
                     }
                 }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
 
@@ -129,13 +129,17 @@ public class ProfileFragment extends Fragment {
                 currentEmployee.email = email.getText().toString();
                 currentEmployee.birthday = birthday.getText().toString();
                 currentEmployee.phone = phone.getText().toString();
-                mDatabase.child(currentCompany.id).child("employees").child(currentEmployee.id).setValue(currentEmployee).addOnSuccessListener(new OnSuccessListener<Void>() {
+                db.collection("companies").document(currentEmployee.companyId).collection("employees")
+                        .document(currentEmployee.id).set(currentEmployee).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                        Objects.requireNonNull(getActivity()).recreate();
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Objects.requireNonNull(getFragmentManager()).beginTransaction().replace(R.id.Frame,new ProfileFragment()).commit();
+                        } else {
+                            showError(getContext(),"Something went wrong...");
+                        }
                     }
                 });
-
             }
         });
 
@@ -169,30 +173,31 @@ public class ProfileFragment extends Fragment {
                 }
             final StorageReference storage = FirebaseStorage.getInstance().getReference("images/");
             final Image image = new Image(UUID.randomUUID().toString(),currentEmployee.id);
-            mDatabase.child(currentCompany.id).child("images").orderByChild("userId").equalTo(currentEmployee.id).addListenerForSingleValueEvent(new ValueEventListener() {
+            db.collection("companies").document(currentEmployee.companyId).collection("images")
+                    .whereEqualTo("userId",currentEmployee.id).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        Image image = snapshot.getValue(Image.class);
-                        snapshot.getRef().setValue(null);
-                        storage.child(currentCompany.id).child(image.id).delete();
-                    }
-                    mDatabase.child(currentCompany.id).child("images").child(image.id).setValue(image).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            storage.child(currentCompany.id).child(image.id).putFile(data.getData()).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    Objects.requireNonNull(getActivity()).recreate();
-                                }
-                            });
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()){
+                        for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                            Image image = data.toObject(Image.class);
+                            data.getReference().delete();
+                            storage.child(currentCompany.id).child(image.id).delete();
                         }
-                    });
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                        db.collection("companies").document(currentEmployee.companyId).collection("images")
+                                .document(image.id).set(image).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    storage.child(currentCompany.id).child(image.id).putFile(Objects.requireNonNull(data.getData())).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            Objects.requireNonNull(getActivity()).recreate();
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
                 }
             });
 

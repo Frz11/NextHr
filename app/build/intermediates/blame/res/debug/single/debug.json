@@ -480,10 +480,6 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_activity_firebase_log_in.xml.flat",
-        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/activity_firebase_log_in.xml"
-    },
-    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1196,6 +1192,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/font_lobster.ttf.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/font/lobster.ttf"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable/abc_ic_go_search_api_material.xml"
     },
@@ -1380,6 +1380,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/font_supermercado_one.ttf.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/font/supermercado_one.ttf"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -1492,6 +1496,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/font_cabin.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/font/cabin.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/color_abc_tint_default.xml.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/color/abc_tint_default.xml"
     },
@@ -1578,6 +1586,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/font_cousine.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/font/cousine.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable_anonymous.png.flat",
@@ -1710,6 +1722,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_activity_login_new.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/activity_login_new.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",

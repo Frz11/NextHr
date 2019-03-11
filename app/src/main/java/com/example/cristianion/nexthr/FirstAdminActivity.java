@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.cristianion.nexthr.Models.Company;
 import com.example.cristianion.nexthr.Models.Employee;
 import com.example.cristianion.nexthr.Models.Role;
+import com.example.cristianion.nexthr.Models.UserCompany;
 import com.example.cristianion.nexthr.Models.UserRole;
 import com.example.cristianion.nexthr.Utils.AESUtils;
 import com.example.cristianion.nexthr.Utils.Global;
@@ -142,10 +143,16 @@ public class FirstAdminActivity extends AppCompatActivity {
                                                                                             addOnSuccessListener(new OnSuccessListener<Void>() {
                                                                                                 @Override
                                                                                                 public void onSuccess(Void aVoid) {
-                                                                                                    Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
-                                                                                                    Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
-                                                                                                    startActivity(intent);
-                                                                                                    finish();
+                                                                                                    UserCompany userCompany = new UserCompany(UUID.randomUUID().toString(),admin.id,company.id);
+                                                                                                    db.collection("UserCompany").document(UUID.randomUUID().toString()).set(userCompany).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                        @Override
+                                                                                                        public void onSuccess(Void aVoid) {
+                                                                                                            Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
+                                                                                                            Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
+                                                                                                            startActivity(intent);
+                                                                                                            finish();
+                                                                                                        }
+                                                                                                    });
                                                                                                 }
                                                                                             });
                                                                                 }

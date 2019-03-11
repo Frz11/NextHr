@@ -8,6 +8,10 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="28" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNETr" />
 
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
@@ -28,7 +32,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.cristianion.nexthr.FirebaseLogIn" />
+        <activity
+            android:name="com.example.cristianion.nexthr.LoginNewActivity"
+            android:label="@string/title_activity_login_new" />
         <activity android:name="com.example.cristianion.nexthr.LoginActivity" />
         <activity android:name="com.example.cristianion.nexthr.WelcomeActivity" >
             <intent-filter>
@@ -43,6 +49,10 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.cristianion.nexthr.ChangePasswordActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

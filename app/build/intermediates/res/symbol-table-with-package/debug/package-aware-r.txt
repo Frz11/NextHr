@@ -25,6 +25,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1087,6 +1091,10 @@ drawable picker_divider_color
 drawable side_nav_bar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font cabin
+font cousine
+font lobster
+font supermercado_one
 id ALT
 id AddRoleButton
 id ArrivalTime
@@ -1186,6 +1194,9 @@ id direct
 id disableHome
 id drawer_layout
 id edit_query
+id email
+id email_login_form
+id email_sign_in_button
 id end
 id end_padder
 id enterAlways
@@ -1228,6 +1239,9 @@ id line3
 id listMode
 id list_item
 id loginButton
+id loginLayout
+id login_form
+id login_progress
 id masked
 id media_actions
 id message
@@ -1262,6 +1276,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id password
 id percent
 id pin
 id profileBirthday
@@ -1335,6 +1350,7 @@ id textView
 id textView2
 id textView3
 id textView4
+id textView5
 id textView6
 id text_input_password_toggle
 id textinput_counter
@@ -1414,9 +1430,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_change_password
-layout activity_firebase_log_in
 layout activity_first_admin
 layout activity_login
+layout activity_login_new
 layout activity_menu
 layout activity_welcome
 layout app_bar_menu
@@ -1506,6 +1522,8 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string action_sign_in
+string action_sign_in_short
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -1532,6 +1550,10 @@ string common_signin_button_text_long
 string company
 string default_web_client_id
 string email
+string error_field_required
+string error_incorrect_password
+string error_invalid_email
+string error_invalid_password
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url
@@ -1560,9 +1582,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_rationale
 string project_id
+string prompt_email
+string prompt_password
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_login_new
 string title_activity_menu
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -1948,6 +1974,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style WhiteEdit
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
