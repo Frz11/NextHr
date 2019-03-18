@@ -20,12 +20,17 @@ import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Adapters.RolesAdapter;
 import com.example.cristianion.nexthr.Models.Role;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +43,8 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 
 public class RolesFragment extends Fragment {
 
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies").child(currentCompany.id);
+    //private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies").child(currentCompany.id);
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Nullable
     @Override
@@ -58,13 +64,14 @@ public class RolesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         final RecyclerView rvRoles = (RecyclerView) view.findViewById(R.id.RoleRecycler);
         //get roles
-        mDatabase.child("roles").orderByChild("name").addListenerForSingleValueEvent(new ValueEventListener() {
+        db.collection("companies").document(currentCompany.id).collection("roles")
+                .orderBy("name").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
                     ArrayList<Role> roles = new ArrayList<>();
-                    for(DataSnapshot child : dataSnapshot.getChildren()){
-                        final Role foundRole = child.getValue(Role.class);
+                    for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        Role foundRole = data.toObject(Role.class);
                         roles.add(foundRole);
                     }
                     RolesAdapter adapter = new RolesAdapter(roles,getFragmentManager());
@@ -72,35 +79,35 @@ public class RolesFragment extends Fragment {
                     rvRoles.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 }
                 Button button = view.findViewById(R.id.AddRoleButton);
-                final TextView role = view.findViewById(R.id.Role);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        final TextView role = view.findViewById(R.id.Role);
                         String roleName = role.getText().toString();
                         if(roleName.length() == 0){
                             showError(getContext(),"Role name is required!");
                             return;
                         }
                         Role roleTBA = new Role(UUID.randomUUID().toString(),roleName);
-                        mDatabase.child("roles").child(roleTBA.id).setValue(roleTBA).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        db.collection("companies").document(currentCompany.id).collection("roles")
+                                .document(roleTBA.id).set(roleTBA).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
-                            public void onSuccess(Void aVoid) {
-                                FragmentManager fragmentManager = getFragmentManager();
-                                FragmentTransaction fragmentTransaction = Objects.requireNonNull(fragmentManager).beginTransaction();
-                                fragmentTransaction.replace(R.id.Frame,new RolesFragment());
-                                fragmentTransaction.commit();
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    FragmentManager fragmentManager = getFragmentManager();
+                                    FragmentTransaction fragmentTransaction = Objects.requireNonNull(fragmentManager).beginTransaction();
+                                    fragmentTransaction.replace(R.id.Frame,new RolesFragment());
+                                    fragmentTransaction.commit();
+                                } else {
+
+                                }
                             }
                         });
+
                     }
                 });
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
         });
-
 
     }
 }

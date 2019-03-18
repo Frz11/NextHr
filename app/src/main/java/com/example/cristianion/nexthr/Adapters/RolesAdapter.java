@@ -16,20 +16,24 @@ import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.R;
 import com.example.cristianion.nexthr.RolesFragment;
 import com.example.cristianion.nexthr.Utils.Global;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
 
 import java.util.List;
 
+import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 
 public class RolesAdapter extends
         RecyclerView.Adapter<RolesAdapter.ViewHolder> {
 
-    private DatabaseReference db = FirebaseDatabase.getInstance().getReference("companies").child(Global.currentCompany.id).child("roles");
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private List<Role> mRoles;
     private LayoutInflater mInflater;
     private AdapterView.OnItemClickListener mClickListenr;
@@ -37,13 +41,12 @@ public class RolesAdapter extends
 
     public class ViewHolder extends RecyclerView.ViewHolder  {
         TextView roleName;
-        FontAwesome editButton,deleteButton;
+        FontAwesome deleteButton;
         Context context;
         ViewHolder(View itemView){
             super(itemView);
             context = itemView.getContext();
             roleName = itemView.findViewById(R.id.RoleName);
-            editButton = itemView.findViewById(R.id.EditRole);
             deleteButton = itemView.findViewById(R.id.DeleteRole);
         }
     }
@@ -70,27 +73,32 @@ public class RolesAdapter extends
 
         final TextView roleName = viewHolder.roleName;
         roleName.setText(role.name);
-        FontAwesome editButton = viewHolder.editButton;
         FontAwesome deleteButton = viewHolder.deleteButton;
         if(role.name.equals("Admin")){
-            editButton.setVisibility(View.INVISIBLE);
             deleteButton.setVisibility(View.INVISIBLE);
+        } else {
+            roleName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //go to edit
+                    showError(viewHolder.context,role.name);
+                }
+            });
         }
-        editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showError(viewHolder.context,role.name);
-            }
-        });
 
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!role.name.equals("Admin")) {
-                    db.child(role.id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    db.collection("companies").document(currentCompany.id).
+                            collection("roles").document(role.id).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
-                        public void onSuccess(Void aVoid) {
-                            fragmentManager.beginTransaction().replace(R.id.Frame, new RolesFragment()).commit();
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                fragmentManager.beginTransaction().replace(R.id.Frame, new RolesFragment()).commit();
+                            } else {
+
+                            }
                         }
                     });
                 } else{

@@ -576,12 +576,12 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/res/drawable-xhdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable_design_bottom_navigation_item_background.xml.flat",
@@ -1126,6 +1126,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/anim_abc_fade_in.xml.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_layout_attendance_item.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/layout_attendance_item.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",

@@ -31,8 +31,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.Objects;
 
 import static com.example.cristianion.nexthr.Utils.Global.adminRole;
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
@@ -42,7 +47,18 @@ public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies");
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag("last_fragment");
+        if (fragment != null) {
+            getSupportFragmentManager().putFragment(outState, "last_fragment", fragment);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -63,11 +79,17 @@ public class MenuActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment profileFragment = new ProfileFragment();
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
+        Fragment fragment;
+        if(savedInstanceState == null) {
+            fragment = new ProfileFragment();
+        } else {
+            fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
+        }
 
-        ft.replace(R.id.Frame,profileFragment);
+        ft.replace(R.id.Frame,fragment);
 
         ft.commit();
 
@@ -91,12 +113,16 @@ public class MenuActivity extends AppCompatActivity
         ((TextView) findViewById(R.id.Company)).setText(currentCompany.name);
         ((TextView) findViewById(R.id.Name)).setText(currentEmployee.lastName + " " + currentEmployee.firstName);
         final ImageView profilePhoto = findViewById(R.id.profileImage);
-        mDatabase.child(currentCompany.id).child("images").orderByChild("userId").equalTo(currentEmployee.id).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+        db.collection("companies").document(currentCompany.id)
+                .collection("images").whereEqualTo("userId",currentEmployee.id)
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Image image = snapshot.getValue(Image.class);
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for(QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        Image image = data.toObject(Image.class);
                         StorageReference storage = FirebaseStorage.getInstance().getReference("images/").child(currentCompany.id).child(image.id);
                         storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
@@ -105,23 +131,46 @@ public class MenuActivity extends AppCompatActivity
 
                             }
                         });
-                        break;
                     }
+                } else {
+
                 }
             }
-
+        });
+        db.collection("companies").document(currentCompany.id).collection("roles").whereEqualTo("name","Admin")
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        adminRole = data.toObject(Role.class);
+                        break;
+                    }
+                    //check if user has admin role!
+                    db.collection("companies").document(currentCompany.id)
+                            .collection("user_role").whereEqualTo("roleId",adminRole.id).whereEqualTo("userId",currentEmployee.id)
+                            .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if(task.isSuccessful()){
+                                if(task.getResult() != null){
+                                    final NavigationView nav = findViewById(R.id.nav_view);
+                                    new Handler().post(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            nav.getMenu().findItem(R.id.nav_administration).setVisible(true);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    });
+                } else {
 
+                }
             }
         });
-        final NavigationView nav = findViewById(R.id.nav_view);
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                nav.getMenu().findItem(R.id.nav_administration).setVisible(true);
-            }
-        });
+
 
         return true;
     }
@@ -178,7 +227,7 @@ public class MenuActivity extends AppCompatActivity
         if(fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.Frame,fragment);
+            fragmentTransaction.replace(R.id.Frame,fragment,"last_fragment");
             fragmentTransaction.commit();
         }
 

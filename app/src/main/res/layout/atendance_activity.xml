@@ -12,8 +12,10 @@
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,9 +25,9 @@
                 android:id="@+id/ArrivalTime"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="time"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -36,9 +38,9 @@
                 android:id="@+id/textView"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:text="Arrival Time"
                 android:textAlignment="viewStart"
                 android:textSize="18sp"
@@ -51,9 +53,9 @@
                 android:id="@+id/textView4"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:text="Leaving Time"
                 android:textAlignment="viewStart"
                 android:textSize="18sp"
@@ -66,9 +68,9 @@
                 android:id="@+id/LeavingTime"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="time"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,9 +81,9 @@
                 android:id="@+id/signAttendanceButton"
                 android:layout_width="246dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
                 android:background="@android:color/transparent"
                 android:text="Sign Attendance"
                 android:textColor="@android:color/holo_blue_light"
@@ -93,15 +95,13 @@
                 android:id="@+id/attendanceFor"
                 android:layout_width="0dp"
                 android:layout_height="36dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/RolesTable"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -118,22 +118,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/signAttendanceButton" />
 
-            <TableLayout
-                android:id="@+id/RolesTable"
-                android:layout_width="0dp"
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/AttendanceTable"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="5dp"
+                app:columnCount="3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
-                app:layout_constraintVertical_bias="0.0">
-
-            </TableLayout>
+                app:layout_constraintVertical_bias="0.002"
+                app:useDefaultMargins="true"/>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>

@@ -4,6 +4,7 @@ ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidM
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-41:12
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-41:12
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:2:1-41:12
+MERGED from [com.android.support:multidex:1.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/d1bb957d7c12932167efa995526c90f7/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/AndroidManifest.xml:17:1-22:12
@@ -34,6 +35,7 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/2b474e7e0e6b043fd0b9bd8db4c4df4b/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f40c5c9522cf54aad63cf88784c23c0c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/30a0078bc5963e7b85b6a20209b0465f/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/0d600a9796fe218d362d2b0bda078bb8/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/b5d0d9f1a9553af6a6b47ffc5cb5fbd4/AndroidManifest.xml:17:1-22:12
@@ -221,6 +223,8 @@ uses-sdk
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
 INJECTED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:multidex:1.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/d1bb957d7c12932167efa995526c90f7/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/d1bb957d7c12932167efa995526c90f7/AndroidManifest.xml:20:5-43
 MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.twinkle942910:monthyearpicker:0.0.1] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/monthyearpicker-0.0.1.aar/1bdda56b281d87d4521c00ef6195784d/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/AndroidManifest.xml:20:5-44
@@ -281,6 +285,8 @@ MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/c
 MERGED from [com.android.support:support-v4:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f40c5c9522cf54aad63cf88784c23c0c/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cfe53bdd072145f22d89da25a01d1d7e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/30a0078bc5963e7b85b6a20209b0465f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/30a0078bc5963e7b85b6a20209b0465f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/be06e0481e3661e856e27b9216e7528a/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/cristianion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/0d600a9796fe218d362d2b0bda078bb8/AndroidManifest.xml:20:5-44

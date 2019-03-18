@@ -5,14 +5,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TableLayout;
-import android.widget.TableRow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Models.Attendance;
@@ -24,9 +25,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.UUID;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
@@ -46,9 +48,57 @@ public class AttendanceFragment extends Fragment {
 
 
 
-    private void fillAttendanceTable(String date, String employeeId, TableLayout layout){
+    private void fillAttendanceTable(String stringDate, String employeeId, GridLayout layout) throws ParseException {
 
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        Date date = dateFormat.parse(stringDate+"-01");
+        cal.setTime(date);
+        cal.set(Calendar.DAY_OF_MONTH,1);
+        int myMonth = cal.get(Calendar.MONTH);
+
+        int day = 1;
+        while (myMonth == cal.get(Calendar.MONTH)){
+            if(!(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)){
+                RelativeLayout relativeLayout = new RelativeLayout(getContext());
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                lp.setMargins(7,7,7,7);
+                relativeLayout.setLayoutParams(lp);
+                relativeLayout.setBackgroundResource(R.color.bright_red);
+                relativeLayout.setPadding(5,5,5,5);
+
+                TextView attendanceDay = new TextView(getContext());
+                attendanceDay.setTextColor(Color.WHITE);
+                attendanceDay.setTextSize(28);
+                attendanceDay.setText(day+"");
+                RelativeLayout.LayoutParams lp_day = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                lp_day.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                attendanceDay.setLayoutParams(lp_day);
+                attendanceDay.setId(View.generateViewId());
+                relativeLayout.addView(attendanceDay);
+
+                TextView duration = new TextView(getContext());
+                duration.setTextSize(24);
+                duration.setTextColor(Color.WHITE);
+                duration.setText(R.string.notFound);
+
+                RelativeLayout.LayoutParams lp_duration = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                lp_duration.addRule(RelativeLayout.BELOW,attendanceDay.getId());
+                duration.setLayoutParams(lp_duration);
+                relativeLayout.addView(duration);
+
+
+                layout.addView(relativeLayout);
+
+                Log.wtf("inside",day+"");
+            }
+
+            Log.wtf("wtf",day+"");
+            day++;
+            cal.add(Calendar.DAY_OF_MONTH,1);
+        }
+        /*
         ArrayList<String> days = new ArrayList<>();
         String[] thisDate = date.split("-");
         final TableLayout attendanceTable = getView().findViewById(R.id.RolesTable);
@@ -77,7 +127,7 @@ public class AttendanceFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
     }
 
@@ -101,7 +151,11 @@ public class AttendanceFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                fillAttendanceTable(attendanceFor.getText().toString(),currentEmployee.id,((TableLayout)view.findViewById(R.id.RolesTable)));
+                try {
+                    fillAttendanceTable(attendanceFor.getText().toString(),currentEmployee.id,(GridLayout)view.findViewById(R.id.AttendanceTable));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         });
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM");

@@ -22,11 +22,11 @@
         android:layout_height="168dp"
         android:layout_weight="1"
         android:fontFamily="@font/cabin"
-        android:gravity="bottom"
         android:text="NextHR"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="55sp" />
+        android:textSize="55sp"
+        android:visibility="visible" />
 
     <ProgressBar
         android:id="@+id/login_progress"

@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/RoleName"
-        android:layout_width="313dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -16,18 +16,6 @@
         android:textSize="40sp" />
 
     <com.example.cristianion.nexthr.FontAwesome
-        android:id="@+id/EditRole"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="12dp"
-        android:layout_toEndOf="@+id/RoleName"
-        android:text="@string/icon_edit"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="36sp" />
-
-    <com.example.cristianion.nexthr.FontAwesome
         android:id="@+id/DeleteRole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,9 +23,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="4dp"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="0dp"
-        android:layout_toEndOf="@+id/EditRole"
         android:text="@string/icon_trash"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp" />
