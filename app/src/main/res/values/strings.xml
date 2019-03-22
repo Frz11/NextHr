@@ -17,6 +17,8 @@
     <string name="icon_people">&#xf007;</string>
     <string name="icon_edit">&#xf044;</string>
     <string name="icon_trash">&#xf1f8;</string>
+    <string name="icon_search">&#xf002;</string>
+    <string name="icon_plus">&#xf067;</string>
     <string name="title_activity_login_new">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -32,4 +34,9 @@
     </string>
     <string name="line">-</string>
     <string name="notFound">Not found!</string>
+    <string name="departments">Departments</string>
+    <string name="employees">Employees</string>
+    <string name="roles">Roles</string>
+    <string name="administration">Administration</string>
+    <string name="locations">Locations</string>
 </resources>

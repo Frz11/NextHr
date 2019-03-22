@@ -1,5 +1,6 @@
 package com.example.cristianion.nexthr;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,6 +27,7 @@ import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.Models.UserRole;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -82,11 +84,9 @@ public class MenuActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        Fragment fragment;
-        if(savedInstanceState == null) {
-            fragment = new ProfileFragment();
-        } else {
-            fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
+        Fragment fragment = new ProfileFragment();
+        if(savedInstanceState != null) {
+           // fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
         }
 
         ft.replace(R.id.Frame,fragment);
@@ -192,7 +192,10 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_log_out) {
-            return true;
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(MenuActivity.this,WelcomeActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -218,6 +221,7 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_roles) {
             fragment = new RolesFragment();
         } else if (id == R.id.nav_employees) {
+            fragment = new EmployeesFragment();
 
         }
 

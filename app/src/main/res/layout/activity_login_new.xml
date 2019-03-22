@@ -16,6 +16,14 @@
 
     <!-- Login progress -->
 
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="318dp"
@@ -27,14 +35,6 @@
         android:textColor="@android:color/white"
         android:textSize="55sp"
         android:visibility="visible" />
-
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
 
     <ScrollView
         android:id="@+id/login_form"

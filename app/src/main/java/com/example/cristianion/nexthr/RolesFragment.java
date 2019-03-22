@@ -1,5 +1,6 @@
 package com.example.cristianion.nexthr;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -78,36 +79,25 @@ public class RolesFragment extends Fragment {
                     rvRoles.setAdapter(adapter);
                     rvRoles.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 }
-                Button button = view.findViewById(R.id.AddRoleButton);
-                button.setOnClickListener(new View.OnClickListener() {
+                (view.findViewById(R.id.newRoleButton)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        final TextView role = view.findViewById(R.id.Role);
-                        String roleName = role.getText().toString();
-                        if(roleName.length() == 0){
-                            showError(getContext(),"Role name is required!");
-                            return;
-                        }
-                        Role roleTBA = new Role(UUID.randomUUID().toString(),roleName);
-                        db.collection("companies").document(currentCompany.id).collection("roles")
-                                .document(roleTBA.id).set(roleTBA).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if(task.isSuccessful()){
-                                    FragmentManager fragmentManager = getFragmentManager();
-                                    FragmentTransaction fragmentTransaction = Objects.requireNonNull(fragmentManager).beginTransaction();
-                                    fragmentTransaction.replace(R.id.Frame,new RolesFragment());
-                                    fragmentTransaction.commit();
-                                } else {
-
-                                }
-                            }
-                        });
-
+                        Intent intent = new Intent(getActivity(),AddRoleActivity.class);
+                        startActivityForResult(intent,1);
                     }
                 });
+
             }
         });
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1){
+            assert getFragmentManager() != null;
+            getFragmentManager().beginTransaction().replace(R.id.Frame,new RolesFragment()).commit();
+        }
     }
 }

@@ -17,18 +17,26 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Models.Attendance;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
@@ -37,7 +45,7 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 
 public class AttendanceFragment extends Fragment {
 
-    private DatabaseReference db = FirebaseDatabase.getInstance().getReference("companies").child(currentCompany.id);
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,87 +55,94 @@ public class AttendanceFragment extends Fragment {
 
 
 
-
-    private void fillAttendanceTable(String stringDate, String employeeId, GridLayout layout) throws ParseException {
-
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar cal = Calendar.getInstance();
-        Date date = dateFormat.parse(stringDate+"-01");
-        cal.setTime(date);
-        cal.set(Calendar.DAY_OF_MONTH,1);
-        int myMonth = cal.get(Calendar.MONTH);
-
-        int day = 1;
-        while (myMonth == cal.get(Calendar.MONTH)){
-            if(!(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)){
-                RelativeLayout relativeLayout = new RelativeLayout(getContext());
-                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                lp.setMargins(7,7,7,7);
-                relativeLayout.setLayoutParams(lp);
-                relativeLayout.setBackgroundResource(R.color.bright_red);
-                relativeLayout.setPadding(5,5,5,5);
-
-                TextView attendanceDay = new TextView(getContext());
-                attendanceDay.setTextColor(Color.WHITE);
-                attendanceDay.setTextSize(28);
-                attendanceDay.setText(day+"");
-                RelativeLayout.LayoutParams lp_day = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                lp_day.addRule(RelativeLayout.CENTER_HORIZONTAL);
-                attendanceDay.setLayoutParams(lp_day);
-                attendanceDay.setId(View.generateViewId());
-                relativeLayout.addView(attendanceDay);
-
-                TextView duration = new TextView(getContext());
-                duration.setTextSize(24);
-                duration.setTextColor(Color.WHITE);
-                duration.setText(R.string.notFound);
-
-                RelativeLayout.LayoutParams lp_duration = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                lp_duration.addRule(RelativeLayout.BELOW,attendanceDay.getId());
-                duration.setLayoutParams(lp_duration);
-                relativeLayout.addView(duration);
-
-
-                layout.addView(relativeLayout);
-
-                Log.wtf("inside",day+"");
+    private static Attendance searchByDay(List<Attendance> attendances,String day){
+        Attendance foundAttendance = null;
+        for (Attendance current : attendances){
+            if(current.day.equals(day)){
+                return current;
             }
-
-            Log.wtf("wtf",day+"");
-            day++;
-            cal.add(Calendar.DAY_OF_MONTH,1);
         }
-        /*
-        ArrayList<String> days = new ArrayList<>();
-        String[] thisDate = date.split("-");
-        final TableLayout attendanceTable = getView().findViewById(R.id.RolesTable);
-        attendanceTable.removeAllViews();
+        return foundAttendance;
+    }
 
-        db.child("attendance").orderByChild("day").startAt(date).endAt(date+"\uf8ff").addListenerForSingleValueEvent(new ValueEventListener() {
+    private void fillAttendanceTable(final String stringDate, String employeeId, final GridLayout layout) throws ParseException {
+
+        layout.removeAllViews();
+        db.collection("companies").document(currentCompany.id).collection("attendances")
+                .whereEqualTo("employeeId",employeeId).whereLessThan("day",stringDate+"-31")
+                .whereGreaterThan("day",stringDate+"-01").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot child : dataSnapshot.getChildren()){
-                        Attendance foundAttendance = child.getValue(Attendance.class);
-                        TableRow tr = new TableRow(getContext());
-                        tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                        TextView attendanceText = new TextView(getContext());
-                        attendanceText.setText("Date: " + foundAttendance.day + "\n Arrival: " + foundAttendance.arrivalTime + "\n Left: " + foundAttendance.leaveTime);
-                        attendanceText.setTextSize(20);
-                        attendanceText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
-                        attendanceText.setTextColor(Color.BLACK);
-                        tr.addView(attendanceText);
-                        attendanceTable.addView(tr, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.WRAP_CONTENT));
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                List<Attendance> attendances = queryDocumentSnapshots.toObjects(Attendance.class);
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Calendar cal = Calendar.getInstance();
+                Date date = null;
+                try {
+                    date = dateFormat.parse(stringDate+"-01");
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                cal.setTime(date);
+                cal.set(Calendar.DAY_OF_MONTH,1);
+                int myMonth = cal.get(Calendar.MONTH);
+
+                int day = 1;
+                while (myMonth == cal.get(Calendar.MONTH)){
+                    if(!(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)){
+                        RelativeLayout relativeLayout = new RelativeLayout(getContext());
+                        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        lp.setMargins(7,7,7,7);
+                        lp.width=(int) getResources().getDimension(R.dimen.attendance_item_width);
+                        relativeLayout.setLayoutParams(lp);
+                        relativeLayout.setPadding(5,5,5,5);
+
+                        TextView attendanceDay = new TextView(getContext());
+                        attendanceDay.setTextColor(Color.WHITE);
+                        attendanceDay.setTextSize(28);
+                        attendanceDay.setText(day+"");
+                        RelativeLayout.LayoutParams lp_day = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        lp_day.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                        attendanceDay.setLayoutParams(lp_day);
+                        attendanceDay.setId(View.generateViewId());
+
+                        TextView duration = new TextView(getContext());
+                        duration.setTextSize(24);
+                        duration.setTextColor(Color.WHITE);
+
+                        RelativeLayout.LayoutParams lp_duration = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        lp_duration.addRule(RelativeLayout.BELOW,attendanceDay.getId());
+                        lp_duration.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                        duration.setLayoutParams(lp_duration);
+
+                        Attendance currentAttendance = searchByDay(attendances,stringDate+"-"+day);
+                        if(currentAttendance != null){
+                            if(currentAttendance.leaveTime.length() == 0) {
+                                relativeLayout.setBackgroundResource(R.color.bright_orange);
+                                duration.setText(currentAttendance.arrivalTime+"-"+"?????");
+                            } else {
+                                relativeLayout.setBackgroundResource(R.color.bright_blue);
+                                duration.setText(currentAttendance.arrivalTime+"-"+currentAttendance.leaveTime);
+                            }
+                        } else {
+                            relativeLayout.setBackgroundResource(R.color.bright_red);
+                            duration.setText(R.string.notFound);
+                        }
+                        relativeLayout.addView(attendanceDay);
+                        relativeLayout.addView(duration);
+                        layout.addView(relativeLayout);
+
+
                     }
+
+                    Log.wtf("wtf",day+"");
+                    day++;
+                    cal.add(Calendar.DAY_OF_MONTH,1);
                 }
             }
+        });
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });*/
 
     }
 
@@ -180,23 +195,18 @@ public class AttendanceFragment extends Fragment {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         String date = df.format(c.getTime());
-        db.child("attendance").orderByChild("day").equalTo(date).addListenerForSingleValueEvent(new ValueEventListener() {
+        db.collection("companies").document(currentEmployee.companyId).collection("attendances").
+                whereEqualTo("day",date).whereEqualTo("employeeId",currentEmployee.id).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot child : dataSnapshot.getChildren()){
-                        Attendance foundAttendance = child.getValue(Attendance.class);
-                        if(foundAttendance.employeeId.equals(currentEmployee.id)){
-                            ((TextView) view.findViewById(R.id.ArrivalTime)).setText(foundAttendance.arrivalTime);
-                            ((TextView) view.findViewById(R.id.LeavingTime)).setText(foundAttendance.leaveTime);
-                        }
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for(QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        Attendance foundAttendance = data.toObject(Attendance.class);
+                        ((TextView) view.findViewById(R.id.ArrivalTime)).setText(foundAttendance.arrivalTime);
+                        ((TextView) view.findViewById(R.id.LeavingTime)).setText(foundAttendance.leaveTime);
+                        break;
                     }
                 }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
 
@@ -216,24 +226,24 @@ public class AttendanceFragment extends Fragment {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                 String date = df.format(c.getTime());
                 final Attendance attendance = new Attendance(UUID.randomUUID().toString(),arrivalTime,leaveTime,currentEmployee.id,date);
-                db.child("attendance").orderByChild("day").equalTo(date).addListenerForSingleValueEvent(new ValueEventListener() {
+                db.collection("companies").document(currentCompany.id).collection("attendances")
+                        .whereEqualTo("day",date).whereEqualTo("employeeId",currentEmployee.id).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-                            boolean found = false;
-                            for(DataSnapshot child : dataSnapshot.getChildren()){
-                                Attendance foundAttendance = child.getValue(Attendance.class);
-                                //we found an attendance for today, assume updating leaving time
-                                if(foundAttendance.employeeId.equals(attendance.employeeId)) {
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            if(!Objects.requireNonNull(task.getResult()).isEmpty()){
+                                for(QueryDocumentSnapshot data : task.getResult()){
+                                    Attendance foundAttendance = data.toObject(Attendance.class);
                                     if(attendance.leaveTime.length() == 0){
                                         showError(getContext(),"Leaving time is required because you previously set the arrival time!");
                                         return;
                                     }
-                                    found = true;
-                                    child.getRef().child("leaveTime").setValue(attendance.leaveTime).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    db.collection("companies").document(currentCompany.id)
+                                            .collection("attendances").document(foundAttendance.id).set(attendance).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             try {
+                                                assert getFragmentManager() != null;
                                                 getFragmentManager().beginTransaction().replace(R.id.Frame,AttendanceFragment.class.newInstance()).commit();
                                             } catch (IllegalAccessException e) {
                                                 e.printStackTrace();
@@ -242,40 +252,25 @@ public class AttendanceFragment extends Fragment {
                                             }
                                         }
                                     });
+                                    break;
                                 }
-                            }
-                            if(!found){
-                                db.child("attendance").child(attendance.id).setValue(attendance).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            } else {
+                                db.collection("companies").document(currentCompany.id)
+                                        .collection("attendances").document(attendance.id).set(attendance).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         try {
+                                            assert getFragmentManager() != null;
                                             getFragmentManager().beginTransaction().replace(R.id.Frame,AttendanceFragment.class.newInstance()).commit();
                                         } catch (IllegalAccessException e) {
                                             e.printStackTrace();
                                         } catch (java.lang.InstantiationException e) {
                                             e.printStackTrace();
-                                        }                                    }
+                                        }
+                                    }
                                 });
                             }
-                        } else {
-                            db.child("attendance").child(attendance.id).setValue(attendance).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    try {
-                                        getFragmentManager().beginTransaction().replace(R.id.Frame,AttendanceFragment.class.newInstance()).commit();
-                                    } catch (IllegalAccessException e) {
-                                        e.printStackTrace();
-                                    } catch (java.lang.InstantiationException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
                         }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
                     }
                 });
 

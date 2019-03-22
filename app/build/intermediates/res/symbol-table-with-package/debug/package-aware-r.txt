@@ -815,6 +815,7 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen attendance_item_width
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1124,6 +1125,7 @@ id Company
 id ConfirmPassword
 id DeleteRole
 id Email
+id EmployeesRecycler
 id FUNCTION
 id FirstName
 id Frame
@@ -1274,6 +1276,7 @@ id month_picker
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id nav_administration
 id nav_attendance
 id nav_employees
@@ -1286,6 +1289,7 @@ id navigation_header_container
 id never
 id newCompanyLayout
 id newPassword
+id newRoleButton
 id none
 id normal
 id notification_background
@@ -1301,6 +1305,7 @@ id parent_matrix
 id password
 id percent
 id pin
+id profImage
 id profileBirthday
 id profileEmail
 id profileFirstName
@@ -1316,6 +1321,7 @@ id relativeLayoutAux
 id right
 id right_icon
 id right_side
+id role
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1325,6 +1331,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
 id search_badge
 id search_bar
 id search_button
@@ -1397,6 +1404,7 @@ id unlabeled
 id up
 id useLogo
 id vertical
+id viewLayout
 id view_offset_helper
 id visible
 id wide
@@ -1453,6 +1461,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_role
 layout activity_change_password
 layout activity_first_admin
 layout activity_login
@@ -1476,6 +1485,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout layout_attendance_item
+layout layout_employees
+layout layout_employees_item
 layout layout_rolelistitem
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1593,6 +1604,8 @@ string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_edit
 string icon_people
+string icon_plus
+string icon_search
 string icon_trash
 string line
 string log_in

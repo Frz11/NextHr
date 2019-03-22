@@ -87,7 +87,8 @@ public class LoginNewActivity extends AppCompatActivity implements LoaderCallbac
     @Override
     protected void onStart() {
         super.onStart();
-        firebaseAuth.signOut();
+        //firebaseAuth.signOut();
+        showProgress(true);
         if(firebaseAuth.getCurrentUser() != null){
             final String userID = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid();
             db.collection("UserCompany").whereEqualTo("userId",userID).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -113,6 +114,7 @@ public class LoginNewActivity extends AppCompatActivity implements LoaderCallbac
                                             }
                                             Intent intent = new Intent(LoginNewActivity.this,MenuActivity.class);
                                             startActivity(intent);
+                                            showProgress(false);
                                             finish();
                                             return;
                                         }
@@ -125,6 +127,8 @@ public class LoginNewActivity extends AppCompatActivity implements LoaderCallbac
                     }
                 }
             });
+        } else {
+            showProgress(false);
         }
     }
 
