@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ import java.util.UUID;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isEmailValid;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isValidDate;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class FirstAdminActivity extends AppCompatActivity {
 
@@ -49,6 +51,9 @@ public class FirstAdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_admin);
         final Company company = new Company(getIntent().getStringExtra("companyId"),getIntent().getStringExtra("companyName"));
+        final View firstAdminView = findViewById(R.id.FirstAdminView);
+        final ProgressBar progressBar = findViewById(R.id.FirstAdminProgress);
+
         Button firstAdminButton = findViewById(R.id.firstAdminButton);
         firstAdminButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +102,7 @@ public class FirstAdminActivity extends AppCompatActivity {
                     showError(getApplicationContext(),"Passwords don't match");
                     return;
                 }
+                showProgress(true,firstAdminView,progressBar);
 
                 auth.createUserWithEmailAndPassword(email,password).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -147,6 +153,7 @@ public class FirstAdminActivity extends AppCompatActivity {
                                                                                                     db.collection("UserCompany").document(UUID.randomUUID().toString()).set(userCompany).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                                                                         @Override
                                                                                                         public void onSuccess(Void aVoid) {
+                                                                                                            showProgress(false,firstAdminView,progressBar);
                                                                                                             Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
                                                                                                             Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
                                                                                                             startActivity(intent);

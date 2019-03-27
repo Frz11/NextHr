@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddRoleActivity"></activity>
+        <activity android:name=".EditLocationActivity"></activity>
+        <activity android:name=".AddLocationActivity" />
+        <activity android:name=".AddRoleActivity" />
         <activity
             android:name=".LoginNewActivity"
             android:label="@string/title_activity_login_new" />

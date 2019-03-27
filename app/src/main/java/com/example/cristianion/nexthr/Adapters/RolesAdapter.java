@@ -70,8 +70,7 @@ public class RolesAdapter extends
 
         View roleView = inflater.inflate(R.layout.layout_rolelistitem,viewGroup,false);
 
-        ViewHolder viewHolder = new ViewHolder(roleView);
-        return viewHolder;
+        return new ViewHolder(roleView);
     }
     private void setAnimation(View view,int position){
         if(position > lastPosition){
@@ -83,7 +82,7 @@ public class RolesAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(final RolesAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final RolesAdapter.ViewHolder viewHolder, int i) {
         setAnimation(viewHolder.itemView,i);
         final Role role = mRoles.get(i);
 

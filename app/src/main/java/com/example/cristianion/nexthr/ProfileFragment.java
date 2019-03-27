@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -44,6 +45,7 @@ import static com.example.cristianion.nexthr.Utils.Global.currentEmployee;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isEmailValid;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isValidDate;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class ProfileFragment extends Fragment {
 
@@ -59,6 +61,10 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final View profileView = view.findViewById(R.id.ProfileView);
+        final ProgressBar progressBar = view.findViewById(R.id.ProfileProgress);
+
+
         final TextView lastName = view.findViewById(R.id.profileLastName);
         final TextView firstName = view.findViewById(R.id.profileFirstName);
         final TextView email = view.findViewById(R.id.profileEmail);
@@ -124,6 +130,7 @@ public class ProfileFragment extends Fragment {
                     showError(getContext(),"Phone is required!");
                     return;
                 }
+                showProgress(true,profileView,progressBar);
                 currentEmployee.firstName = firstName.getText().toString();
                 currentEmployee.lastName = lastName.getText().toString();
                 currentEmployee.email = email.getText().toString();
@@ -133,6 +140,7 @@ public class ProfileFragment extends Fragment {
                         .document(currentEmployee.id).set(currentEmployee).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        showProgress(false,profileView,progressBar);
                         if(task.isSuccessful()){
                             Objects.requireNonNull(getFragmentManager()).beginTransaction().replace(R.id.Frame,new ProfileFragment()).commit();
                         } else {

@@ -39,4 +39,20 @@
     <string name="roles">Roles</string>
     <string name="administration">Administration</string>
     <string name="locations">Locations</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="postal_code">Postal code</string>
+    <string name="county">County</string>
+    <string name="country">Country</string>
+    <string name="add_location">Add Location</string>
+    <string name="dbError">Something went wrong...</string>
+    <string name="search">Search..</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="phone">Phone</string>
+    <string name="birthday">Birthday</string>
+    <string name="save">Save</string>
+    <string name="change_password">Change Password</string>
+    <string name="add">ADD</string>
+    <string name="name">Name</string>
 </resources>

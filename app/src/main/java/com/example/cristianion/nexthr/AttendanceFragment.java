@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,6 +43,7 @@ import java.util.UUID;
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.Global.currentEmployee;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class AttendanceFragment extends Fragment {
 
@@ -65,8 +67,9 @@ public class AttendanceFragment extends Fragment {
         return foundAttendance;
     }
 
-    private void fillAttendanceTable(final String stringDate, String employeeId, final GridLayout layout) throws ParseException {
+    private void fillAttendanceTable(final String stringDate, String employeeId, final GridLayout layout, final ProgressBar progressBar) throws ParseException {
 
+        showProgress(true,layout,progressBar);
         layout.removeAllViews();
         db.collection("companies").document(currentCompany.id).collection("attendances")
                 .whereEqualTo("employeeId",employeeId).whereLessThan("day",stringDate+"-31")
@@ -139,6 +142,7 @@ public class AttendanceFragment extends Fragment {
                     day++;
                     cal.add(Calendar.DAY_OF_MONTH,1);
                 }
+                showProgress(false,layout,progressBar);
             }
         });
 
@@ -150,6 +154,7 @@ public class AttendanceFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        final ProgressBar progressBar = view.findViewById(R.id.AttendanceProgress);
         Calendar calendar = Calendar.getInstance();
 
         final TextView attendanceFor = view.findViewById(R.id.attendanceFor);
@@ -167,7 +172,7 @@ public class AttendanceFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
                 try {
-                    fillAttendanceTable(attendanceFor.getText().toString(),currentEmployee.id,(GridLayout)view.findViewById(R.id.AttendanceTable));
+                    fillAttendanceTable(attendanceFor.getText().toString(),currentEmployee.id,(GridLayout)view.findViewById(R.id.AttendanceTable),progressBar);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }

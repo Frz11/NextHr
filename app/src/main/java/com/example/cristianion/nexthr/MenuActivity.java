@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -49,6 +50,7 @@ public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
+    public static final int editLocationCode = 1;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -222,7 +224,8 @@ public class MenuActivity extends AppCompatActivity
             fragment = new RolesFragment();
         } else if (id == R.id.nav_employees) {
             fragment = new EmployeesFragment();
-
+        } else if (id == R.id.nav_locations){
+            fragment = new LocationFragment();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -236,5 +239,15 @@ public class MenuActivity extends AppCompatActivity
         }
 
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case editLocationCode :
+                getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new LocationFragment()).commit();
+                break;
+        }
     }
 }

@@ -32,6 +32,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.cristianion.nexthr.EditLocationActivity" />
+        <activity android:name="com.example.cristianion.nexthr.AddLocationActivity" />
         <activity android:name="com.example.cristianion.nexthr.AddRoleActivity" />
         <activity
             android:name="com.example.cristianion.nexthr.LoginNewActivity"

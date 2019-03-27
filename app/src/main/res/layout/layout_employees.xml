@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:id="@+id/EmployeesProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/EmployeesView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/EmployeesRecycler"
+        android:fillViewport="true">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/searchBarEmployees"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="@string/search"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                />
+            <com.example.cristianion.nexthr.FontAwesome
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_search"
+                android:textSize="38sp"
+                android:layout_toEndOf="@id/searchBarEmployees"
+                />
+            <com.example.cristianion.nexthr.FontAwesome
+                android:textSize="38sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/icon_plus"
+                android:layout_marginEnd="2dp"
+                android:textColor="@android:color/holo_green_dark"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/EmployeesRecycler"
+                android:layout_below="@id/searchBarEmployees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
     </android.support.v4.widget.NestedScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

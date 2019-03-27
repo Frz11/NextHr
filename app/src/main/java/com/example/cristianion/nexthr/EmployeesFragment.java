@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.cristianion.nexthr.Adapters.EmployeesAdapter;
 import com.example.cristianion.nexthr.Models.Employee;
@@ -20,6 +21,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class EmployeesFragment extends Fragment {
 
@@ -33,6 +35,9 @@ public class EmployeesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final View employeesView = view.findViewById(R.id.EmployeesView);
+        final ProgressBar progressBar = view.findViewById(R.id.EmployeesProgress);
+        showProgress(true,employeesView,progressBar);
         db.collection("companies").document(currentCompany.id).collection("employees").orderBy("id").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -44,6 +49,7 @@ public class EmployeesFragment extends Fragment {
                 EmployeesAdapter adapter = new EmployeesAdapter(employees,getFragmentManager());
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+                showProgress(false,employeesView,progressBar);
             }
 
         });

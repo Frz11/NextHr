@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Models.Role;
@@ -19,6 +20,7 @@ import java.util.UUID;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 import static java.security.AccessController.getContext;
 
 public class AddRoleActivity extends AppCompatActivity {
@@ -28,6 +30,8 @@ public class AddRoleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_role);
+        final View addRoleView = findViewById(R.id.AddRoleView);
+        final ProgressBar progressBar = findViewById(R.id.AddRoleProgress);
                 Button button = findViewById(R.id.AddRoleButton);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -38,13 +42,15 @@ public class AddRoleActivity extends AppCompatActivity {
                             showError(getApplicationContext(),"Role name is required!");
                             return;
                         }
+                        showProgress(true,addRoleView,progressBar);
                         Role roleTBA = new Role(UUID.randomUUID().toString(),roleName);
                         db.collection("companies").document(currentCompany.id).collection("roles")
                                 .document(roleTBA.id).set(roleTBA).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
-                                  finish();
+                                    showProgress(false,addRoleView,progressBar);
+                                    finish();
                                 }
                             }
                         });

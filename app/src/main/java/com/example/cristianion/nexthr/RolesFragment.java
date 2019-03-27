@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ import java.util.UUID;
 import static android.graphics.Color.WHITE;
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class RolesFragment extends Fragment {
 
@@ -63,6 +65,9 @@ public class RolesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final View rolesView = view.findViewById(R.id.RolesView);
+        final ProgressBar progressBar = view.findViewById(R.id.RolesProgress);
+        showProgress(true,rolesView,progressBar);
         final RecyclerView rvRoles = (RecyclerView) view.findViewById(R.id.RoleRecycler);
         //get roles
         db.collection("companies").document(currentCompany.id).collection("roles")
@@ -79,6 +84,7 @@ public class RolesFragment extends Fragment {
                     rvRoles.setAdapter(adapter);
                     rvRoles.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 }
+                showProgress(false,rolesView,progressBar);
                 (view.findViewById(R.id.newRoleButton)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
