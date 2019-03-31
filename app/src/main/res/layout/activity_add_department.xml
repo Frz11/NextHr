@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDepartmentActivity">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddDepartmentProgress"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:id="@+id/AddDepartmentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/departmentNameLabel"
+            android:text="@string/name"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_below="@id/departmentNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/departmentNameInput"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/manager"
+            android:labelFor="@id/departmentManagerInput"
+            android:layout_below="@+id/departmentNameInput"
+            android:id="@+id/departmentManagerLabel"/>
+
+        <AutoCompleteTextView
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/departmentManagerLabel"
+            android:id="@+id/departmentManagerInput"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/departmentManagerInput"
+            android:textSize="20sp"
+            android:id="@+id/departmentLocationLabel"
+            android:labelFor="@id/departmentLocationInput"
+            android:text="@string/location"/>
+
+        <AutoCompleteTextView
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/departmentLocationLabel"
+            android:id="@+id/departmentLocationInput"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AddDepartmentButton"
+            android:layout_below="@id/departmentLocationInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/add"
+            android:textColor="@android:color/white"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1115,6 +1115,9 @@ font cousine
 font lobster
 font supermercado_one
 id ALT
+id AddDepartmentButton
+id AddDepartmentProgress
+id AddDepartmentView
 id AddLocationButton
 id AddLocationProgress
 id AddLocationView
@@ -1131,6 +1134,9 @@ id City
 id Company
 id ConfirmPassword
 id DeleteRole
+id DepartmentsProgress
+id DepartmentsRecycler
+id DepartmentsView
 id Email
 id EmployeesProgress
 id EmployeesRecycler
@@ -1232,7 +1238,16 @@ id customPanel
 id dark
 id decor_content_parent
 id default_activity_button
+id deleteDepartment
 id deleteLocation
+id departmentLayout
+id departmentLocationInput
+id departmentLocationLabel
+id departmentManagerInput
+id departmentManagerLabel
+id departmentName
+id departmentNameInput
+id departmentNameLabel
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1320,6 +1335,7 @@ id navigation_header_container
 id nestedScrollView
 id never
 id newCompanyLayout
+id newDepButton
 id newLocation
 id newPassword
 id newRoleButton
@@ -1367,6 +1383,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id searchBar
+id searchBarDepartments
 id searchBarEmployees
 id searchBarLocations
 id search_badge
@@ -1502,6 +1519,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_department
 layout activity_add_location
 layout activity_add_role
 layout activity_change_password
@@ -1513,6 +1531,8 @@ layout activity_menu
 layout activity_welcome
 layout app_bar_menu
 layout atendance_activity
+layout departmentitem_layout
+layout departments_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1666,8 +1686,10 @@ string icon_search
 string icon_trash
 string last_name
 string line
+string location
 string locations
 string log_in
+string manager
 string mtrl_chip_close_icon_content_description
 string name
 string nav_header_desc

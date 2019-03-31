@@ -51,6 +51,7 @@ public class MenuActivity extends AppCompatActivity
 
 
     public static final int editLocationCode = 1;
+    public static final int editDepartmentCode = 2;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -224,6 +225,8 @@ public class MenuActivity extends AppCompatActivity
             fragment = new RolesFragment();
         } else if (id == R.id.nav_employees) {
             fragment = new EmployeesFragment();
+        } else if (id == R.id.nav_departments){
+            fragment = new DepartmentsFragment();
         } else if (id == R.id.nav_locations){
             fragment = new LocationFragment();
         }
@@ -248,6 +251,8 @@ public class MenuActivity extends AppCompatActivity
             case editLocationCode :
                 getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new LocationFragment()).commit();
                 break;
+            case editDepartmentCode :
+                getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new DepartmentsFragment()).commit();
         }
     }
 }

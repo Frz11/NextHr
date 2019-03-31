@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditLocationActivity"></activity>
+        <activity android:name=".EditDepartmentActivity"></activity>
+        <activity android:name=".AddDepartmentActivity" />
+        <activity android:name=".EditLocationActivity" />
         <activity android:name=".AddLocationActivity" />
         <activity android:name=".AddRoleActivity" />
         <activity

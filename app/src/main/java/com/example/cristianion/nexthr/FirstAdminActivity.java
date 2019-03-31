@@ -111,6 +111,7 @@ public class FirstAdminActivity extends AppCompatActivity {
                         if(!task.isSuccessful()){
                             showError(getApplicationContext(),"Register failed: "
                                     +task.getException());
+                            showProgress(false,firstAdminView,progressBar);
                         } else {
                             auth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
@@ -171,6 +172,9 @@ public class FirstAdminActivity extends AppCompatActivity {
                                                         }
                                                     });
                                                 }
+                                            } else {
+                                                showError(getApplicationContext(),"Company name already in use!");
+                                                showProgress(false,firstAdminView,progressBar);
                                             }
                                         }
                                     });

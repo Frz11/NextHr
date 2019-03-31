@@ -66,7 +66,7 @@ public class LocationFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
             assert getFragmentManager() != null;
-            getFragmentManager().beginTransaction().replace(R.id.Frame,new LocationFragment());
+            getFragmentManager().beginTransaction().replace(R.id.Frame,new LocationFragment()).commit();
 
         }
     }

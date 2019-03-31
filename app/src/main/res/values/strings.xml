@@ -55,4 +55,6 @@
     <string name="change_password">Change Password</string>
     <string name="add">ADD</string>
     <string name="name">Name</string>
+    <string name="manager">Manager</string>
+    <string name="location">Location</string>
 </resources>
