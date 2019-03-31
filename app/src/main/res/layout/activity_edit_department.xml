@@ -1,64 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditDepartmentActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_alignParentStart="true"
-        android:text="@string/name"
-        android:id="@+id/eDepNameLabel"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:layout_below="@id/eDepNameLabel"
-        android:id="@+id/eDepNameInput"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="@string/manager"
-        android:layout_below="@id/eDepNameInput"
-        android:id="@+id/eDepManagerLabel"
-        android:labelFor="@id/eDepManagerInput"/>
-
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/eDepManagerInput"
-        android:layout_below="@+id/eDepManagerLabel"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/eDepLocationLabel"
-        android:textSize="20sp"
-        android:text="@string/location"
-        android:layout_below="@id/eDepManagerInput"
-        android:labelFor="@id/eDepLocationInput"/>
-
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/eDepLocationInput"
-        android:layout_below="@id/eDepLocationLabel"/>
-
-    <Button
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/eDepLocationInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/save"
-        android:id="@+id/SaveDepartmentButton"/>
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/EditDepProgress"/>
+    <RelativeLayout
+        android:id="@+id/EditDepView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"
+            android:text="@string/name"
+            android:id="@+id/eDepNameLabel"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@id/eDepNameLabel"
+            android:id="@+id/eDepNameInput"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/manager"
+            android:layout_below="@id/eDepNameInput"
+            android:id="@+id/eDepManagerLabel"
+            android:labelFor="@id/eDepManagerInput"/>
 
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eDepManagerInput"
+            android:layout_below="@+id/eDepManagerLabel"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eDepLocationLabel"
+            android:textSize="20sp"
+            android:text="@string/location"
+            android:layout_below="@id/eDepManagerInput"
+            android:labelFor="@id/eDepLocationInput"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eDepLocationInput"
+            android:layout_below="@id/eDepLocationLabel"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eDepLocationInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/save"
+            android:id="@+id/SaveDepartmentButton"/>
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

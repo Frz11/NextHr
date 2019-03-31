@@ -15,18 +15,24 @@ import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.cristianion.nexthr.DepartmentsFragment;
 import com.example.cristianion.nexthr.EditDepartmentActivity;
 import com.example.cristianion.nexthr.FontAwesome;
 import com.example.cristianion.nexthr.MenuActivity;
 import com.example.cristianion.nexthr.Models.Department;
 import com.example.cristianion.nexthr.R;
 import com.example.cristianion.nexthr.Utils.UtilFunc;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 import java.util.Random;
 
+import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
+
 public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.ViewHolder> {
 
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private List<Department> mDepartments;
     private FragmentManager fragmentManager;
     private int lastPosition = 1;
@@ -54,7 +60,13 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
         viewHolder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                db.collection("companies").document(currentCompany.id).collection("departments")
+                        .document(department.id).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        fragmentManager.beginTransaction().replace(R.id.Frame,new DepartmentsFragment()).commit();
+                    }
+                });
             }
         });
         viewHolder.viewLayout.setOnClickListener(new View.OnClickListener() {
