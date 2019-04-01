@@ -25,15 +25,16 @@
 
             <EditText
                 android:id="@+id/searchBarLocations"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="56dp"
+                android:layout_marginEnd="@dimen/searchBarMargin"
                 android:layout_marginBottom="2dp"
                 android:ems="10"
                 android:hint="@string/search"
                 android:inputType="textPersonName"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/LocationsRecycler"
-                app:layout_constraintEnd_toStartOf="@id/search_button"
+                app:layout_constraintEnd_toStartOf="@+id/newLocation"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
@@ -62,7 +63,8 @@
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="38sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/searchBarLocations"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/LocationsRecycler"

@@ -57,4 +57,8 @@
     <string name="name">Name</string>
     <string name="manager">Manager</string>
     <string name="location">Location</string>
+    <string name="birthday_dd_mm_yyyy">Birthday(dd/mm/yyyy)</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="department">Department</string>
+    <string name="role_job">Role/Job</string>
 </resources>

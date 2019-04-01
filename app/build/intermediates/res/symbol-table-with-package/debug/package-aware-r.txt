@@ -952,6 +952,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen searchBarMargin
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1118,6 +1119,9 @@ id ALT
 id AddDepartmentButton
 id AddDepartmentProgress
 id AddDepartmentView
+id AddEmployeeButton
+id AddEmployeeProgress
+id AddEmployeeView
 id AddLocationButton
 id AddLocationProgress
 id AddLocationView
@@ -1140,6 +1144,20 @@ id DepartmentsView
 id EditDepProgress
 id EditDepView
 id Email
+id EmpBirthdayInput
+id EmpBirthdayLabel
+id EmpDepInput
+id EmpDepLabel
+id EmpEmailInput
+id EmpEmailLabel
+id EmpFirstNameInput
+id EmpFirstNameLabel
+id EmpLastNameInput
+id EmpLastNameLabel
+id EmpPhoneInput
+id EmpPhoneLabel
+id EmpRoleInput
+id EmpRoleLabel
 id EmployeesProgress
 id EmployeesRecycler
 id EmployeesView
@@ -1285,6 +1303,7 @@ id fill_vertical
 id filled
 id firstAdminButton
 id fixed
+id fontAwesome
 id forever
 id forgotPasswordButton
 id ghost_view
@@ -1529,6 +1548,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_department
+layout activity_add_employee
 layout activity_add_location
 layout activity_add_role
 layout activity_change_password
@@ -1641,6 +1661,7 @@ string administration
 string app_name
 string appbar_scrolling_view_behavior
 string birthday
+string birthday_dd_mm_yyyy
 string bottom_sheet_behavior
 string change_password
 string character_counter_content_description
@@ -1665,10 +1686,12 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string company
+string confirm_password
 string country
 string county
 string dbError
 string default_web_client_id
+string department
 string departments
 string email
 string employees
@@ -1720,6 +1743,7 @@ string postal_code
 string project_id
 string prompt_email
 string prompt_password
+string role_job
 string roles
 string save
 string search

@@ -33,6 +33,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.cristianion.nexthr.AddEmployee" />
         <activity android:name="com.example.cristianion.nexthr.EditDepartmentActivity" />
         <activity android:name="com.example.cristianion.nexthr.AddDepartmentActivity" />
         <activity android:name="com.example.cristianion.nexthr.EditLocationActivity" />
