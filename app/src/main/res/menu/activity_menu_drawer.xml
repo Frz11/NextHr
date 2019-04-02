@@ -22,7 +22,6 @@
             android:id="@+id/nav_holidays"
             android:icon="@android:drawable/ic_menu_gallery"
             android:title="Holydays" />
-    </group>
 
     <item
         android:id="@+id/nav_administration"
@@ -46,5 +45,6 @@
                 android:title="@string/locations" />
         </menu>
     </item>
+    </group>
 
 </menu>

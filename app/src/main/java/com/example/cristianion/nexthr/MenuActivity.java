@@ -71,6 +71,7 @@ public class MenuActivity extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Log.wtf("ishere",currentEmployee.salary);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -89,9 +90,10 @@ public class MenuActivity extends AppCompatActivity
         FragmentTransaction ft = fragmentManager.beginTransaction();
         Fragment fragment = new ProfileFragment();
         if(savedInstanceState != null) {
-           // fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
+            fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
         }
 
+        assert fragment != null;
         ft.replace(R.id.Frame,fragment);
 
         ft.commit();
@@ -207,7 +209,7 @@ public class MenuActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 

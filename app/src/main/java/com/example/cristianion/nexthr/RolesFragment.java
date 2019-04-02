@@ -52,6 +52,7 @@ public class RolesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Objects.requireNonNull(getActivity()).setTitle(R.string.roles);
         return inflater.inflate(R.layout.roles_layout, null);
     }
 

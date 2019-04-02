@@ -20,6 +20,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
+import java.util.Objects;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
@@ -30,6 +31,7 @@ public class LocationFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Objects.requireNonNull(getActivity()).setTitle(R.string.locations);
         return inflater.inflate(R.layout.layout_locations,container,false);
     }
 

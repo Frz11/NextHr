@@ -36,6 +36,7 @@ public class EditDepartmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_department);
+        setTitle(R.string.edit_department);
         final ProgressBar progressBar = findViewById(R.id.EditDepProgress);
         final View editView = findViewById(R.id.EditDepView);
         final AutoCompleteTextView managerInput = findViewById(R.id.eDepManagerInput);

@@ -50,6 +50,7 @@ public class FirstAdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_admin);
+        setTitle(R.string.app_name);
         final Company company = new Company(getIntent().getStringExtra("companyId"),getIntent().getStringExtra("companyName"));
         final View firstAdminView = findViewById(R.id.FirstAdminView);
         final ProgressBar progressBar = findViewById(R.id.FirstAdminProgress);

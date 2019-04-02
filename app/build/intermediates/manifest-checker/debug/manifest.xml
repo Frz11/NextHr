@@ -32,17 +32,32 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.cristianion.nexthr.AddEmployee" />
-        <activity android:name="com.example.cristianion.nexthr.EditDepartmentActivity" />
-        <activity android:name="com.example.cristianion.nexthr.AddDepartmentActivity" />
-        <activity android:name="com.example.cristianion.nexthr.EditLocationActivity" />
-        <activity android:name="com.example.cristianion.nexthr.AddLocationActivity" />
-        <activity android:name="com.example.cristianion.nexthr.AddRoleActivity" />
+        <activity
+            android:name="com.example.cristianion.nexthr.AddEmployee"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.example.cristianion.nexthr.EditDepartmentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.example.cristianion.nexthr.AddDepartmentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.example.cristianion.nexthr.EditLocationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.example.cristianion.nexthr.AddLocationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.example.cristianion.nexthr.AddRoleActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.example.cristianion.nexthr.LoginNewActivity"
-            android:label="@string/title_activity_login_new" />
+            android:label="@string/title_activity_login_new"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name="com.example.cristianion.nexthr.LoginActivity" />
-        <activity android:name="com.example.cristianion.nexthr.WelcomeActivity" >
+        <activity
+            android:name="com.example.cristianion.nexthr.WelcomeActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,7 +68,8 @@
         <activity
             android:name="com.example.cristianion.nexthr.MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name="com.example.cristianion.nexthr.ChangePasswordActivity" />
 
         <meta-data

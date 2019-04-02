@@ -55,6 +55,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Objects.requireNonNull(getActivity()).setTitle(R.string.profile);
         return inflater.inflate(R.layout.profile_layout,null);
     }
 

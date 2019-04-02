@@ -1158,6 +1158,8 @@ id EmpPhoneInput
 id EmpPhoneLabel
 id EmpRoleInput
 id EmpRoleLabel
+id EmpSalaryInput
+id EmpSalaryLabel
 id EmployeesProgress
 id EmployeesRecycler
 id EmployeesView
@@ -1303,7 +1305,6 @@ id fill_vertical
 id filled
 id firstAdminButton
 id fixed
-id fontAwesome
 id forever
 id forgotPasswordButton
 id ghost_view
@@ -1414,6 +1415,7 @@ id searchBar
 id searchBarDepartments
 id searchBarEmployees
 id searchBarLocations
+id searchButton
 id search_badge
 id search_bar
 id search_button
@@ -1656,10 +1658,14 @@ string action_settings
 string action_sign_in
 string action_sign_in_short
 string add
+string add_department
+string add_employee
 string add_location
+string add_role
 string administration
 string app_name
 string appbar_scrolling_view_behavior
+string attendance
 string birthday
 string birthday_dd_mm_yyyy
 string bottom_sheet_behavior
@@ -1693,6 +1699,8 @@ string dbError
 string default_web_client_id
 string department
 string departments
+string edit_department
+string edit_location
 string email
 string employees
 string error_field_required
@@ -1740,11 +1748,13 @@ string path_password_strike_through
 string permission_rationale
 string phone
 string postal_code
+string profile
 string project_id
 string prompt_email
 string prompt_password
 string role_job
 string roles
+string salary
 string save
 string search
 string search_menu_title

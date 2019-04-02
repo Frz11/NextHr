@@ -38,6 +38,7 @@ public class EditLocationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_edit_location);
         super.onCreate(savedInstanceState);
+        setTitle(R.string.edit_location);
         final TextView streetInput = findViewById(R.id.streetInput);
         final TextView cityInput = findViewById(R.id.cityInput);
         final TextView postalCodeInput = findViewById(R.id.postalInput);

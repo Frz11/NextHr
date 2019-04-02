@@ -51,6 +51,7 @@ public class AttendanceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Objects.requireNonNull(getActivity()).setTitle(R.string.attendance);
         return inflater.inflate(R.layout.atendance_activity,null);
     }
 
@@ -58,13 +59,12 @@ public class AttendanceFragment extends Fragment {
 
 
     private static Attendance searchByDay(List<Attendance> attendances,String day){
-        Attendance foundAttendance = null;
         for (Attendance current : attendances){
             if(current.day.equals(day)){
                 return current;
             }
         }
-        return foundAttendance;
+        return null;
     }
 
     private void fillAttendanceTable(final String stringDate, String employeeId, final GridLayout layout, final ProgressBar progressBar) throws ParseException {

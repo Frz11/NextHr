@@ -36,7 +36,6 @@
     <string name="notFound">Not found!</string>
     <string name="departments">Departments</string>
     <string name="employees">Employees</string>
-    <string name="roles">Roles</string>
     <string name="administration">Administration</string>
     <string name="locations">Locations</string>
     <string name="street">Street</string>
@@ -61,4 +60,13 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="department">Department</string>
     <string name="role_job">Role/Job</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="add_department">Add Department</string>
+    <string name="add_role">Add Role</string>
+    <string name="attendance">Attendance</string>
+    <string name="edit_department">Edit Department</string>
+    <string name="edit_location">Edit Location</string>
+    <string name="profile">Profile</string>
+    <string name="roles">Roles</string>
+    <string name="salary">Salary(per hour)</string>
 </resources>

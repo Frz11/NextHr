@@ -35,6 +35,7 @@ public class AddDepartmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.add_department);
         setContentView(R.layout.activity_add_department);
         final View addDepartmentView = findViewById(R.id.AddDepartmentView);
         final ProgressBar progressBar = findViewById(R.id.AddDepartmentProgress);
