@@ -134,43 +134,31 @@ public class FirstAdminActivity extends AppCompatActivity {
                                                     db.collection("companies").document(company.id).set(company).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override
                                                         public void onSuccess(Void aVoid) {
-                                                            final Role adminRole = new Role(UUID.randomUUID().toString(),"Admin");
-                                                            db.collection("companies").document(company.id).collection("roles").document(adminRole.id).set(adminRole)
-                                                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                        @Override
-                                                                        public void onSuccess(Void aVoid) {
-                                                                            String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
-                                                                            final Employee admin = new Employee(userId,lastName,firstName,birthday,email,phone,company.id);
-                                                                            db.collection("companies").document(company.id).collection("employees")
-                                                                                    .document(admin.id).set(admin).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                            String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
+                                                            final Employee admin = new Employee(userId,lastName,firstName,birthday,email,phone,company.id);
+                                                            admin.isAdmin = true;
+                                                            db.collection("companies").document(company.id).collection("employees")
+                                                                    .document(admin.id).set(admin).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                                                 @Override
                                                                                 public void onSuccess(Void aVoid) {
-                                                                                    db.collection("companies").document(company.id).collection("user_role").
-                                                                                            document(UUID.randomUUID().toString()).
-                                                                                            set(new UserRole(admin.id,adminRole.id)).
-                                                                                            addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                                                @Override
-                                                                                                public void onSuccess(Void aVoid) {
-                                                                                                    UserCompany userCompany = new UserCompany(UUID.randomUUID().toString(),admin.id,company.id);
-                                                                                                    db.collection("UserCompany").document(UUID.randomUUID().toString()).set(userCompany).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                                                        @Override
-                                                                                                        public void onSuccess(Void aVoid) {
-                                                                                                            showProgress(false,firstAdminView,progressBar);
-                                                                                                            Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
-                                                                                                            Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
-                                                                                                            startActivity(intent);
-                                                                                                            finish();
-                                                                                                        }
-                                                                                                    });
-                                                                                                }
-                                                                                            });
+
+                                                                                    UserCompany userCompany = new UserCompany(UUID.randomUUID().toString(),admin.id,company.id);
+                                                                                    db.collection("UserCompany").document(UUID.randomUUID().toString()).set(userCompany).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                        @Override
+                                                                                        public void onSuccess(Void aVoid) {
+                                                                                            showProgress(false,firstAdminView,progressBar);
+                                                                                            Toast.makeText(getApplicationContext(),"Log in with your company name and the admin account!",Toast.LENGTH_LONG).show();
+                                                                                            Intent intent = new Intent(FirstAdminActivity.this,WelcomeActivity.class);
+                                                                                            startActivity(intent);
+                                                                                            finish(); }
+                                                                                    });
                                                                                 }
+
+
                                                                             });
 
                                                                         }
-                                                                    });
 
-                                                        }
                                                     });
                                                 }
                                             } else {

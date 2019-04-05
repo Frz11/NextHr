@@ -69,4 +69,8 @@
     <string name="profile">Profile</string>
     <string name="roles">Roles</string>
     <string name="salary">Salary(per hour)</string>
+    <string name="error_user_exists">Email already in use!</string>
+    <string name="is_admin">Is admin?</string>
+    <string name="min_salary">Min Salary</string>
+    <string name="max_salary">Max Salary</string>
 </resources>

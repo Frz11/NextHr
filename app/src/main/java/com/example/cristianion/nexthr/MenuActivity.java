@@ -151,25 +151,15 @@ public class MenuActivity extends AppCompatActivity
                         adminRole = data.toObject(Role.class);
                         break;
                     }
-                    //check if user has admin role!
-                    db.collection("companies").document(currentCompany.id)
-                            .collection("user_role").whereEqualTo("roleId",adminRole.id).whereEqualTo("userId",currentEmployee.id)
-                            .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                            if(task.isSuccessful()){
-                                if(task.getResult() != null){
-                                    final NavigationView nav = findViewById(R.id.nav_view);
-                                    new Handler().post(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            nav.getMenu().findItem(R.id.nav_administration).setVisible(true);
-                                        }
-                                    });
-                                }
+                    if(currentEmployee.isAdmin){
+                        final NavigationView nav = findViewById(R.id.nav_view);
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                nav.getMenu().findItem(R.id.nav_administration).setVisible(true);
                             }
-                        }
-                    });
+                        });
+                    }
                 } else {
 
                 }
@@ -220,7 +210,7 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_attendance) {
             fragment = new AttendanceFragment();
         } else if (id == R.id.nav_salary) {
-
+            fragment = new SalaryFragment();
         } else if (id == R.id.nav_holidays) {
 
         } else if (id == R.id.nav_roles) {

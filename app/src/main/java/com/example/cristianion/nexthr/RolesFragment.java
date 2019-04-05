@@ -49,6 +49,7 @@ public class RolesFragment extends Fragment {
     //private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies").child(currentCompany.id);
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -56,12 +57,6 @@ public class RolesFragment extends Fragment {
         return inflater.inflate(R.layout.roles_layout, null);
     }
 
-    public void GoToEdit(Role role){
-
-    }
-    public void Delete(Role role){
-
-    }
 
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {

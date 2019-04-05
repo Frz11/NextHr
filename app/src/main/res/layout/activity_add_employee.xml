@@ -109,15 +109,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="@string/role_job"
-                android:layout_below="@id/EmpDepInput"
-                android:id="@+id/EmpRoleLabel"/>
-
+                android:id="@+id/EmpRoleLabel"
+                android:layout_below="@id/EmpDepInput"/>
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/EmpRoleLabel"
-                android:singleLine="true"
-                android:id="@+id/EmpRoleInput"/>
+                android:id="@+id/EmpRoleInput"
+                android:layout_below="@+id/EmpRoleLabel"
+                android:singleLine="true"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -131,10 +131,23 @@
                 android:layout_below="@id/EmpSalaryLabel"
                 android:inputType="numberDecimal"
                 android:id="@+id/EmpSalaryInput"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/is_admin"
+                android:layout_height="wrap_content"
+                android:id="@+id/EmpAdminLabel"
+                android:layout_below="@id/EmpSalaryInput"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/EmpAdminLabel"
+                android:layout_below="@id/EmpSalaryInput"
+                android:id="@+id/EmpAdminInput"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/EmpSalaryInput"
+                android:layout_below="@id/EmpAdminLabel"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/AddEmployeeButton"

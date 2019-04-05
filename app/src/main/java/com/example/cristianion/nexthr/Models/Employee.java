@@ -13,6 +13,8 @@ public class Employee {
     public String companyId;
     public String salary;
     public String departmentId;
+    public String roleId;
+    public Boolean isAdmin;
 
     public Employee(){}
     public Employee(String id, String lastName, String firstName, String birthday,String email,String phone,String companyId){
@@ -25,8 +27,10 @@ public class Employee {
         this.companyId = companyId;
         this.salary = "";
         this.departmentId = "";
+        isAdmin = false;
+        roleId = "";
     }
-    public Employee(String id, String lastName, String firstName, String birthday,String email,String phone,String companyId,String salary,String departmentId){
+    public Employee(String id, String lastName, String firstName, String birthday,String email,String phone,String companyId,String roleId,String salary,String departmentId){
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -36,5 +40,7 @@ public class Employee {
         this.companyId = companyId;
         this.salary = salary;
         this.departmentId = departmentId;
+        isAdmin = false;
+        this.roleId = roleId;
     }
 }

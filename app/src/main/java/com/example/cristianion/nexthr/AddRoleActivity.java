@@ -38,13 +38,28 @@ public class AddRoleActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         final TextView role = findViewById(R.id.Role);
+                        final TextView maxSalary = findViewById(R.id.maxSalary);
+                        final TextView minSalary = findViewById(R.id.minSalary);
                         String roleName = role.getText().toString();
+                        String xSal = maxSalary.getText().toString();
+                        String iSal = minSalary.getText().toString();
                         if(roleName.length() == 0){
                             showError(getApplicationContext(),"Role name is required!");
                             return;
                         }
+                        if(xSal.isEmpty()){
+                            showError(getApplicationContext(),"Max salary is required!");
+                            return;
+                        }
+                        if(iSal.isEmpty()){
+                            showError(getApplicationContext(),"Min salary is required");
+                            return;
+                        }
+                        if(Float.parseFloat(iSal) > Float.parseFloat(xSal)){
+                            showError(getApplicationContext(),"Min salary cannot be greater than max salary");
+                        }
                         showProgress(true,addRoleView,progressBar);
-                        Role roleTBA = new Role(UUID.randomUUID().toString(),roleName);
+                        Role roleTBA = new Role(UUID.randomUUID().toString(),roleName,iSal,xSal);
                         db.collection("companies").document(currentCompany.id).collection("roles")
                                 .document(roleTBA.id).set(roleTBA).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override

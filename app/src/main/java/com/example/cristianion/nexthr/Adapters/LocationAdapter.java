@@ -1,7 +1,9 @@
 package com.example.cristianion.nexthr.Adapters;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.util.Util;
+import com.example.cristianion.nexthr.DepartmentsFragment;
 import com.example.cristianion.nexthr.EditLocationActivity;
 import com.example.cristianion.nexthr.FontAwesome;
 import com.example.cristianion.nexthr.LocationFragment;
@@ -84,15 +87,26 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
         viewHolder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db.collection("companies").document(currentCompany.id)
-                        .collection("locations").document(location.id).delete()
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                new AlertDialog.Builder(viewHolder.context)
+                        .setTitle("Delete!")
+                        .setMessage("Do you really want to delete this item?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
-                            public void onSuccess(Void aVoid) {
-                                fragmentManager.beginTransaction().replace(R.id.Frame,new LocationFragment())
-                                        .commit();
+                            public void onClick(DialogInterface dialog, int which) {
+                                db.collection("companies").document(currentCompany.id)
+                                        .collection("locations").document(location.id).delete()
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                fragmentManager.beginTransaction().replace(R.id.Frame,new LocationFragment())
+                                                        .commit();
+                                            }
+                                        });
                             }
-                        });
+                        })
+                        .setNegativeButton(android.R.string.no,null).show();
+
             }
         });
         viewHolder.viewLayout.setOnClickListener(new View.OnClickListener() {

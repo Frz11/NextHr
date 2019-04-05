@@ -860,6 +860,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_layout_salary.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/layout_salary.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },

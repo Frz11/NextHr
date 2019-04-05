@@ -1,6 +1,7 @@
 package com.example.cristianion.nexthr.Adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,18 +14,25 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.cristianion.nexthr.Models.Employee;
+import com.example.cristianion.nexthr.Models.Image;
 import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.Models.UserRole;
 import com.example.cristianion.nexthr.R;
 import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.auth.User;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
@@ -72,7 +80,7 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
 
         final TextView name = viewHolder.name;
         final TextView role = viewHolder.role;
-        final ImageView image = viewHolder.profileImage;
+        final ImageView imageView = viewHolder.profileImage;
         final RelativeLayout viewLayout = viewHolder.viewLayout;
         final Context context = viewHolder.context;
 
@@ -105,6 +113,26 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
                     @Override
                     public void onClick(View v) {
                         showError(context,"edit");
+                    }
+                });
+                db.collection("companies").document(currentCompany.id).collection("images")
+                        .whereEqualTo("userId",employee.id).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                                final Image image = data.toObject(Image.class);
+                                StorageReference storage = FirebaseStorage.getInstance().getReference("images/").child(currentCompany.id).child(image.id);
+                                storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Uri> task) {
+                                        Glide.with(context).load(task.getResult()).into(imageView);
+
+                                    }
+                                });
+                                break;
+                            }
+                        }
                     }
                 });
             }

@@ -87,7 +87,6 @@ public class LoginNewActivity extends AppCompatActivity implements LoaderCallbac
     @Override
     protected void onStart() {
         super.onStart();
-        //firebaseAuth.signOut();
         showProgress(true);
         if(firebaseAuth.getCurrentUser() != null){
             final String userID = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid();

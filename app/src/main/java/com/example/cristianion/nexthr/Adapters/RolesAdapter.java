@@ -1,6 +1,8 @@
 package com.example.cristianion.nexthr.Adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
@@ -105,18 +107,29 @@ public class RolesAdapter extends
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!role.name.equals("Admin")) {
-                    db.collection("companies").document(currentCompany.id).
-                            collection("roles").document(role.id).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            fragmentManager.beginTransaction().replace(R.id.Frame, new RolesFragment()).commit();
+                new AlertDialog.Builder(viewHolder.context)
+                        .setTitle("Delete!")
+                        .setMessage("Do you really want to delete this item?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(!role.name.equals("Admin")) {
+                                    db.collection("companies").document(currentCompany.id).
+                                            collection("roles").document(role.id).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            fragmentManager.beginTransaction().replace(R.id.Frame, new RolesFragment()).commit();
 
-                        }
-                    });
-                } else{
-                    showError(viewHolder.context,"Admin role cannot be deleted!");
-                }
+                                        }
+                                    });
+                                } else{
+                                    showError(viewHolder.context,"Admin role cannot be deleted!");
+                                }
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no,null).show();
+
             }
         });
 
