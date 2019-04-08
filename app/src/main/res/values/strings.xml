@@ -73,4 +73,5 @@
     <string name="is_admin">Is admin?</string>
     <string name="min_salary">Min Salary</string>
     <string name="max_salary">Max Salary</string>
+    <string name="edit_role">Edit Role</string>
 </resources>

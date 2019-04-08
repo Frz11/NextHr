@@ -2,10 +2,12 @@ package com.example.cristianion.nexthr;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class AddRoleActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        closeKeyboard();
                         final TextView role = findViewById(R.id.Role);
                         final TextView maxSalary = findViewById(R.id.maxSalary);
                         final TextView minSalary = findViewById(R.id.minSalary);
@@ -57,6 +60,7 @@ public class AddRoleActivity extends AppCompatActivity {
                         }
                         if(Float.parseFloat(iSal) > Float.parseFloat(xSal)){
                             showError(getApplicationContext(),"Min salary cannot be greater than max salary");
+                            return;
                         }
                         showProgress(true,addRoleView,progressBar);
                         Role roleTBA = new Role(UUID.randomUUID().toString(),roleName,iSal,xSal);
@@ -73,5 +77,13 @@ public class AddRoleActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            assert imm != null;
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }

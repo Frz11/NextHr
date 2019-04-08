@@ -14,24 +14,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddEmployee"
+        <activity android:name=".EditEmployeeActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
-        <activity android:name=".EditDepartmentActivity"
+        <activity android:name=".EditRoleActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".AddDepartmentActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".EditLocationActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".AddLocationActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".AddRoleActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".AddEmployee"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".EditDepartmentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".AddDepartmentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".EditLocationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".AddLocationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".AddRoleActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".LoginNewActivity"
             android:label="@string/title_activity_login_new"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".WelcomeActivity"
+        <activity
+            android:name=".WelcomeActivity"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,7 +55,7 @@
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".ChangePasswordActivity" />
 
         <meta-data

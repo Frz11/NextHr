@@ -1,8 +1,11 @@
 package com.example.cristianion.nexthr.Adapters;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +19,9 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.cristianion.nexthr.EditRoleActivity;
 import com.example.cristianion.nexthr.FontAwesome;
+import com.example.cristianion.nexthr.MenuActivity;
 import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.R;
 import com.example.cristianion.nexthr.RolesFragment;
@@ -99,7 +104,9 @@ public class RolesAdapter extends
                 @Override
                 public void onClick(View v) {
                     //go to edit
-                    showError(viewHolder.context,role.name);
+                    Intent intent = new Intent(viewHolder.context, EditRoleActivity.class);
+                    intent.putExtra("roleId",role.id);
+                    ((Activity) viewHolder.context).startActivityForResult(intent,MenuActivity.editRoleCode);
                 }
             });
         }

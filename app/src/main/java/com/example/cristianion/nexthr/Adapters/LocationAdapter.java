@@ -22,11 +22,13 @@ import com.example.cristianion.nexthr.EditLocationActivity;
 import com.example.cristianion.nexthr.FontAwesome;
 import com.example.cristianion.nexthr.LocationFragment;
 import com.example.cristianion.nexthr.MenuActivity;
+import com.example.cristianion.nexthr.Models.Department;
 import com.example.cristianion.nexthr.Models.Location;
 import com.example.cristianion.nexthr.R;
 import com.example.cristianion.nexthr.Utils.UtilFunc;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Text;
 
@@ -36,6 +38,7 @@ import java.util.Random;
 import io.opencensus.internal.StringUtil;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showSnackbarError;
 
 public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHolder> {
 
@@ -94,15 +97,26 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                db.collection("companies").document(currentCompany.id)
-                                        .collection("locations").document(location.id).delete()
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void aVoid) {
-                                                fragmentManager.beginTransaction().replace(R.id.Frame,new LocationFragment())
-                                                        .commit();
-                                            }
-                                        });
+                                db.collection("companies").document(currentCompany.id).collection("departments")
+                                        .whereEqualTo("locationId",location.id).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                    @Override
+                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                        if(queryDocumentSnapshots.toObjects(Department.class).size() > 0){
+                                            showSnackbarError(viewHolder.viewLayout,"Cannot delete! This location is used by at least one department!");
+                                        } else {
+                                            db.collection("companies").document(currentCompany.id)
+                                                    .collection("locations").document(location.id).delete()
+                                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            fragmentManager.beginTransaction().replace(R.id.Frame,new LocationFragment())
+                                                                    .commit();
+                                                        }
+                                                    });
+                                        }
+                                    }
+                                });
+
                             }
                         })
                         .setNegativeButton(android.R.string.no,null).show();

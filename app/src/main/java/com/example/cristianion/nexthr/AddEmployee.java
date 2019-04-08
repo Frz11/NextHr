@@ -1,5 +1,6 @@
 package com.example.cristianion.nexthr;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -98,7 +100,7 @@ public class AddEmployee extends AppCompatActivity {
 
                 }
                 ArrayAdapter<String> departmentsAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.select_dialog_item, departmentNames);
-                department.setThreshold(1);
+                department.setThreshold(0);
                 department.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                 department.setAdapter(departmentsAdapter);
                 db.collection("companies").document(currentCompany.id).collection("roles")
@@ -112,7 +114,7 @@ public class AddEmployee extends AppCompatActivity {
                             roleNames.add(current.name);
                         }
                         ArrayAdapter<String> rolesAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.select_dialog_item, roleNames);
-                        role.setThreshold(1);
+                        role.setThreshold(0);
                         role.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                         role.setAdapter(rolesAdapter);
                         showProgress(false, empView, progressBar);
@@ -125,6 +127,7 @@ public class AddEmployee extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                closeKeyboard();
                 final String eLastName = lastName.getText().toString();
                 final String eFirstName = firstName.getText().toString();
                 final String eEmail = email.getText().toString();
@@ -254,5 +257,13 @@ public class AddEmployee extends AppCompatActivity {
         });
 
 
+    }
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            assert imm != null;
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }

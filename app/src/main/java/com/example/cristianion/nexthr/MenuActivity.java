@@ -52,6 +52,8 @@ public class MenuActivity extends AppCompatActivity
 
     public static final int editLocationCode = 1;
     public static final int editDepartmentCode = 2;
+    public static final int editRoleCode = 3;
+    public static final int editEmployeeCode = 4;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -107,7 +109,7 @@ public class MenuActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            drawer.openDrawer(GravityCompat.START);
         }
     }
 
@@ -236,6 +238,7 @@ public class MenuActivity extends AppCompatActivity
         return true;
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -245,6 +248,13 @@ public class MenuActivity extends AppCompatActivity
                 break;
             case editDepartmentCode :
                 getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new DepartmentsFragment()).commit();
+                break;
+            case editRoleCode :
+                getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new RolesFragment()).commit();
+                break;
+            case editEmployeeCode :
+                getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new EmployeesFragment()).commit();
+                break;
         }
     }
 }

@@ -1143,6 +1143,10 @@ id DepartmentsRecycler
 id DepartmentsView
 id EditDepProgress
 id EditDepView
+id EditEmployeeProgress
+id EditEmployeeView
+id EditRoleProgress
+id EditRoleView
 id Email
 id EmpAdminInput
 id EmpAdminLabel
@@ -1190,7 +1194,9 @@ id RolesView
 id SHIFT
 id SYM
 id SaveDepartmentButton
+id SaveEmployeeButton
 id SaveLocationButton
+id SaveRoleButton
 id SubmitPasswordChange
 id action0
 id action_bar
@@ -1343,10 +1349,12 @@ id login_form
 id login_progress
 id masked
 id maxSalary
+id maxSalaryLabel
 id media_actions
 id message
 id middle
 id minSalary
+id minSalaryLabel
 id mini
 id month_name
 id month_picker
@@ -1406,6 +1414,7 @@ id right
 id right_icon
 id right_side
 id role
+id roleNameLabel
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1559,7 +1568,9 @@ layout activity_add_location
 layout activity_add_role
 layout activity_change_password
 layout activity_edit_department
+layout activity_edit_employee
 layout activity_edit_location
+layout activity_edit_role
 layout activity_first_admin
 layout activity_login
 layout activity_login_new
@@ -1706,6 +1717,7 @@ string department
 string departments
 string edit_department
 string edit_location
+string edit_role
 string email
 string employees
 string error_field_required

@@ -1,6 +1,8 @@
 package com.example.cristianion.nexthr.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.cristianion.nexthr.EditEmployeeActivity;
+import com.example.cristianion.nexthr.MenuActivity;
 import com.example.cristianion.nexthr.Models.Employee;
 import com.example.cristianion.nexthr.Models.Image;
 import com.example.cristianion.nexthr.Models.Role;
@@ -112,7 +116,9 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
                 viewLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        showError(context,"edit");
+                        Intent intent = new Intent(context, EditEmployeeActivity.class);
+                        intent.putExtra("employeeId",employee.id);
+                        ((Activity) context).startActivityForResult(intent, MenuActivity.editEmployeeCode);
                     }
                 });
                 db.collection("companies").document(currentCompany.id).collection("images")

@@ -1,8 +1,10 @@
 package com.example.cristianion.nexthr;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -38,6 +40,7 @@ public class AddLocationActivity extends AppCompatActivity {
         findViewById(R.id.AddLocationButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                closeKeyboard();
                 if(street.getText().toString().length() == 0){
                     showError(getApplicationContext(),"Street is required!");
                     return;
@@ -67,5 +70,13 @@ public class AddLocationActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            assert imm != null;
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }
