@@ -1052,6 +1052,9 @@ drawable abc_vector_test
 drawable anonymous
 drawable avd_hide_password
 drawable avd_show_password
+drawable border
+drawable border_shadow
+drawable border_unselected
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1193,6 +1196,8 @@ id RolesProgress
 id RolesView
 id SHIFT
 id SYM
+id SalaryProgress
+id SalaryView
 id SaveDepartmentButton
 id SaveEmployeeButton
 id SaveLocationButton
@@ -1255,6 +1260,8 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id companyName
+id constraintLayout
+id constraintLayout2
 id container
 id content
 id contentPanel
@@ -1267,6 +1274,9 @@ id countyLabel
 id custom
 id customPanel
 id dark
+id dayNumeric
+id dayText
+id day_layout
 id decor_content_parent
 id default_activity_button
 id deleteDepartment
@@ -1320,6 +1330,11 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id holidaysDate
+id holidaysProgress
+id holidaysRecycler
+id holidaysToolbar
+id holidaysView
 id home
 id homeAsUp
 id horizontal
@@ -1347,6 +1362,7 @@ id loginButton
 id loginLayout
 id login_form
 id login_progress
+id makeSubmission
 id masked
 id maxSalary
 id maxSalaryLabel
@@ -1368,6 +1384,7 @@ id nav_departments
 id nav_employees
 id nav_holidays
 id nav_locations
+id nav_logOut
 id nav_profile
 id nav_roles
 id nav_salary
@@ -1410,11 +1427,15 @@ id progress_circular
 id progress_horizontal
 id radio
 id relativeLayoutAux
+id requests
 id right
 id right_icon
 id right_side
 id role
 id roleNameLabel
+id salary
+id salaryFor
+id salaryForLabel
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1461,6 +1482,7 @@ id src_in
 id src_over
 id standard
 id start
+id status
 id status_bar_latest_event_content
 id street
 id streetInput
@@ -1510,6 +1532,7 @@ id view_offset_helper
 id visible
 id wide
 id withText
+id workedHours
 id wrap
 id wrap_content
 id year_name
@@ -1578,6 +1601,7 @@ layout activity_menu
 layout activity_welcome
 layout app_bar_menu
 layout atendance_activity
+layout day_item_layout
 layout departmentitem_layout
 layout departments_layout
 layout design_bottom_navigation_item
@@ -1594,6 +1618,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout holidays_layout
 layout layout_attendance_item
 layout layout_employees
 layout layout_employees_item
@@ -1631,6 +1656,7 @@ menu activity_menu_drawer
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string _salary
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1738,6 +1764,10 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string holidays_for
+string holydays
+string icon_book
+string icon_check
 string icon_edit
 string icon_people
 string icon_plus
@@ -1749,6 +1779,7 @@ string line
 string location
 string locations
 string log_in
+string log_out
 string manager
 string max_salary
 string min_salary
@@ -1773,9 +1804,11 @@ string profile
 string project_id
 string prompt_email
 string prompt_password
+string requests
 string role_job
 string roles
 string salary
+string salary_for
 string save
 string search
 string search_menu_title

@@ -40,6 +40,7 @@
             <EditText
                 android:id="@+id/streetInput"
                 android:layout_width="match_parent"
+                android:singleLine="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/streetLabel"
                 android:layout_alignParentStart="true"
@@ -63,6 +64,7 @@
                 android:id="@+id/cityInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_below="@id/cityLabel"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />
@@ -80,6 +82,7 @@
             <EditText
                 android:id="@+id/postalInput"
                 android:layout_width="match_parent"
+                android:singleLine="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/postalLabel"
                 android:layout_alignParentStart="true"
@@ -100,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/countyLabel"
+                android:singleLine="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />
 
@@ -118,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/countryLabel"
+                android:singleLine="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />
 

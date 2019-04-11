@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
 
     <ProgressBar
         android:id="@+id/DepartmentsProgress"
@@ -13,9 +15,12 @@
         android:layout_centerVertical="true"/>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/DepartmentsView"
+        android:padding="5dp"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/border_shadow">
 
         <EditText
             android:id="@+id/searchBarDepartments"
@@ -40,9 +45,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/icon_search"
+            android:textSize="38sp"
             app:layout_constraintStart_toEndOf="@id/searchBarDepartments"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textSize="38sp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.example.cristianion.nexthr.FontAwesome
             android:id="@+id/newDepButton"
@@ -57,15 +62,35 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@id/searchBarDepartments"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/DepartmentsRecycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/searchBarDepartments">
-
-        </android.support.v7.widget.RecyclerView>
-
     </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/constraintLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="4dp">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/DepartmentsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/DepartmentsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 </RelativeLayout>

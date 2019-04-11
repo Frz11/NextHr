@@ -1,5 +1,6 @@
 package com.example.cristianion.nexthr;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,9 +24,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.cristianion.nexthr.Models.Employee;
 import com.example.cristianion.nexthr.Models.Image;
 import com.example.cristianion.nexthr.Models.Role;
 import com.example.cristianion.nexthr.Models.UserRole;
+import com.example.cristianion.nexthr.Service.NotificationsService;
+import com.example.cristianion.nexthr.Utils.Notifications;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +38,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
@@ -69,10 +76,12 @@ public class MenuActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Notifications.createNotificationChannel(this);
+        Intent service = new Intent(this, NotificationsService.class);
+        service.putExtra("start",true);
+        startService(service);
         Log.wtf("ishere",currentEmployee.salary);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -83,6 +92,7 @@ public class MenuActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        toolbar.setVisibility(View.GONE);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -204,7 +214,6 @@ public class MenuActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         Fragment fragment = null;
         if (id == R.id.nav_profile) {
             // Handle the camera action
@@ -214,7 +223,7 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_salary) {
             fragment = new SalaryFragment();
         } else if (id == R.id.nav_holidays) {
-
+            fragment = new HolidaysFragment();
         } else if (id == R.id.nav_roles) {
             fragment = new RolesFragment();
         } else if (id == R.id.nav_employees) {
@@ -223,6 +232,10 @@ public class MenuActivity extends AppCompatActivity
             fragment = new DepartmentsFragment();
         } else if (id == R.id.nav_locations){
             fragment = new LocationFragment();
+        } else if (id == R.id.nav_logOut){
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            auth.signOut();
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

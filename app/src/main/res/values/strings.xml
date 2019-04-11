@@ -19,6 +19,8 @@
     <string name="icon_trash">&#xf1f8;</string>
     <string name="icon_search">&#xf002;</string>
     <string name="icon_plus">&#xf067;</string>
+    <string name="icon_book">&#xf02d;</string>
+    <string name="icon_check">&#xf00c;</string>
     <string name="title_activity_login_new">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -74,4 +76,10 @@
     <string name="min_salary">Min Salary</string>
     <string name="max_salary">Max Salary</string>
     <string name="edit_role">Edit Role</string>
+    <string name="salary_for">Salary for :</string>
+    <string name="holidays_for">Holidays for:</string>
+    <string name="requests">Requests</string>
+    <string name="holydays">Holydays</string>
+    <string name="_salary">Salary</string>
+    <string name="log_out">Log out</string>
 </resources>

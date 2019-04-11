@@ -203,7 +203,11 @@ public class AddEmployee extends AppCompatActivity {
                                         return;
 
                                     }
-                                    final Employee employee = new Employee(UUID.randomUUID().toString(), eLastName, eFirstName, eBday, eEmail, ePhone, currentCompany.id, roleId, eSalary, departments.get(0).id);
+
+                                    final Employee employee = new Employee(UUID.randomUUID().toString(), eLastName, eFirstName, eBday, eEmail, ePhone, currentCompany.id, roleId, eSalary, "");
+                                    if(departments.size() > 0){
+                                        employee.departmentId = departments.get(0).id;
+                                    }
 
                                     auth.createUserWithEmailAndPassword(eEmail, UUID.randomUUID().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                         @Override

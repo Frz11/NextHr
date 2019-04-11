@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/white"
     android:layout_height="match_parent">
 
     <ProgressBar
@@ -12,69 +13,79 @@
         android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:background="@drawable/border_shadow"
+        android:id="@+id/constraintLayout">
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="@dimen/searchBarMargin"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/newRoleButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.example.cristianion.nexthr.FontAwesome
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/icon_search"
+            android:textSize="38sp"
+            app:layout_constraintStart_toEndOf="@+id/searchBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.example.cristianion.nexthr.FontAwesome
+            android:id="@+id/newRoleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/icon_plus"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="38sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/RolesView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/constraintLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
         android:fillViewport="true">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/searchBar"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="@dimen/searchBarMargin"
-                android:ems="10"
-                android:hint="@string/search"
-                android:inputType="textPersonName"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/RoleRecycler"
-                app:layout_constraintEnd_toStartOf="@id/newRoleButton"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <com.example.cristianion.nexthr.FontAwesome
-                android:id="@+id/search_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/icon_search"
-                android:textSize="38sp"
-                app:layout_constraintBottom_toTopOf="@+id/RoleRecycler"
-                app:layout_constraintStart_toEndOf="@+id/searchBar"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <com.example.cristianion.nexthr.FontAwesome
-                android:id="@+id/newRoleButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="@string/icon_plus"
-                android:textColor="@android:color/holo_green_dark"
-                android:textSize="38sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/RoleRecycler"
                 android:layout_width="match_parent"
-                android:layout_height="677dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newRoleButton"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 tools:layout_editor_absoluteX="0dp" />
 

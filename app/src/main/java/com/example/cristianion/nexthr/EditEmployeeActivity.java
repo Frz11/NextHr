@@ -175,6 +175,7 @@ public class EditEmployeeActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         final List<Department> departments = queryDocumentSnapshots.toObjects(Department.class);
+                        String departmentId = "";
                         if (departments.size() == 0 && !eDep.isEmpty()) {
                             showProgress(false, empView, progressBar);
                             showSnackbarError(empView, "That department wasn't found!Take a look again?");
@@ -202,7 +203,12 @@ public class EditEmployeeActivity extends AppCompatActivity {
                                         return;
 
                                     }
-                                    final Employee employee = new Employee(employeeId, eLastName, eFirstName, eBday, eEmail, ePhone, currentCompany.id, roleId, eSalary, departments.get(0).id);
+                                    Employee employee;
+                                    if(departments.size() > 0) {
+                                        employee = new Employee(employeeId, eLastName, eFirstName, eBday, eEmail, ePhone, currentCompany.id, roleId, eSalary, departments.get(0).id);
+                                    } else {
+                                        employee = new Employee(employeeId, eLastName, eFirstName, eBday, eEmail, ePhone, currentCompany.id, roleId, eSalary, "");
+                                    }
                                     if(isAdmin.isChecked()){
                                         employee.isAdmin = true;
                                     }

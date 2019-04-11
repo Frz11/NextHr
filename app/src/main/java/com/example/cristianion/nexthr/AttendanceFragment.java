@@ -1,5 +1,6 @@
 package com.example.cristianion.nexthr;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -51,7 +52,6 @@ public class AttendanceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Objects.requireNonNull(getActivity()).setTitle(R.string.attendance);
         return inflater.inflate(R.layout.atendance_activity,null);
     }
 
@@ -59,6 +59,7 @@ public class AttendanceFragment extends Fragment {
 
 
     private static Attendance searchByDay(List<Attendance> attendances,String day){
+        Log.wtf(day,day);
         for (Attendance current : attendances){
             if(current.day.equals(day)){
                 return current;
@@ -71,6 +72,9 @@ public class AttendanceFragment extends Fragment {
 
         showProgress(true,layout,progressBar);
         layout.removeAllViews();
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            layout.setColumnCount(5);
+        }
         db.collection("companies").document(currentCompany.id).collection("attendances")
                 .whereEqualTo("employeeId",employeeId).whereLessThan("day",stringDate+"-31")
                 .whereGreaterThan("day",stringDate+"-01").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -118,7 +122,12 @@ public class AttendanceFragment extends Fragment {
                         lp_duration.addRule(RelativeLayout.CENTER_HORIZONTAL);
                         duration.setLayoutParams(lp_duration);
 
-                        Attendance currentAttendance = searchByDay(attendances,stringDate+"-"+day);
+                        Attendance currentAttendance;
+                        if(day > 9) {
+                             currentAttendance = searchByDay(attendances, stringDate + "-" + day);
+                        } else {
+                             currentAttendance = searchByDay(attendances, stringDate + "-" + "0"+day);
+                        }
                         if(currentAttendance != null){
                             if(currentAttendance.leaveTime.length() == 0) {
                                 relativeLayout.setBackgroundResource(R.color.bright_orange);
@@ -138,7 +147,6 @@ public class AttendanceFragment extends Fragment {
 
                     }
 
-                    Log.wtf("wtf",day+"");
                     day++;
                     cal.add(Calendar.DAY_OF_MONTH,1);
                 }

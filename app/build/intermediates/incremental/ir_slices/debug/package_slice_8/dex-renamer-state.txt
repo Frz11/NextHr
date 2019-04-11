@@ -1,4 +1,4 @@
-#Mon Apr 08 13:33:35 EEST 2019
+#Thu Apr 11 14:44:42 EEST 2019
 base.0=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/8
 path.0=classes.dex
 renamed.0=classes.dex

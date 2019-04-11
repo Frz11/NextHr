@@ -9,24 +9,29 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Profile" />
+            android:title="@string/profile" />
         <item
             android:id="@+id/nav_attendance"
             android:icon="@android:drawable/ic_menu_week"
-            android:title="Attendance" />
+            android:title="@string/attendance" />
         <item
             android:id="@+id/nav_salary"
             android:icon="@android:drawable/btn_star_big_on"
-            android:title="Salary" />
+            android:title="@string/_salary" />
         <item
             android:id="@+id/nav_holidays"
             android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Holydays" />
+            android:title="@string/holydays" />
+        <item
+            android:id="@+id/nav_logOut"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="@string/log_out"/>
 
     <item
         android:id="@+id/nav_administration"
         android:title="@string/administration"
-        android:visible="false">
+        android:visible="false"
+        android:checkableBehavior="single">
         <menu>
             <item
                 android:id="@+id/nav_roles"

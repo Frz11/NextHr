@@ -2,6 +2,7 @@ package com.example.cristianion.nexthr.Utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
@@ -9,6 +10,7 @@ import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Date;
@@ -59,6 +61,21 @@ public abstract class UtilFunc {
 
         return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 
+    }
+
+    public static void numberAnimation(final TextView textView){
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, Float.parseFloat(textView.getText().toString()));
+        valueAnimator.setDuration(1500);
+
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+
+                textView.setText(valueAnimator.getAnimatedValue().toString());
+
+            }
+        });
+        valueAnimator.start();
     }
     /**
      * Shows the progress UI and hides the form.
