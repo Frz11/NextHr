@@ -1240,6 +1240,7 @@ id auto
 id backButton
 id barrier
 id beginning
+id birthdayLabel
 id blocking
 id bottom
 id buttonAddCompany
@@ -1308,6 +1309,7 @@ id editLocationForm
 id editLocationProgress
 id edit_query
 id email
+id emailLabel
 id email_login_form
 id email_sign_in_button
 id end
@@ -1322,6 +1324,7 @@ id fill_horizontal
 id fill_vertical
 id filled
 id firstAdminButton
+id firstNameLabel
 id fixed
 id forever
 id forgotPasswordButton
@@ -1331,6 +1334,7 @@ id gone
 id group_divider
 id groups
 id holidaysDate
+id holidaysLeft
 id holidaysProgress
 id holidaysRecycler
 id holidaysToolbar
@@ -1411,16 +1415,23 @@ id parentPanel
 id parent_matrix
 id password
 id percent
+id phoneLabel
 id pin
 id postalInput
 id postalLabel
 id profImage
 id profileBirthday
+id profileDepartment
+id profileDepartmentLabel
 id profileEmail
 id profileFirstName
 id profileImage
 id profileLastName
+id profileLastNameLabel
 id profilePhone
+id profileRole
+id profileRoleLabel
+id profileSalary
 id profile_SaveProfileButton
 id profile_changePasswordButton
 id progress_circular
@@ -1436,6 +1447,7 @@ id roleNameLabel
 id salary
 id salaryFor
 id salaryForLabel
+id salaryLabel
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1655,7 +1667,6 @@ layout view_month_year_picker
 menu activity_menu_drawer
 menu menu
 mipmap ic_launcher
-mipmap ic_launcher_round
 string _salary
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -1776,6 +1787,7 @@ string icon_trash
 string is_admin
 string last_name
 string line
+string loading
 string location
 string locations
 string log_in
@@ -1791,6 +1803,7 @@ string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
 string notFound
+string not_set
 string password
 string password_toggle_content_description
 string path_password_eye

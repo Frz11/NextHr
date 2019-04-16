@@ -196,7 +196,7 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gra
 	android:label
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:18:9-48
 	android:icon
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:16:9-43
 	android:allowBackup

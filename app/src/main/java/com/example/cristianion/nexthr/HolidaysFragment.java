@@ -27,6 +27,7 @@ import com.example.cristianion.nexthr.Models.Department;
 import com.example.cristianion.nexthr.Models.Holiday;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
@@ -39,6 +40,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.UUID;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.Global.currentEmployee;
@@ -47,6 +49,8 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showSnackbarError;
 
 public class HolidaysFragment extends Fragment {
 
+
+    private String monthYear;
     private DocumentReference db = FirebaseFirestore.getInstance().collection("companies").document(currentCompany.id);
     private View holidaysView;
     private ProgressBar progressBar;
@@ -61,6 +65,7 @@ public class HolidaysFragment extends Fragment {
 
     }
     private void addToRecycler(final RecyclerView recyclerView, final String stringDate){
+
 
         showProgress(true,holidaysView,progressBar);
         db.collection("holidays").whereEqualTo("employeeId",currentEmployee.id).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -111,6 +116,9 @@ public class HolidaysFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        final TextView holidaysLeft = view.findViewById(R.id.holidaysLeft);
+        holidaysLeft.setText(currentEmployee.holidays + " days left");
         Calendar calendar = Calendar.getInstance();
         holidaysView = view.findViewById(R.id.holidaysView);
         progressBar = view.findViewById(R.id.holidaysProgress);
@@ -139,6 +147,7 @@ public class HolidaysFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
                 addToRecycler(recyclerView,holidaysDate.getText().toString());
+                monthYear = holidaysDate.getText().toString();
             }
         });
         final YearMonthPickerDialog yearMonthPickerDialog = new YearMonthPickerDialog(getContext(),new YearMonthPickerDialog.OnDateSetListener(){
@@ -175,6 +184,42 @@ public class HolidaysFragment extends Fragment {
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .setNegativeButton(android.R.string.ok,null).show();
 
+                } else {
+                    final ArrayList<String> dates = new ArrayList<>();
+                    if(currentEmployee.departmentId.isEmpty()){
+                        showSnackbarError(view,"There was a problem with the department...");
+                        return;
+                    }
+                    for (Day day : selectedDays){
+                        dates.add(monthYear + "-" +day.day);
+                    }
+                    if(currentEmployee.holidays < selectedDays.size()){
+                        showSnackbarError(view,"You don't have enough holidays left...");
+                    } else {
+                        currentEmployee.holidays -= selectedDays.size();
+                        db.collection("employees").document(currentEmployee.id).set(currentEmployee);
+                    }
+                    showProgress(true,view,progressBar);
+                    db.collection("departments").document(currentEmployee.departmentId).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            Department department = documentSnapshot.toObject(Department.class);
+                            if(department == null){
+                                showProgress(false,view,progressBar);
+                                showSnackbarError(view,"There was a problem with the department...");
+                            } else {
+                                Holiday holiday = new Holiday(UUID.randomUUID().toString(),currentEmployee.id,dates,"Pending",department.managerId);
+                                db.collection("holidays").document(holiday.id).set(holiday).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        showProgress(false,view,progressBar);
+                                        assert getFragmentManager() != null;
+                                        getFragmentManager().beginTransaction().replace(R.id.Frame,new HolidaysFragment()).commit();
+                                    }
+                                });
+                            }
+                        }
+                    });
                 }
             }
         });

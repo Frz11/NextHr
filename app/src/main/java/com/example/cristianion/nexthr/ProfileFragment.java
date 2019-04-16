@@ -18,7 +18,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
+import com.example.cristianion.nexthr.Models.Department;
 import com.example.cristianion.nexthr.Models.Image;
+import com.example.cristianion.nexthr.Models.Role;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -27,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -71,6 +74,44 @@ public class ProfileFragment extends Fragment {
         final TextView email = view.findViewById(R.id.profileEmail);
         final TextView birthday = view.findViewById(R.id.profileBirthday);
         final TextView phone = view.findViewById(R.id.profilePhone);
+        final TextView department = view.findViewById(R.id.profileDepartment);
+        final TextView role = view.findViewById(R.id.profileRole);
+        if(!currentEmployee.salary.isEmpty()) {
+            ((TextView) view.findViewById(R.id.profileSalary)).setText(currentEmployee.salary);
+        }
+
+        if(currentEmployee.departmentId.isEmpty()){
+            department.setText("Not set!");
+        } else {
+            db.collection("companies").document(currentCompany.id).collection("departments").document(currentEmployee.departmentId)
+                    .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    Department dep = documentSnapshot.toObject(Department.class);
+                    if (dep == null) {
+                        department.setText("Not set!");
+                    } else {
+                        department.setText(dep.name);
+                    }
+                }
+            });
+        }
+        if(currentEmployee.roleId.isEmpty()){
+            role.setText("Not set!");
+        } else {
+            db.collection("companies").document(currentCompany.id).collection("roles").document(currentEmployee.roleId)
+                    .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    Role found = documentSnapshot.toObject(Role.class);
+                    if (found == null) {
+                        role.setText("Not set!");
+                    } else {
+                        role.setText(found.name);
+                    }
+                }
+            });
+        }
 
         final ImageView profilePhoto = view.findViewById(R.id.imagePicker);
         db.collection("companies").document(currentEmployee.companyId).collection("images")

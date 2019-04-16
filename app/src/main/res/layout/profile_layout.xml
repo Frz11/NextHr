@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,107 +21,172 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:padding="2dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imagePicker"
                 android:layout_width="149dp"
                 android:layout_height="88dp"
-                android:src="@drawable/anonymous"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/anonymous"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:civ_border_width="1dp"
-                app:civ_border_color="#FF000000"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileLastNameLabel"
+                android:text="@string/last_name"
+                app:layout_constraintTop_toBottomOf="@id/imagePicker"/>
             <EditText
                 android:id="@+id/profileLastName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="@string/last_name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imagePicker" />
+                app:layout_constraintTop_toBottomOf="@+id/profileLastNameLabel" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"
+                android:id="@+id/firstNameLabel"
+                app:layout_constraintTop_toBottomOf="@id/profileLastName"/>
             <EditText
                 android:id="@+id/profileFirstName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="@string/first_name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profileLastName" />
+                app:layout_constraintTop_toBottomOf="@+id/firstNameLabel" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                app:layout_constraintTop_toBottomOf="@id/profileFirstName"
+                android:id="@+id/emailLabel"/>
 
             <EditText
                 android:id="@+id/profileEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:ems="10"
-                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profileFirstName" />
+                app:layout_constraintTop_toBottomOf="@id/emailLabel" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                app:layout_constraintTop_toBottomOf="@id/profileEmail"
+                android:id="@+id/phoneLabel"/>
 
             <EditText
                 android:id="@+id/profilePhone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="@string/phone"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profileEmail" />
+                app:layout_constraintTop_toBottomOf="@id/phoneLabel" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday"
+                app:layout_constraintTop_toBottomOf="@id/profilePhone"
+                android:id="@+id/birthdayLabel"/>
             <EditText
                 android:id="@+id/profileBirthday"
                 android:layout_width="0dp"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="@string/birthday"
                 android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profilePhone" />
+                app:layout_constraintTop_toBottomOf="@+id/birthdayLabel" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/salary"
+                app:layout_constraintTop_toBottomOf="@id/profileBirthday"
+                android:id="@+id/salaryLabel"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:text="@string/not_set"
+                android:id="@+id/profileSalary"
+                app:layout_constraintTop_toBottomOf="@id/salaryLabel" />
+            <TextView
+                android:id="@+id/profileDepartmentLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/department"
+                app:layout_constraintTop_toBottomOf="@id/profileSalary" />
+
+            <EditText
+                android:id="@+id/profileDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/loading"
+                android:editable="false"
+                app:layout_constraintTop_toBottomOf="@id/profileDepartmentLabel"/>
+
+            <TextView
+                android:id="@+id/profileRoleLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profileDepartment"
+                android:text="@string/role_job"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileRole"
+                android:hint="@string/loading"
+                app:layout_constraintTop_toBottomOf="@id/profileRoleLabel"
+                android:editable="false"/>
 
             <Button
                 android:id="@+id/profile_SaveProfileButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:background="@color/design_default_color_primary_dark"
                 android:text="@string/save"
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profileBirthday" />
+                app:layout_constraintTop_toBottomOf="@id/profileRole"
+                tools:layout_editor_absoluteY="563dp" />
 
             <Button
                 android:id="@+id/profile_changePasswordButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
                 android:background="@android:color/transparent"
                 android:text="@string/change_password"
                 android:textColor="@android:color/holo_red_dark"

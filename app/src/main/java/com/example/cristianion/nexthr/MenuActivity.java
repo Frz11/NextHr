@@ -52,6 +52,8 @@ import java.util.Objects;
 import static com.example.cristianion.nexthr.Utils.Global.adminRole;
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
 import static com.example.cristianion.nexthr.Utils.Global.currentEmployee;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showSnackbarError;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -129,6 +131,7 @@ public class MenuActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.menu, menu);
         ((TextView) findViewById(R.id.Company)).setText(currentCompany.name);
         ((TextView) findViewById(R.id.Name)).setText(currentEmployee.lastName + " " + currentEmployee.firstName);
+
         final ImageView profilePhoto = findViewById(R.id.profileImage);
 
 
@@ -223,6 +226,10 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_salary) {
             fragment = new SalaryFragment();
         } else if (id == R.id.nav_holidays) {
+            if(currentEmployee.departmentId.isEmpty()){
+                showError(getApplicationContext(),"Holidays unavailable until a department is set!");
+                return true;
+            }
             fragment = new HolidaysFragment();
         } else if (id == R.id.nav_roles) {
             fragment = new RolesFragment();

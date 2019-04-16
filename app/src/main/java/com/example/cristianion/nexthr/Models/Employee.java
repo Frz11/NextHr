@@ -15,6 +15,7 @@ public class Employee {
     public String departmentId;
     public String roleId;
     public Boolean isAdmin;
+    public int holidays;
 
     public Employee(){}
     public Employee(String id, String lastName, String firstName, String birthday,String email,String phone,String companyId){
@@ -29,6 +30,7 @@ public class Employee {
         this.departmentId = "";
         isAdmin = false;
         roleId = "";
+        holidays =  20;
     }
     public Employee(String id, String lastName, String firstName, String birthday,String email,String phone,String companyId,String roleId,String salary,String departmentId){
         this.id = id;
@@ -42,5 +44,6 @@ public class Employee {
         this.departmentId = departmentId;
         isAdmin = false;
         this.roleId = roleId;
+        holidays = 20;
     }
 }

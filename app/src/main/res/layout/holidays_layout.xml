@@ -15,9 +15,10 @@
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/holidaysLeft"
             android:layout_below="@+id/holidaysDate"
             android:layout_alignParentStart="true"
-            android:text="20 days left"
+            android:text="@string/loading"
             android:textSize="18sp" />
 
         <TextView
