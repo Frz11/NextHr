@@ -17,6 +17,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import org.w3c.dom.Document;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.annotation.Nullable;
@@ -81,6 +83,26 @@ public class NotificationsService extends Service {
                     isStartHolidaysManager.set(false);
                 }
             });
+            final AtomicBoolean isStartHolidaysEmp = new AtomicBoolean(true);
+            db.collection("companies").document(currentCompany.id).collection("holidays")
+                    .whereEqualTo("employeeId", currentEmployee.id).addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                    if(!isStartHolidaysEmp.get()){
+                        assert  queryDocumentSnapshots != null;
+                        for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
+                            switch (change.getType()){
+                                case MODIFIED:
+                                    Notifications.showNotification("Holidays...","Status of one of your requests changed", getApplicationContext(),
+                                            android.R.drawable.ic_dialog_info);
+                                    break;
+                            }
+                        }
+                    }
+                    isStartHolidaysEmp.set(false);
+                }
+            });
+
         }
         contor++;
         return super.onStartCommand(intent, flags, startId);

@@ -56,7 +56,7 @@ public class HolidaysAdapter extends RecyclerView.Adapter<HolidaysAdapter.ViewHo
         viewHolder.dayText.setText(current.dayText);
         if(!current.status.isEmpty()){
             viewHolder.status.setText(current.status);
-            viewHolder.dayView.setBackgroundResource(R.drawable.border_unselected);
+            viewHolder.dayView.setBackgroundResource(R.drawable.border);
         } else if(!current.freeDay){
             viewHolder.dayView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -30,7 +30,7 @@
     <item
         android:id="@+id/nav_administration"
         android:title="@string/administration"
-        android:visible="false"
+        android:visible="true"
         android:checkableBehavior="single">
         <menu>
             <item
@@ -49,6 +49,10 @@
                 android:id="@+id/nav_locations"
                 android:icon="@android:drawable/ic_dialog_map"
                 android:title="@string/locations" />
+            <item
+                android:id="@+id/nav_holidays_requests"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:title="@string/holiday_requets"/>
         </menu>
     </item>
     </group>

@@ -248,6 +248,14 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/res/layout/design_navigation_item_header.xml"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable_salary.png.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/drawable/salary.png"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_holidays_requests_layout.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/holidays_requests_layout.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -674,6 +682,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/color_abc_tint_btn_checkable.xml.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_holiday_request_item.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/holiday_request_item.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1282,6 +1294,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_activity_change_password.xml.flat",
         "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/activity_change_password.xml"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_list_item_simple.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/list_item_simple.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/color_abc_tint_seek_thumb.xml.flat",

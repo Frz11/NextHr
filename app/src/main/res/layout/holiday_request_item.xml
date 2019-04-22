@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/design_default_color_primary_dark"
+    android:padding="2dp"
+    android:id="@+id/view">
+    <TextView
+        android:id="@+id/employee_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Employee San"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/approveButton" />
+    <com.example.cristianion.nexthr.FontAwesome
+        android:textSize="30sp"
+        android:id="@+id/approveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_check"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rejectButton"
+        app:layout_constraintStart_toEndOf="@id/employee_name"
+        android:layout_marginEnd="10dp"
+        />
+    <com.example.cristianion.nexthr.FontAwesome
+        android:id="@+id/rejectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cdown"
+        android:text="@string/icon_times"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/approveButton"
+        android:layout_marginEnd="15dp"/>
+    <com.example.cristianion.nexthr.FontAwesome
+        android:id="@+id/cdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_cdown"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datesList"
+        app:layout_constraintTop_toBottomOf="@id/employee_name"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:textSize="22sp"
+        android:singleLine="false"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@+id/datesList"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/darker_gray" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

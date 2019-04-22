@@ -61,8 +61,15 @@ public class HolidaysFragment extends Fragment {
         return inflater.inflate(R.layout.holidays_layout,container,false);
     }
 
-    private void searchForDay(String day,List<Holiday> holidays){
-
+    private String searchForDay(String day,List<Holiday> holidays){
+        for(Holiday holiday:holidays){
+            for(String date : holiday.dates){
+                if(date.equals(monthYear+"-"+day)){
+                    return holiday.status;
+                }
+            }
+        }
+        return "";
     }
     private void addToRecycler(final RecyclerView recyclerView, final String stringDate){
 
@@ -98,7 +105,9 @@ public class HolidaysFragment extends Fragment {
                         day1.freeDay = true;
                         day1.status = "";
                     }
+                    day1.status = searchForDay(day1.day,holidays);
                     days.add(day1);
+
                     day++;
                     cal.add(Calendar.DAY_OF_MONTH,1);
                 }

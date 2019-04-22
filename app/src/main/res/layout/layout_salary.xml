@@ -1,75 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ProgressBar
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:padding="12dp"
+    android:background="@drawable/border_shadow"
+    android:id="@+id/toolbar">
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/salaryFor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:ems="10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/salPerHour"
+        android:textSize="22sp"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/salary" />
+    <ProgressBar
+        android:layout_below="@id/toolbar"
         android:id="@+id/SalaryProgress"
-        android:visibility="gone"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/SalaryView"
+        android:layout_below="@id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="32sp"
-                android:id="@+id/salaryForLabel"
-                android:text="@string/salary_for"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="5dp"
-                app:layout_constraintEnd_toStartOf="@id/salaryFor"/>
-            <TextView
-                android:id="@+id/salaryFor"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="32sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/salaryForLabel"
-               />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:textAlignment="center"
                 android:id="@+id/salary"
-                app:layout_constraintTop_toBottomOf="@id/salaryFor"
-                android:textSize="100sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/workedHours"
-                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="9000"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="100sp"
+                app:layout_constraintBottom_toBottomOf="@id/workedHours"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
+                android:textAlignment="center"
+                android:padding="10dp"
                 android:id="@+id/workedHours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:text="from 200 hours of work"
                 android:textColor="@color/colorPrimary"
-                app:layout_constraintTop_toBottomOf="@id/salary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="from 200 hours of work"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/salary" />
+
+
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

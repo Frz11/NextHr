@@ -28,6 +28,7 @@ animator mtrl_fab_transformation_sheet_expand_spec
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array holiday_requests_status
 array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1111,6 +1112,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable picker_divider_color
+drawable salary
 drawable side_nav_bar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1232,6 +1234,7 @@ id alignBounds
 id alignMargins
 id all
 id always
+id approveButton
 id async
 id attendanceDay
 id attendanceDuration
@@ -1249,6 +1252,7 @@ id buttonLoginEmployee
 id buttonPanel
 id buttonRegisterCompany
 id cancel_action
+id cdown
 id center
 id center_horizontal
 id center_vertical
@@ -1275,6 +1279,7 @@ id countyLabel
 id custom
 id customPanel
 id dark
+id datesList
 id dayNumeric
 id dayText
 id day_layout
@@ -1312,6 +1317,7 @@ id email
 id emailLabel
 id email_login_form
 id email_sign_in_button
+id employee_name
 id end
 id end_padder
 id enterAlways
@@ -1333,12 +1339,15 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id holiday_req_recycler
 id holidaysDate
 id holidaysLeft
 id holidaysProgress
 id holidaysRecycler
 id holidaysToolbar
 id holidaysView
+id holidays_req_progress
+id holidays_req_view
 id home
 id homeAsUp
 id horizontal
@@ -1349,10 +1358,12 @@ id ifRoom
 id image
 id imagePicker
 id imageView
+id imageView2
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id label
 id labeled
 id largeLabel
 id left
@@ -1387,6 +1398,7 @@ id nav_attendance
 id nav_departments
 id nav_employees
 id nav_holidays
+id nav_holidays_requests
 id nav_locations
 id nav_logOut
 id nav_profile
@@ -1437,6 +1449,7 @@ id profile_changePasswordButton
 id progress_circular
 id progress_horizontal
 id radio
+id rejectButton
 id relativeLayoutAux
 id requests
 id right
@@ -1444,9 +1457,9 @@ id right_icon
 id right_side
 id role
 id roleNameLabel
+id salPerHour
 id salary
 id salaryFor
-id salaryForLabel
 id salaryLabel
 id save_image_matrix
 id save_non_transition_alpha
@@ -1539,6 +1552,7 @@ id unlabeled
 id up
 id useLogo
 id vertical
+id view
 id viewLayout
 id view_offset_helper
 id visible
@@ -1630,7 +1644,9 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout holiday_request_item
 layout holidays_layout
+layout holidays_requests_layout
 layout layout_attendance_item
 layout layout_employees
 layout layout_employees_item
@@ -1638,6 +1654,7 @@ layout layout_location_item
 layout layout_locations
 layout layout_rolelistitem
 layout layout_salary
+layout list_item_simple
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_menu
@@ -1707,6 +1724,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string accepted
 string action_settings
 string action_sign_in
 string action_sign_in_short
@@ -1748,7 +1766,10 @@ string company
 string confirm_password
 string country
 string county
+string date
+string dates
 string dbError
+string declined
 string default_web_client_id
 string department
 string departments
@@ -1775,14 +1796,17 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string holiday_requets
 string holidays_for
 string holydays
 string icon_book
+string icon_cdown
 string icon_check
 string icon_edit
 string icon_people
 string icon_plus
 string icon_search
+string icon_times
 string icon_trash
 string is_admin
 string last_name
@@ -1810,6 +1834,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pending
 string permission_rationale
 string phone
 string postal_code

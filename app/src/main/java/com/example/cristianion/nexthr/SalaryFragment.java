@@ -60,8 +60,10 @@ public class SalaryFragment extends Fragment {
         final View salaryView = view.findViewById(R.id.SalaryView);
         salaryView.setVisibility(View.VISIBLE);
         final TextView salaryFor = view.findViewById(R.id.salaryFor);
+        final TextView salH = view.findViewById(R.id.salPerHour);
         final TextView salary = view.findViewById(R.id.salary);
         final TextView hours = view.findViewById(R.id.workedHours);
+        salH.setText(currentEmployee.salary + "/hour");
         salaryFor.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

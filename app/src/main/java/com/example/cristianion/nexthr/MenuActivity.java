@@ -226,8 +226,8 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_salary) {
             fragment = new SalaryFragment();
         } else if (id == R.id.nav_holidays) {
-            if(currentEmployee.departmentId.isEmpty()){
-                showError(getApplicationContext(),"Holidays unavailable until a department is set!");
+            if (currentEmployee.departmentId.isEmpty()) {
+                showError(getApplicationContext(), "Holidays unavailable until a department is set!");
                 return true;
             }
             fragment = new HolidaysFragment();
@@ -235,10 +235,12 @@ public class MenuActivity extends AppCompatActivity
             fragment = new RolesFragment();
         } else if (id == R.id.nav_employees) {
             fragment = new EmployeesFragment();
-        } else if (id == R.id.nav_departments){
+        } else if (id == R.id.nav_departments) {
             fragment = new DepartmentsFragment();
-        } else if (id == R.id.nav_locations){
+        } else if (id == R.id.nav_locations) {
             fragment = new LocationFragment();
+        } else if (id == R.id.nav_holidays_requests) {
+            fragment = new HolidaysRequestsFragment();
         } else if (id == R.id.nav_logOut){
             FirebaseAuth auth = FirebaseAuth.getInstance();
             auth.signOut();
