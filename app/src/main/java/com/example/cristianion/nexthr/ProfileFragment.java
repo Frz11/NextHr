@@ -24,6 +24,7 @@ import com.example.cristianion.nexthr.Models.Role;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -49,6 +50,7 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.isEmailValid;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.isValidDate;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showError;
 import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
+import static com.example.cristianion.nexthr.Utils.UtilFunc.showSnackbarError;
 
 public class ProfileFragment extends Fragment {
 
@@ -197,8 +199,8 @@ public class ProfileFragment extends Fragment {
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),ChangePasswordActivity.class);
-                startActivity(intent);
+                FirebaseAuth.getInstance().sendPasswordResetEmail(currentEmployee.email);
+                showSnackbarError(profileView,"Check your email to reset your password!");
             }
         });
 

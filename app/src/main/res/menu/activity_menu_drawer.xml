@@ -23,6 +23,10 @@
             android:icon="@android:drawable/ic_menu_gallery"
             android:title="@string/holydays" />
         <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/messages"/>
+        <item
             android:id="@+id/nav_logOut"
             android:icon="@android:drawable/ic_lock_power_off"
             android:title="@string/log_out"/>

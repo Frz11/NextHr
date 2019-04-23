@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/conversationView">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="83dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/employee_name"
+        app:srcCompat="@drawable/anonymous" />
+
+    <TextView
+        android:id="@+id/employee_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toEndOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="26sp"
+        android:text="Employee Name"/>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/darker_gray" />
+
+</android.support.constraint.ConstraintLayout>

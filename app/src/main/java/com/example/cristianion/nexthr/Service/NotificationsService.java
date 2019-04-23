@@ -102,6 +102,24 @@ public class NotificationsService extends Service {
                     isStartHolidaysEmp.set(false);
                 }
             });
+            final AtomicBoolean isStartMessage= new AtomicBoolean(true);
+            db.collection("companies").document(currentCompany.id).collection("messages").whereEqualTo("to",currentEmployee.id).addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                    if(!isStartMessage.get()){
+                        assert queryDocumentSnapshots != null;
+                        for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
+                            switch (change.getType()){
+                                case ADDED:
+                                    Notifications.showNotification("New message!","Someone sent you a new message!",getApplicationContext(),R.drawable.ic_menu_mail);
+                                    break;
+                            }
+                        }
+                    }
+                    isStartMessage.set(false);
+                }
+            });
+
 
         }
         contor++;

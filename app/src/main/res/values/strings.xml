@@ -92,6 +92,8 @@
     <string name="declined">Declined</string>
     <string name="date">Date...</string>
     <string name="dates">Dates</string>
+    <string name="messages">Messages</string>
+    <string name="send">Send</string>
     <string-array name="holiday_requests_status">
         <item>All requests</item>
         <item>Pending</item>

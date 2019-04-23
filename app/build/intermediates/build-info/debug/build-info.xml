@@ -5,38 +5,39 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.3.2"
-    timestamp="1555944651941"
+    timestamp="1556034286794"
     token="-2873628355217067070"
-    verifier="CLASS_ADDED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1067" />
+        duration="822" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="31" />
+        duration="28" />
     <task
         name="verifier"
-        duration="10" />
+        duration="3" />
 
     <artifact
         location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1555942118392"
+        timestamp="1556032297931"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
+            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
@@ -59,6 +60,9 @@
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
@@ -68,44 +72,27 @@
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1555943765328"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1555944651941"
+        timestamp="1556034117179"
         verifier="CLASS_ADDED" >
         <artifact
+            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1556034286794"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
             location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
     </build>
 

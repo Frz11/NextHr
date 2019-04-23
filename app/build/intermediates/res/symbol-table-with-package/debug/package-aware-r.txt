@@ -1088,6 +1088,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
 drawable ic_menu_gallery
+drawable ic_menu_mail
 drawable ic_menu_manage
 drawable ic_menu_send
 drawable ic_menu_share
@@ -1096,6 +1097,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable logo
+drawable message_item_receiver
+drawable message_item_sender
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1270,6 +1273,8 @@ id constraintLayout2
 id container
 id content
 id contentPanel
+id contraint
+id conversationView
 id coordinator
 id countryInput
 id countryLabel
@@ -1317,6 +1322,7 @@ id email
 id emailLabel
 id email_login_form
 id email_sign_in_button
+id empSearch
 id employee_name
 id end
 id end_padder
@@ -1359,6 +1365,7 @@ id image
 id imagePicker
 id imageView
 id imageView2
+id imageView3
 id info
 id invisible
 id italic
@@ -1383,6 +1390,13 @@ id maxSalary
 id maxSalaryLabel
 id media_actions
 id message
+id messageBox
+id messageReceiver
+id messageSender
+id messageTimeReceiver
+id messageTimeSender
+id messagesProgress
+id messagesRecycler
 id middle
 id minSalary
 id minSalaryLabel
@@ -1401,6 +1415,7 @@ id nav_holidays
 id nav_holidays_requests
 id nav_locations
 id nav_logOut
+id nav_messages
 id nav_profile
 id nav_roles
 id nav_salary
@@ -1449,6 +1464,7 @@ id profile_changePasswordButton
 id progress_circular
 id progress_horizontal
 id radio
+id receiverLayout
 id rejectButton
 id relativeLayoutAux
 id requests
@@ -1488,6 +1504,8 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sendButton
+id senderLayout
 id shortcut
 id showCustom
 id showHome
@@ -1616,6 +1634,7 @@ layout activity_add_employee
 layout activity_add_location
 layout activity_add_role
 layout activity_change_password
+layout activity_conversation
 layout activity_edit_department
 layout activity_edit_employee
 layout activity_edit_location
@@ -1627,6 +1646,7 @@ layout activity_menu
 layout activity_welcome
 layout app_bar_menu
 layout atendance_activity
+layout conversation_list_item
 layout day_item_layout
 layout departmentitem_layout
 layout departments_layout
@@ -1655,6 +1675,8 @@ layout layout_locations
 layout layout_rolelistitem
 layout layout_salary
 layout list_item_simple
+layout message_item
+layout messages_layout
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_menu
@@ -1818,6 +1840,7 @@ string log_in
 string log_out
 string manager
 string max_salary
+string messages
 string min_salary
 string mtrl_chip_close_icon_content_description
 string name
@@ -1850,6 +1873,7 @@ string salary_for
 string save
 string search
 string search_menu_title
+string send
 string status_bar_notification_info_overflow
 string street
 string title_activity_login_new
