@@ -8,6 +8,7 @@
 
     <RelativeLayout
         android:id="@+id/toolbar"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,37 +31,45 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/messagesRecycler"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/contraint"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/contraint"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/message_box_background"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="1dp"
+        android:padding="8dp">
 
         <EditText
             android:id="@+id/messageBox"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:singleLine="false"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="8dp"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/sendButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/sendButton"
+        <com.example.cristianion.nexthr.FontAwesome
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:background="@color/design_default_color_primary_dark"
-            android:text="@string/send"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/sendButton"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/messageBox"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="@string/icon_paper_plane"
+            android:textColor="@android:color/white"
+            android:textSize="38sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 

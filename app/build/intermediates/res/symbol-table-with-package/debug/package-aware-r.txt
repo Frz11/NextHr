@@ -1097,6 +1097,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable logo
+drawable message_box_background
 drawable message_item_receiver
 drawable message_item_sender
 drawable mtrl_snackbar_background
@@ -1827,6 +1828,7 @@ string icon_book
 string icon_cdown
 string icon_check
 string icon_edit
+string icon_paper_plane
 string icon_people
 string icon_plus
 string icon_search

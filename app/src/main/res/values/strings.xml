@@ -23,6 +23,7 @@
     <string name="icon_check">&#xf00c;</string>
     <string name="icon_times">&#xf00d;</string>
     <string name="icon_cdown">&#xf078;</string>
+    <string name="icon_paper_plane">&#xf1d8;</string>
     <string name="title_activity_login_new">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

@@ -34,6 +34,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -57,12 +58,14 @@ public class ConversationActivity extends AppCompatActivity {
         final MessagesAdapter adapter = new MessagesAdapter(getApplicationContext(),messages);
         final TextView messageBox = findViewById(R.id.messageBox);
         final TextView employeeName = findViewById(R.id.employee_name);
-        final Button send = findViewById(R.id.sendButton);
+        final FontAwesome send = findViewById(R.id.sendButton);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         final String employeeId = getIntent().getStringExtra("employeeId");
         final String eName= getIntent().getStringExtra("employeeName");
-        employeeName.setText(eName);
+        setTitle(eName);
+
+        //employeeName.setText(eName);
         final Task receiver = db.collection("messages").whereEqualTo("from",employeeId)
                 .whereEqualTo("to",currentEmployee.id).orderBy("sentAt", Query.Direction.DESCENDING).get();
         Task sender = db.collection("messages").whereEqualTo("from",currentEmployee.id)
