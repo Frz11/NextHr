@@ -23,11 +23,14 @@ import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 
 import org.w3c.dom.Text;
 
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import static com.example.cristianion.nexthr.Utils.Global.currentCompany;
@@ -139,7 +142,12 @@ public class SalaryFragment extends Fragment {
 
                 int h = (int)(totalHours*60)/60;
                 int m = (int)(totalHours*60)%60;
-                salary.setText(String.format("%.2f", totalSalary));
+                NumberFormat formatter = NumberFormat.getInstance(Locale.US);
+                formatter.setMaximumFractionDigits(2);
+                formatter.setMinimumFractionDigits(2);
+                formatter.setRoundingMode(RoundingMode.HALF_UP);
+                Float formatedFloat = Float.valueOf(formatter.format(totalSalary));
+                salary.setText(""+formatedFloat);
                 hours.setText(String.format("from %s hours and %s minutes of work", h,m));
                 showProgress(false,view,progressBar);
                 numberAnimation(salary);

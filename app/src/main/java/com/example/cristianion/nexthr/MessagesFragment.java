@@ -32,6 +32,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -96,6 +98,10 @@ public class MessagesFragment extends Fragment {
                     public void afterTextChanged(Editable s) {
                         for(Employee employee : employees){
                             if(search.getText().toString().equals(employee.firstName + " " + employee.lastName)){
+                                if(employee.id.equals(currentEmployee.id)){
+                                    search.setText("");
+                                    return;
+                                }
                                 Intent intent = new Intent(getActivity(),ConversationActivity.class);
                                 intent.putExtra("employeeId",employee.id);
                                 intent.putExtra("employeeName",employee.firstName + " " +  employee.lastName);
@@ -118,19 +124,33 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onSuccess(List<Object> objects) {
                 Set<String> conversations = new HashSet<>();
+                ArrayList<Message> tba = new ArrayList<>();
                 for(Object object : objects ){
                     QuerySnapshot snapshot = (QuerySnapshot) object;
                     List<Message> messages = snapshot.toObjects(Message.class);
-                    for(Message message : messages) {
-                        if (!message.from.equals(currentEmployee.id)) {
-                            conversations.add(message.from);
+                    tba.addAll(messages);
+                }
+                Collections.sort(tba, new Comparator<Message>() {
+                    @Override
+                    public int compare(Message o1, Message o2) {
+                        if(o1.sentAt.equals(o2.sentAt)){
+                            return 0;
                         } else {
-                            conversations.add(message.to);
+                            return o1.sentAt.compareTo(o2.sentAt);
                         }
+                    }
+                });
+                for(Message message : tba){
+                    if(!message.from.equals(currentEmployee.id)){
+                        conversations.add(message.from);
+                    } else {
+                        conversations.add(message.to);
                     }
                 }
                 showProgress(false,messagesView,progressBar);
                 convs.addAll(conversations);
+                Collections.reverse(convs);
+                adapter.notifyDataSetChanged();
 
             }
         });
@@ -140,6 +160,7 @@ public class MessagesFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
+            assert getFragmentManager() != null;
             getFragmentManager().beginTransaction().replace(R.id.Frame,new MessagesFragment()).commit();
         }
     }

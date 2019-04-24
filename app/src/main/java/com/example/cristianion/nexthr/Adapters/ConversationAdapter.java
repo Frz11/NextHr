@@ -3,6 +3,7 @@ package com.example.cristianion.nexthr.Adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,13 +14,20 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.cristianion.nexthr.ConversationActivity;
 import com.example.cristianion.nexthr.Models.Employee;
+import com.example.cristianion.nexthr.Models.Image;
 import com.example.cristianion.nexthr.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
 import java.util.Random;
@@ -69,6 +77,24 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
                         context.startActivity(intent);
                     }
                 });
+            }
+        });
+
+        db.collection("images").whereEqualTo("userId",conversationId).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<Image> images = queryDocumentSnapshots.toObjects(Image.class);
+                for (Image image : images){
+                    StorageReference storage = FirebaseStorage.getInstance().getReference("images/").child(currentCompany.id).child(image.id);
+                    storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Uri> task) {
+                            Glide.with(context).load(task.getResult()).into(viewHolder.image);
+
+                        }
+                    });
+                    break;
+                }
             }
         });
 

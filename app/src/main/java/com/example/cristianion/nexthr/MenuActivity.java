@@ -231,6 +231,8 @@ public class MenuActivity extends AppCompatActivity
                 return true;
             }
             fragment = new HolidaysFragment();
+        } else if(id == R.id.nav_closeApp){
+            MenuActivity.this.moveTaskToBack(true);
         } else if(id == R.id.nav_messages){
             fragment = new MessagesFragment();
         } else if (id == R.id.nav_roles) {

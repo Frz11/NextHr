@@ -94,6 +94,7 @@
     <string name="dates">Dates</string>
     <string name="messages">Messages</string>
     <string name="send">Send</string>
+    <string name="close_application">Close Application</string>
     <string-array name="holiday_requests_status">
         <item>All requests</item>
         <item>Pending</item>

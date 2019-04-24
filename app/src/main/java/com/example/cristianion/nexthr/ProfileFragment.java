@@ -243,7 +243,8 @@ public class ProfileFragment extends Fragment {
                                     storage.child(currentCompany.id).child(image.id).putFile(Objects.requireNonNull(data.getData())).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                         @Override
                                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                            Objects.requireNonNull(getActivity()).recreate();
+                                            assert getFragmentManager() != null;
+                                            getFragmentManager().beginTransaction().replace(R.id.Frame,new ProfileFragment()).commit();
                                         }
                                     });
                                 }
