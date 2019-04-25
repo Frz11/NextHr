@@ -67,7 +67,7 @@ public class HolidaysReqAdapter extends RecyclerView.Adapter<HolidaysReqAdapter.
             @SuppressLint("SetTextI18n")
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                Employee employee = documentSnapshot.toObject(Employee.class);
+                final Employee employee = documentSnapshot.toObject(Employee.class);
                 if(employee == null){
                     return;
                 }
@@ -142,6 +142,9 @@ public class HolidaysReqAdapter extends RecyclerView.Adapter<HolidaysReqAdapter.
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                             holiday.status = "Rejected";
+                                            //give the days back;
+                                            employee.holidays += holiday.dates.size();
+                                            db.collection("employees").document(employee.id).set(employee);
                                             db.collection("holidays").document(holiday.id).set(holiday)
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override

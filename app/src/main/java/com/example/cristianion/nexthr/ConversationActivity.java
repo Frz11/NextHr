@@ -95,7 +95,9 @@ public class ConversationActivity extends AppCompatActivity {
                     }
                 });
                 adapter.notifyDataSetChanged();
-                recyclerView.smoothScrollToPosition(messages.size() -1);
+                if(messages.size()  > 0) {
+                    recyclerView.smoothScrollToPosition(messages.size() - 1);
+                }
                 send.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
