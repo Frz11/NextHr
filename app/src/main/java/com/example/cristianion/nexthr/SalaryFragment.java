@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.cristianion.nexthr.Models.Attendance;
+import com.example.cristianion.nexthr.Models.Holiday;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -108,49 +110,81 @@ public class SalaryFragment extends Fragment {
 
     }
 
-    private void calculateSalary(String date, final TextView salary, final TextView hours, final View view, final ProgressBar progressBar){
+    private void calculateSalary(final String date, final TextView salary, final TextView hours, final View view, final ProgressBar progressBar){
         showProgress(true,view,progressBar);
         db.collection("attendances")
                 .whereEqualTo("employeeId",currentEmployee.id).whereLessThan("day",date+"-31")
                 .whereGreaterThan("day",date+"-01").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                double totalHours = 0;
-                double totalSalary = 0;
-                List<Attendance> attendances = queryDocumentSnapshots.toObjects(Attendance.class);
-                for(Attendance attendance : attendances){
-                    if(!attendance.arrivalTime.isEmpty() && !attendance.leaveTime.isEmpty() && !attendance.day.isEmpty()){
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm");
-                        try {
-                            Date date1 = format.parse(attendance.day + " " + attendance.arrivalTime);
-                            Date date2 = format.parse(attendance.day + " " + attendance.leaveTime);
-                            Log.wtf(attendance.day,date1.getTime() + "--" + date2.getTime());
 
-                            double diff = date2.getTime() - date1.getTime();
-                            double seconds = diff / 1000;
-                            double minutes = (seconds / 60);
-                            double hours = (minutes / 60);
-
-                            totalHours += hours;
-                            totalSalary += (Double.parseDouble(currentEmployee.salary))*hours;
-                            Log.wtf(attendance.day,minutes + "xx" + hours);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
+                final List<Attendance> attendances = queryDocumentSnapshots.toObjects(Attendance.class);
+                db.collection("holidays").whereEqualTo("employeeId",currentEmployee.id).whereEqualTo("status","Approved")
+                        .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        double totalHours = 0;
+                        double totalSalary = 0;
+                        List<Holiday> holidays = queryDocumentSnapshots.toObjects(Holiday.class);
+                        for (Holiday holiday : holidays){
+                            for (String dateH : holiday.dates){
+                                if(dateH.substring(0,7).equals(date)){
+                                    totalHours += 8;
+                                    totalSalary += (Double.parseDouble(currentEmployee.salary))*8;
+                                }
+                            }
                         }
-                    }
-                }
 
-                int h = (int)(totalHours*60)/60;
-                int m = (int)(totalHours*60)%60;
-                NumberFormat formatter = NumberFormat.getInstance(Locale.US);
-                formatter.setMaximumFractionDigits(2);
-                formatter.setMinimumFractionDigits(2);
-                formatter.setRoundingMode(RoundingMode.HALF_UP);
-                Float formatedFloat = Float.valueOf(formatter.format(totalSalary));
-                salary.setText(""+formatedFloat);
-                hours.setText(String.format("from %s hours and %s minutes of work", h,m));
-                showProgress(false,view,progressBar);
-                numberAnimation(salary);
+                        for(Attendance attendance : attendances){
+                            boolean cont = true;
+                            if(!attendance.arrivalTime.isEmpty() && !attendance.leaveTime.isEmpty() && !attendance.day.isEmpty()){
+                                SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm");
+                                for(Holiday holiday : holidays){
+                                    for (String date1 : holiday.dates){
+                                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+                                        try {
+                                            Date attDate = dateFormat.parse(attendance.day);
+                                            Date holiDate = dateFormat.parse(date1);
+                                            Log.wtf(attendance.day,date1);
+                                            if(attDate.compareTo(holiDate) == 0){
+                                                cont = false;
+                                            }
+                                        } catch (ParseException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                }
+                                if(!cont){
+                                    continue;
+                                }
+                                try {
+                                    Date date1 = format.parse(attendance.day + " " + attendance.arrivalTime);
+                                    Date date2 = format.parse(attendance.day + " " + attendance.leaveTime);
+                                    Log.wtf(attendance.day,date1.getTime() + "--" + date2.getTime());
+
+                                    double diff = date2.getTime() - date1.getTime();
+                                    double seconds = diff / 1000;
+                                    double minutes = (seconds / 60);
+                                    double hours = (minutes / 60);
+
+                                    totalHours += hours;
+                                    totalSalary += (Double.parseDouble(currentEmployee.salary))*hours;
+                                    Log.wtf(attendance.day,minutes + "xx" + hours);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+
+                        int h = (int)(totalHours*60)/60;
+                        int m = (int)(totalHours*60)%60;
+                        salary.setText(String.format(Locale.US,"%.2f",totalSalary));
+                        hours.setText(String.format("from %s hours and %s minutes of work", h,m));
+                        showProgress(false,view,progressBar);
+                        numberAnimation(salary);
+                    }
+                });
+
 
             }
         });
