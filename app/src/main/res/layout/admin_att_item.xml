@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border"
+    android:id="@+id/view"
+    android:padding="10dp">
+    <HorizontalScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/start"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:id="@+id/horizontal"
+        android:duplicateParentState="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:duplicateParentState="true"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:id="@+id/employee_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Employee San"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="5dp"
+                />
+            <TextView
+                android:duplicateParentState="true"
+                android:clickable="false"
+                android:id="@+id/department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/employee_name"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintTop_toBottomOf="@id/employee_name"
+                android:text="..........." />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/end"
+        app:layout_constraintTop_toBottomOf="@id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:text="18:00"/>
+
+</android.support.constraint.ConstraintLayout>

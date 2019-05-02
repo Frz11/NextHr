@@ -96,6 +96,11 @@
     <string name="messages">Messages</string>
     <string name="send">Send</string>
     <string name="close_application">Close Application</string>
+    <string name="attendances">Attendances</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="leave_time">Leave Time</string>
+    <string name="day">Day</string>
+    <string name="remove">Remove</string>
     <string-array name="holiday_requests_status">
         <item>All requests</item>
         <item>Pending</item>

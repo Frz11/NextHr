@@ -203,10 +203,14 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/cristianion/.gra
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:18:9-40
-activity#com.example.cristianion.nexthr.ConversationActivity
-ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:19:9-20:61
+activity#com.example.cristianion.nexthr.EditAttendanceActivity
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:19:9-69
 	android:name
-		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:20:13-49
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:19:19-57
+activity#com.example.cristianion.nexthr.ConversationActivity
+ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:20:9-58
+	android:name
+		ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:20:19-55
 service#com.example.cristianion.nexthr.Service.NotificationsService
 ADDED from /Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/AndroidManifest.xml:22:9-25:39
 	android:enabled

@@ -1054,6 +1054,7 @@ drawable anonymous
 drawable avd_hide_password
 drawable avd_show_password
 drawable border
+drawable border_red
 drawable border_shadow
 drawable border_unselected
 drawable common_full_open_on_phone
@@ -1285,14 +1286,18 @@ id countyLabel
 id custom
 id customPanel
 id dark
+id date
+id date_label
 id datesList
 id dayNumeric
 id dayText
 id day_layout
 id decor_content_parent
 id default_activity_button
+id delete
 id deleteDepartment
 id deleteLocation
+id department
 id departmentLayout
 id departmentLocationInput
 id departmentLocationLabel
@@ -1324,6 +1329,7 @@ id emailLabel
 id email_login_form
 id email_sign_in_button
 id empSearch
+id employee
 id employee_name
 id end
 id end_padder
@@ -1374,6 +1380,8 @@ id item_touch_helper_previous_elevation
 id label
 id labeled
 id largeLabel
+id leave
+id leave_label
 id left
 id light
 id line1
@@ -1410,6 +1418,7 @@ id multiply
 id name
 id nav_administration
 id nav_attendance
+id nav_attendances
 id nav_closeApp
 id nav_departments
 id nav_employees
@@ -1463,10 +1472,12 @@ id profileRoleLabel
 id profileSalary
 id profile_SaveProfileButton
 id profile_changePasswordButton
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
 id receiverLayout
+id recycler
 id rejectButton
 id relativeLayoutAux
 id requests
@@ -1479,6 +1490,7 @@ id salPerHour
 id salary
 id salaryFor
 id salaryLabel
+id save
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1527,6 +1539,7 @@ id src_in
 id src_over
 id standard
 id start
+id start_label
 id status
 id status_bar_latest_event_content
 id street
@@ -1637,6 +1650,7 @@ layout activity_add_location
 layout activity_add_role
 layout activity_change_password
 layout activity_conversation
+layout activity_edit_attendance
 layout activity_edit_department
 layout activity_edit_employee
 layout activity_edit_location
@@ -1646,8 +1660,10 @@ layout activity_login
 layout activity_login_new
 layout activity_menu
 layout activity_welcome
+layout admin_att_item
 layout app_bar_menu
 layout atendance_activity
+layout attendances_admin_layout
 layout conversation_list_item
 layout day_item_layout
 layout departmentitem_layout
@@ -1760,7 +1776,9 @@ string add_role
 string administration
 string app_name
 string appbar_scrolling_view_behavior
+string arrival_time
 string attendance
+string attendances
 string birthday
 string birthday_dd_mm_yyyy
 string bottom_sheet_behavior
@@ -1793,6 +1811,7 @@ string country
 string county
 string date
 string dates
+string day
 string dbError
 string declined
 string default_web_client_id
@@ -1836,6 +1855,7 @@ string icon_times
 string icon_trash
 string is_admin
 string last_name
+string leave_time
 string line
 string loading
 string location
@@ -1869,6 +1889,7 @@ string profile
 string project_id
 string prompt_email
 string prompt_password
+string remove
 string requests
 string role_job
 string roles

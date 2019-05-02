@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable_border_red.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/drawable/border_red.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -1060,6 +1064,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/res/color/mtrl_bottom_nav_item_tint.xml"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_admin_att_item.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/admin_att_item.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
@@ -1172,6 +1180,10 @@
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_attendances_admin_layout.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/attendances_admin_layout.xml"
+    },
+    {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -1186,6 +1198,10 @@
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/dac903405f989233bea45257c7faf504/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_activity_edit_attendance.xml.flat",
+        "source": "/Users/cristianion/AndroidStudioProjects/NextHR/app/src/main/res/layout/activity_edit_attendance.xml"
     },
     {
         "merged": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",

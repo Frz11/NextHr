@@ -61,6 +61,10 @@
                 android:id="@+id/nav_holidays_requests"
                 android:icon="@android:drawable/ic_menu_agenda"
                 android:title="@string/holiday_requets"/>
+            <item
+                android:id="@+id/nav_attendances"
+                android:icon="@android:drawable/ic_menu_my_calendar"
+                android:title="@string/attendances"/>
         </menu>
     </item>
     </group>

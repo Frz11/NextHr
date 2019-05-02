@@ -63,6 +63,7 @@ public class MenuActivity extends AppCompatActivity
     public static final int editDepartmentCode = 2;
     public static final int editRoleCode = 3;
     public static final int editEmployeeCode = 4;
+    public static final int editAttendanceCode = 5;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -129,6 +130,14 @@ public class MenuActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(final Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(final Menu menu){
+
+        super.onPrepareOptionsMenu(menu);
         ((TextView) findViewById(R.id.Company)).setText(currentCompany.name);
         ((TextView) findViewById(R.id.Name)).setText(currentEmployee.lastName + " " + currentEmployee.firstName);
 
@@ -180,15 +189,6 @@ public class MenuActivity extends AppCompatActivity
                 }
             }
         });
-
-
-        return true;
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(final Menu menu){
-
-        super.onPrepareOptionsMenu(menu);
 
         return true;
     }
@@ -249,6 +249,8 @@ public class MenuActivity extends AppCompatActivity
             FirebaseAuth auth = FirebaseAuth.getInstance();
             auth.signOut();
             finish();
+        } else if (id == R.id.nav_attendances){
+            fragment = new AttendancesAdminFragment();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -280,6 +282,9 @@ public class MenuActivity extends AppCompatActivity
                 break;
             case editEmployeeCode :
                 getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new EmployeesFragment()).commit();
+                break;
+            case editAttendanceCode:
+                getSupportFragmentManager().beginTransaction().replace(R.id.Frame,new AttendancesAdminFragment()).commit();
                 break;
         }
     }
