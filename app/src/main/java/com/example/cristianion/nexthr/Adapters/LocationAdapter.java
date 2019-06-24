@@ -141,8 +141,7 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
     private void setAnimation(View view,int position){
         if(lastPosition < position){
             ScaleAnimation anim = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            anim.setDuration(new Random().nextInt(501));
-            view.startAnimation(anim);
+anim.setDuration(new Random().nextInt(1000));view.startAnimation(anim);
             lastPosition = position;
         }
     }

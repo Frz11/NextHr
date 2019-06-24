@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:drawable/edit_text"
-                android:hint="@string/prompt_password"
+                android:hint="@string/password"
                 android:imeActionId="6"
                 android:imeActionLabel="@string/action_sign_in_short"
                 android:imeOptions="actionUnspecified"
@@ -78,6 +78,17 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimaryDark"
                 android:text="Login"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/forgot_password_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="FORGOT PASSWORD"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 

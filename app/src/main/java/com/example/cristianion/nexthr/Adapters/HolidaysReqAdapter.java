@@ -28,6 +28,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -59,18 +60,29 @@ public class HolidaysReqAdapter extends RecyclerView.Adapter<HolidaysReqAdapter.
     }
 
     @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
+    @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         setAnimation(viewHolder.itemView,i);
         final Holiday holiday = holidays.get(i);
-        Log.wtf("wtf",holiday.employeeId);
         db.collection("employees").document(holiday.employeeId).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 final Employee employee = documentSnapshot.toObject(Employee.class);
                 if(employee == null){
+                    Log.wtf("wtf","!!!!!");
                     return;
                 }
+                Log.wtf(viewHolder.datesList.getText().toString(),"1");
                 viewHolder.employeeName.setText(employee.lastName + " " + employee.firstName);
                 if(holiday.status.equals("Approved")){
                     viewHolder.reqView.setBackgroundColor(context.getResources().getColor(android.R.color.holo_green_dark));
@@ -79,6 +91,7 @@ public class HolidaysReqAdapter extends RecyclerView.Adapter<HolidaysReqAdapter.
                 } else if(holiday.status.equals("Rejected")){
                     viewHolder.reqView.setBackgroundColor(context.getResources().getColor(android.R.color.holo_red_dark));
                     viewHolder.reject.setVisibility(View.GONE);
+                } else if(holiday.status.equals("Pending")){
 
                 }
                 for (String date: holiday.dates) {
@@ -190,9 +203,20 @@ public class HolidaysReqAdapter extends RecyclerView.Adapter<HolidaysReqAdapter.
     public void setAnimation(View view,int position){
         if(lastPosition < position){
             ScaleAnimation anim = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            anim.setDuration(new Random().nextInt(501));
-            view.startAnimation(anim);
+anim.setDuration(new Random().nextInt(1000));view.startAnimation(anim);
             lastPosition = position;
         }
+    }
+
+    public void clearList(){
+        for (Holiday holiday : holidays) {
+            holiday.dates.clear();
+        }
+        holidays.clear();
+        notifyDataSetChanged();
+    }
+    public void addToList(List<Holiday> holidayList){
+        this.holidays.addAll(holidayList);
+        notifyDataSetChanged();
     }
 }

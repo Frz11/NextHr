@@ -4,41 +4,7 @@
             "outputFile": "/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
             "map": [
                 {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/67ac1fd8553760864bec28e060658aa3/res/values-uk/values-uk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5615",
-                        "endColumns": "100",
-                        "endOffsets": "5711"
-                    }
-                },
-                {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/5076feb7ee9977afbb82adb3449eb120/res/values-uk/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3988",
-                        "endColumns": "204",
-                        "endOffsets": "4188"
-                    }
-                },
-                {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4bfd2d13287d8996a0d5d13ea64aa465/res/values-uk/values-uk.xml",
+                    "source": "/Users/cristianion/.gradle/caches/transforms-2/files-2.1/c19360c30ca77a0ff118cfc066ebf7a2/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/cristianion/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f139146487043c61e0a3f0853c6f4313/res/values-uk/values.xml",
+                    "source": "/Users/cristianion/.gradle/caches/transforms-2/files-2.1/c532109be1c5403c1094ea0847343237/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5615",
+                        "endColumns": "100",
+                        "endOffsets": "5711"
+                    }
+                },
+                {
+                    "source": "/Users/cristianion/.gradle/caches/transforms-2/files-2.1/87ecc5dd966cafb578f903fe96e61b24/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "2819,2929,3124,3253,3365,3578,3709,3854,4193,4420,4528,4721,4848,5054,5226,5326,5417",
                         "endColumns": "109,194,128,111,212,130,144,133,226,107,192,126,205,171,99,90,116",
                         "endOffsets": "2924,3119,3248,3360,3573,3704,3849,3983,4415,4523,4716,4843,5049,5221,5321,5412,5529"
+                    }
+                },
+                {
+                    "source": "/Users/cristianion/.gradle/caches/transforms-2/files-2.1/f0a4e36bc100bd9c59e0a8bc88d4eb99/res/values-uk/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3988",
+                        "endColumns": "204",
+                        "endOffsets": "4188"
                     }
                 }
             ]

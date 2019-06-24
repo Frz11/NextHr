@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -76,37 +77,56 @@ public class EditAttendanceActivity extends AppCompatActivity {
                     leave.setText(attendance.leaveTime);
                     date.setText(attendance.day);
 
-                    start.setOnClickListener(new View.OnClickListener() {
+                    start.setOnTouchListener(new View.OnTouchListener() {
                         @Override
-                        public void onClick(View v) {
-                            new TimePickerDialog(EditAttendanceActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                                @Override
-                                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                    start.setText(String.format(Locale.US,"%02d:%02d",hourOfDay,minute));
-                                }
-                            },0,0,false).show();
+                        public boolean onTouch(final View v, MotionEvent event) {
+                            if(MotionEvent.ACTION_UP == event.getAction()) {
+                                new TimePickerDialog(EditAttendanceActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                                    @Override
+                                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                        start.setText(String.format(Locale.US,"%02d:%02d",hourOfDay,minute));
+                                        if(start.getText().toString().compareTo(leave.getText().toString()) > 0 && !leave.getText().toString().isEmpty()){
+                                            start.setText("");
+                                            showSnackbarError(v,"Arrival time cannot be greater than leave time!");
+                                            return;
+                                        }
+                                    }
+                                },0,0,false).show();
+                            }
+                            return false;
                         }
                     });
-                    leave.setOnClickListener(new View.OnClickListener() {
+                    leave.setOnTouchListener(new View.OnTouchListener() {
                         @Override
-                        public void onClick(View v) {
-                            new TimePickerDialog(EditAttendanceActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                                @Override
-                                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                    leave.setText(String.format(Locale.US,"%02d:%02d",hourOfDay,minute));
-                                }
-                            },0,0,false).show();
+                        public boolean onTouch(final View v, MotionEvent event) {
+                            if(MotionEvent.ACTION_UP == event.getAction()){
+                                new TimePickerDialog(EditAttendanceActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                                    @Override
+                                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                        leave.setText(String.format(Locale.US,"%02d:%02d",hourOfDay,minute));
+                                        if(start.getText().toString().compareTo(leave.getText().toString()) > 0){
+                                            leave.setText("");
+                                            showSnackbarError(v,"Arrival time cannot be greater than start time!");
+                                            return;
+                                        }
+                                    }
+                                },0,0,false).show();
+                            }
+                            return false;
                         }
                     });
-                    date.setOnClickListener(new View.OnClickListener() {
+                    date.setOnTouchListener(new View.OnTouchListener() {
                         @Override
-                        public void onClick(View v) {
-                            new DatePickerDialog(EditAttendanceActivity.this, new DatePickerDialog.OnDateSetListener() {
-                                @Override
-                                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                    date.setText(String.format(Locale.US,"%d-%02d-%02d",year,month,dayOfMonth));
-                                }
-                            },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+                        public boolean onTouch(View v, MotionEvent event) {
+                            if(MotionEvent.ACTION_UP == event.getAction()){
+                                new DatePickerDialog(EditAttendanceActivity.this, new DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        date.setText(String.format(Locale.US,"%d-%02d-%02d",year,month,dayOfMonth));
+                                    }
+                                },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+                            }
+                            return false;
                         }
                     });
 

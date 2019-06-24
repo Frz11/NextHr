@@ -57,7 +57,9 @@ public class NotificationsService extends Service {
                 public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
                         Log.wtf(isStartEmployeeChanges.get()+"","get");
                         if(!isStartEmployeeChanges.get()) {
-                            assert documentSnapshot != null;
+                            if(documentSnapshot == null){
+                                return;
+                            }
                             currentEmployee = documentSnapshot.toObject(Employee.class);
                             //Notifications.showNotification("Changes!", "Someone changed something in your profile...", getApplicationContext());
                         }
@@ -70,13 +72,14 @@ public class NotificationsService extends Service {
                 @Override
                 public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                     if(!isStartHolidaysManager.get()){
-                        assert queryDocumentSnapshots != null;
-                        for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
-                            switch (change.getType()){
-                                case ADDED:
-                                    Notifications.showNotification("New holiday request!","Someone made a new holiday request!", getApplicationContext(),
-                                            android.R.drawable.ic_dialog_info);
-                                    break;
+                        if (queryDocumentSnapshots != null) {
+                            for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
+                                switch (change.getType()){
+                                    case ADDED:
+                                        Notifications.showNotification("New holiday request!","Someone made a new holiday request!", getApplicationContext(),
+                                                android.R.drawable.ic_dialog_info);
+                                        break;
+                                }
                             }
                         }
                     }
@@ -89,13 +92,15 @@ public class NotificationsService extends Service {
                 @Override
                 public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                     if(!isStartHolidaysEmp.get()){
-                        assert  queryDocumentSnapshots != null;
-                        for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
-                            switch (change.getType()){
-                                case MODIFIED:
-                                    Notifications.showNotification("Holidays...","Status of one of your requests changed", getApplicationContext(),
-                                            android.R.drawable.ic_dialog_info);
-                                    break;
+
+                        if (queryDocumentSnapshots != null) {
+                            for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
+                                switch (change.getType()){
+                                    case MODIFIED:
+                                        Notifications.showNotification("Holidays...","Status of one of your requests changed", getApplicationContext(),
+                                                android.R.drawable.ic_dialog_info);
+                                        break;
+                                }
                             }
                         }
                     }
@@ -107,12 +112,13 @@ public class NotificationsService extends Service {
                 @Override
                 public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                     if(!isStartMessage.get()){
-                        assert queryDocumentSnapshots != null;
-                        for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
-                            switch (change.getType()){
-                                case ADDED:
-                                    Notifications.showNotification("New message!","Someone sent you a new message!",getApplicationContext(),R.drawable.ic_menu_mail);
-                                    break;
+                        if (queryDocumentSnapshots != null) {
+                            for(DocumentChange change : queryDocumentSnapshots.getDocumentChanges()){
+                                switch (change.getType()){
+                                    case ADDED:
+                                        Notifications.showNotification("New message!","Someone sent you a new message!",getApplicationContext(),R.drawable.ic_menu_mail);
+                                        break;
+                                }
                             }
                         }
                     }

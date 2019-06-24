@@ -200,7 +200,7 @@ public class AttendanceFragment extends Fragment {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         arrival.setText(String.format(Locale.US,"%02d:%02d", hourOfDay, minute));
-                        if(arrival.getText().toString().compareTo(leave.getText().toString()) > 0){
+                        if(arrival.getText().toString().compareTo(leave.getText().toString()) > 0 && !leave.getText().toString().isEmpty()){
                             showSnackbarError(getView(),"Arrival time cannot be greater than leave time!");
                             arrival.setText("");
                         }

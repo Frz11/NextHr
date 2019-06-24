@@ -101,10 +101,12 @@
     <string name="leave_time">Leave Time</string>
     <string name="day">Day</string>
     <string name="remove">Remove</string>
+    <string name="generate_csv">Generate CSV</string>
+    <string name="salaries">Salaries</string>
     <string-array name="holiday_requests_status">
         <item>All requests</item>
         <item>Pending</item>
-        <item>Accepted</item>
-        <item>Denied</item>
+        <item>Approved</item>
+        <item>Rejected</item>
     </string-array>
 </resources>

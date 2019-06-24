@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         setAnimation(viewHolder.itemView,i);
         final Department department = mDepartments.get(i);
+        Log.wtf(department.name,department.id);
         viewHolder.departmentName.setText(UtilFunc.truncate(department.name,30));
         viewHolder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,8 +122,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
     public void setAnimation(View view,int position){
         if(lastPosition < position){
             ScaleAnimation anim = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            anim.setDuration(new Random().nextInt(501));
-            view.startAnimation(anim);
+anim.setDuration(new Random().nextInt(1000));view.startAnimation(anim);
             lastPosition = position;
         }
     }

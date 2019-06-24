@@ -34,6 +34,7 @@
             android:id="@+id/nav_closeApp"
             android:icon="@android:drawable/ic_lock_power_off"
             android:title="@string/close_application"/>
+    </group>
 
     <item
         android:id="@+id/nav_administration"
@@ -65,8 +66,11 @@
                 android:id="@+id/nav_attendances"
                 android:icon="@android:drawable/ic_menu_my_calendar"
                 android:title="@string/attendances"/>
+            <item
+                android:id="@+id/nav_salaries"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="@string/salaries"/>
         </menu>
     </item>
-    </group>
 
 </menu>

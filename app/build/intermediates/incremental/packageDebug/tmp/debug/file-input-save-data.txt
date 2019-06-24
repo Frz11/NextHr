@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 23 18:11:45 EEST 2019
+#Mon Jun 10 18:57:16 EEST 2019
 4.path=classes.dex
 8.set=DEX
 6.path=classes.dex
@@ -10,15 +10,15 @@
 8.path=classes.dex
 3.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/16
 4.set=DEX
-5.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/20
-7.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+5.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/merged_assets/debug/out
+7.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/12
 11.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/17
 9.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/15
 1.baseType=DIRECTORY
 11.set=DEX
 0.set=DEX
 6.baseType=DIRECTORY
-7.set=ASSET
+7.set=DEX
 3.set=DEX
 2.baseType=DIRECTORY
 10.baseType=DIRECTORY
@@ -26,9 +26,9 @@
 7.baseType=DIRECTORY
 3.path=classes.dex
 10.set=DEX
-5.path=classes.dex
+5.path=fonts/fontawesome.otf
 0.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/11
-7.path=fonts/fontawesome.otf
+7.path=classes.dex
 11.path=classes.dex
 9.path=classes.dex
 6.set=DEX
@@ -36,7 +36,7 @@
 11.baseType=DIRECTORY
 4.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/21
 3.baseType=DIRECTORY
-6.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/12
+6.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/20
 10.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/18
 8.base=/Users/cristianion/AndroidStudioProjects/NextHR/app/build/intermediates/transforms/dexMerger/debug/19
 2.set=DEX
@@ -44,7 +44,7 @@
 9.set=DEX
 count=12
 4.baseType=DIRECTORY
-5.set=DEX
+5.set=ASSET
 9.baseType=DIRECTORY
 0.path=classes.dex
 1.set=DEX

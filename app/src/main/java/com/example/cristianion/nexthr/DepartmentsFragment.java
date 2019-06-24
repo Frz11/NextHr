@@ -30,6 +30,8 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 public class DepartmentsFragment extends Fragment {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    RecyclerView departmentsRecycler;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,20 +42,20 @@ public class DepartmentsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final View departmentsView = view.findViewById(R.id.DepartmentsView);
         final ProgressBar progressBar = view.findViewById(R.id.DepartmentsProgress);
-        final RecyclerView departmentsRecycler = view.findViewById(R.id.DepartmentsRecycler);
-        showProgress(true,departmentsView,progressBar);
+        departmentsRecycler = view.findViewById(R.id.DepartmentsRecycler);
+        showProgress(true,departmentsRecycler,progressBar);
         db.collection("companies").document(currentCompany.id).collection("departments").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         List<Department> departments = queryDocumentSnapshots.toObjects(Department.class);
 
-                        showProgress(false,departmentsView,progressBar);
+                        showProgress(false,departmentsRecycler,progressBar);
                         DepartmentAdapter departmentAdapter = new DepartmentAdapter(departments,getFragmentManager());
                         departmentsRecycler.setAdapter(departmentAdapter);
                         departmentsRecycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
+                        departmentAdapter.notifyDataSetChanged();
                     }
                 });
 
@@ -74,6 +76,7 @@ public class DepartmentsFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
             assert getFragmentManager() != null;
+            departmentsRecycler.getRecycledViewPool().clear();
             getFragmentManager().beginTransaction().replace(R.id.Frame,new DepartmentsFragment()).commit();
         }
     }

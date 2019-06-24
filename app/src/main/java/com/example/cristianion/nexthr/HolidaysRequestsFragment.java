@@ -6,10 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 
 import com.example.cristianion.nexthr.Adapters.HolidaysReqAdapter;
 import com.example.cristianion.nexthr.Models.Holiday;
@@ -40,21 +43,53 @@ public class HolidaysRequestsFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final View reqView = view.findViewById(R.id.holidays_req_view);
+        final Spinner status = view.findViewById(R.id.status);
         final ProgressBar progressBar = view.findViewById(R.id.holidays_req_progress);
         final RecyclerView reqRecycler = view.findViewById(R.id.holiday_req_recycler);
-        showProgress(true,reqView,progressBar);
         final HolidaysReqAdapter adapter = new HolidaysReqAdapter(holidays,view.getContext(),getFragmentManager());
         reqRecycler.setAdapter(adapter);
         reqRecycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        db.collection("holidays").whereEqualTo("managerId",currentEmployee.id).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        status.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                holidays.addAll(queryDocumentSnapshots.toObjects(Holiday.class));
-                adapter.notifyDataSetChanged();
-                showProgress(false,reqView,progressBar);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                reqRecycler.getRecycledViewPool().clear();
+                holidays.clear();
+                adapter.clearList();
+                if(position != 0){
+                    Log.wtf("item",parent.getItemAtPosition(position).toString());
+                    showProgress(true,reqView,progressBar);
+                    db.collection("holidays").whereEqualTo("managerId",currentEmployee.id)
+                            .whereEqualTo("status",parent.getItemAtPosition(position).toString()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            adapter.addToList(queryDocumentSnapshots.toObjects(Holiday.class));
+                            for(Holiday holiday : queryDocumentSnapshots.toObjects(Holiday.class)){
+                                Log.wtf(holiday.employeeId,holiday.status);
+                            }
+                            showProgress(false,reqView,progressBar);
+
+                        }
+                    });
+                } else {
+                    showProgress(true,reqView,progressBar);
+                    db.collection("holidays").whereEqualTo("managerId",currentEmployee.id).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            adapter.addToList(queryDocumentSnapshots.toObjects(Holiday.class));
+                            showProgress(false,reqView,progressBar);
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
     }
 }

@@ -46,7 +46,6 @@ import static com.example.cristianion.nexthr.Utils.UtilFunc.showProgress;
 
 public class RolesFragment extends Fragment {
 
-    //private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("companies").child(currentCompany.id);
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 

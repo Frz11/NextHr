@@ -97,7 +97,7 @@ public class MenuActivity extends AppCompatActivity
         toggle.syncState();
         toolbar.setVisibility(View.GONE);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -108,10 +108,69 @@ public class MenuActivity extends AppCompatActivity
             fragment = getSupportFragmentManager().getFragment(savedInstanceState,"last_fragment");
         }
 
-        assert fragment != null;
-        ft.replace(R.id.Frame,fragment);
+        if(fragment != null){
+            ft.replace(R.id.Frame,fragment);
+            ft.commit();
 
-        ft.commit();
+        }
+        View menu = navigationView.inflateHeaderView(R.layout.nav_header_menu);
+        TextView company = menu.findViewById(R.id.Company);
+        TextView employee =  menu.findViewById(R.id.Name);
+        final ImageView profilePhoto = menu.findViewById(R.id.profileImage);
+
+
+        company.setText(currentCompany.name);
+        employee.setText(currentEmployee.lastName + " " + currentEmployee.firstName);
+
+        db.collection("companies").document(currentCompany.id)
+                .collection("images").whereEqualTo("userId",currentEmployee.id)
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for(QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        Image image = data.toObject(Image.class);
+                        StorageReference storage = FirebaseStorage.getInstance().getReference("images/").child(currentCompany.id).child(image.id);
+                        storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Uri> task) {
+                                Glide.with(getApplicationContext()).load(task.getResult()).into(profilePhoto);
+
+                            }
+                        });
+                    }
+                } else {
+
+                }
+            }
+        });
+
+        db.collection("companies").document(currentCompany.id).collection("roles").whereEqualTo("name","Admin")
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for (QueryDocumentSnapshot data : Objects.requireNonNull(task.getResult())){
+                        adminRole = data.toObject(Role.class);
+                        break;
+                    }
+                    if(currentEmployee.isAdmin){
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                navigationView.getMenu().findItem(R.id.nav_administration).setVisible(true);
+                            }
+                        });
+                    }
+                } else {
+
+                }
+            }
+        });
+
+
+
+
 
 
     }
@@ -134,12 +193,19 @@ public class MenuActivity extends AppCompatActivity
         return true;
     }
 
+
     @Override
     public boolean onPrepareOptionsMenu(final Menu menu){
 
         super.onPrepareOptionsMenu(menu);
-        ((TextView) findViewById(R.id.Company)).setText(currentCompany.name);
-        ((TextView) findViewById(R.id.Name)).setText(currentEmployee.lastName + " " + currentEmployee.firstName);
+       /* TextView company =   ((TextView) findViewById(R.id.Company));
+        TextView employee =  (TextView) findViewById(R.id.Name);
+        if(company != null){
+            company.setText(currentCompany.name);
+        }
+        if (employee != null){
+            employee.setText(currentEmployee.lastName + " " + currentEmployee.firstName);
+        }
 
         final ImageView profilePhoto = findViewById(R.id.profileImage);
 
@@ -190,6 +256,7 @@ public class MenuActivity extends AppCompatActivity
             }
         });
 
+    */
         return true;
     }
 
@@ -245,10 +312,14 @@ public class MenuActivity extends AppCompatActivity
             fragment = new LocationFragment();
         } else if (id == R.id.nav_holidays_requests) {
             fragment = new HolidaysRequestsFragment();
+        } else if(id == R.id.nav_salaries){
+            fragment = new SalariesFragment();
         } else if (id == R.id.nav_logOut){
             FirebaseAuth auth = FirebaseAuth.getInstance();
             auth.signOut();
             finish();
+            Intent intent = new Intent(this,WelcomeActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_attendances){
             fragment = new AttendancesAdminFragment();
         }

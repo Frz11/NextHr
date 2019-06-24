@@ -1150,7 +1150,6 @@ id ConfirmPassword
 id DeleteRole
 id DepartmentsProgress
 id DepartmentsRecycler
-id DepartmentsView
 id EditDepProgress
 id EditDepView
 id EditEmployeeProgress
@@ -1347,6 +1346,8 @@ id firstNameLabel
 id fixed
 id forever
 id forgotPasswordButton
+id forgot_password_button
+id generateButton
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -1429,6 +1430,7 @@ id nav_logOut
 id nav_messages
 id nav_profile
 id nav_roles
+id nav_salaries
 id nav_salary
 id nav_view
 id navigation_header_container
@@ -1715,6 +1717,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout profile_layout
 layout roles_layout
+layout salaries_layout
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1834,6 +1837,7 @@ string first_admin_main
 string first_name
 string forgot_password
 string gcm_defaultSenderId
+string generate_csv
 string go
 string google_api_key
 string google_app_id
@@ -1893,6 +1897,7 @@ string remove
 string requests
 string role_job
 string roles
+string salaries
 string salary
 string salary_for
 string save
